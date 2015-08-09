@@ -24,5 +24,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
     
+    func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        // Quit the app on a reopen request
+        NSApplication.sharedApplication().terminate(self)
+        
+        return false
+    }
+    
 }
 

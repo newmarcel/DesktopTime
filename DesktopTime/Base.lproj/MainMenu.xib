@@ -685,7 +685,7 @@
                         <animations/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="" id="6YK-gs-gKI">
                             <font key="font" metaFont="systemSemibold" size="13"/>
-                            <color key="textColor" red="0.87870806455612183" green="0.87868189811706543" blue="0.87869668006896973" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.92490178346633911" green="0.92483890056610107" blue="0.92487561702728271" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>

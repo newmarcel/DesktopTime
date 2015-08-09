@@ -26,7 +26,7 @@ class TimeWindow: NSWindow {
         self.timeLabel.layer?.shadowRadius = 0.6
         
         // Setup timer
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("tick:"), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("tick:"), userInfo: nil, repeats: true)
     }
     
     private var dateFormatter: NSDateFormatter = {
