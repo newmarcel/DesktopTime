@@ -669,7 +669,7 @@
         </menu>
         <window title="DesktopTime" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="TimeWindow" customModule="DesktopTime" customModuleProvider="target">
             <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowCollectionBehavior key="collectionBehavior" canJoinAllSpaces="YES" stationary="YES" fullScreenDisallowsTiling="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" canJoinAllSpaces="YES" stationary="YES" ignoresCycle="YES" fullScreenDisallowsTiling="YES"/>
             <windowPositionMask key="initialPositionMask" topStrut="YES"/>
             <rect key="contentRect" x="335" y="747" width="480" height="21"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1366" height="768"/>
@@ -685,7 +685,7 @@
                         <animations/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="" id="6YK-gs-gKI">
                             <font key="font" metaFont="systemSemibold" size="13"/>
-                            <color key="textColor" red="0.92490178346633911" green="0.92483890056610107" blue="0.92487561702728271" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.97480571269989014" green="0.97469174861907959" blue="0.97476035356521606" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -701,7 +701,7 @@
             <connections>
                 <outlet property="timeLabel" destination="NHf-U7-U4y" id="1c9-Zs-Sec"/>
             </connections>
-            <point key="canvasLocation" x="38" y="192.5"/>
+            <point key="canvasLocation" x="-47" y="200.5"/>
         </window>
     </objects>
 </document>

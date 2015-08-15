@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import CoreImage
 
 class TimeWindow: NSWindow {
     @IBOutlet weak var timeLabel: NSTextField!
