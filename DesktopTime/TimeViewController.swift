@@ -30,6 +30,12 @@ class TimeViewController: NSViewController {
         tick(timer)  // initial tick:
     }
     
+    deinit {
+        if let timer = self.timer {
+            timer.invalidate()
+        }
+    }
+    
     override func viewWillAppear() {
         super.viewWillAppear()
         
@@ -55,7 +61,7 @@ class TimeViewController: NSViewController {
     private func updatePositionOfWindow(window: NSWindow) {
         var frame = window.frame
         if let screen = window.screen {
-            frame.origin.y = screen.frame.size.height - frame.size.height
+            frame.origin.y = ceil(screen.frame.size.height - frame.size.height)
             
             // Constrain size
             frame.size.width = self.timeLabel.intrinsicContentSize.width + 16.0  // + padding
