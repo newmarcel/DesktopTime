@@ -673,8 +673,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="21"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7We-qm-CI8">
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7We-qm-CI8">
                                 <rect key="frame" x="-2" y="2" width="484" height="17"/>
+                                <shadow key="shadow" blurRadius="1">
+                                    <size key="offset" width="0.0" height="1"/>
+                                    <color key="color" white="0.0" alpha="0.70306443798449614" colorSpace="calibratedWhite"/>
+                                </shadow>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Some Time Ago" placeholderString="" id="dWL-La-1hR">
                                     <font key="font" metaFont="systemSemibold" size="13"/>
