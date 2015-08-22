@@ -51,8 +51,11 @@ class TimeViewController: NSViewController {
     // MARK: - Actions
     private dynamic func tick(timer: NSTimer) {
         let time = NSDate()
-        
-        self.timeLabel.stringValue = dateFormatter.stringFromDate(time) + " — \(batteryStatus.currentCapacity) %"
+        var outputString = dateFormatter.stringFromDate(time)
+        if let capacity = batteryStatus.currentCapacity {
+            outputString += " — \(capacity) %"
+        }
+        self.timeLabel.stringValue = outputString
         
         if let window = self.view.window {
             updatePositionOfWindow(window)

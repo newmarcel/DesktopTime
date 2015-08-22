@@ -11,12 +11,8 @@ import IOKit.ps
 
 public class BatteryStatus {
     
-    public var currentCapacity: Int {
-        if let capacity = powerSourceInfos()?[kIOPSCurrentCapacityKey] as? Int {
-            return capacity
-        } else {
-            return 0
-        }
+    public var currentCapacity: Int? {
+        return (powerSourceInfos()?[kIOPSCurrentCapacityKey] as? Int)
     }
     
     private func powerSourceInfos() -> NSDictionary? {
