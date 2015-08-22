@@ -21,6 +21,8 @@ class TimeViewController: NSViewController {
         return df
     }()
     
+    private let batteryStatus = BatteryStatus()
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +52,7 @@ class TimeViewController: NSViewController {
     private dynamic func tick(timer: NSTimer) {
         let time = NSDate()
         
-        self.timeLabel.stringValue = dateFormatter.stringFromDate(time)
+        self.timeLabel.stringValue = dateFormatter.stringFromDate(time) + " — \(batteryStatus.currentCapacity) %"
         
         if let window = self.view.window {
             updatePositionOfWindow(window)

@@ -12,6 +12,7 @@
 		DA1A4A601B772B26009EF083 /* TimeWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A4A5F1B772B26009EF083 /* TimeWindow.swift */; };
 		DA4C7DAF1B837CB700EE6CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA4C7DAE1B837CB700EE6CCB /* Main.storyboard */; };
 		DA4C7DB11B837DD600EE6CCB /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4C7DB01B837DD600EE6CCB /* TimeViewController.swift */; };
+		DAF200D41B884DE30071F77F /* BatteryStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF200D31B884DE30071F77F /* BatteryStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DA1A4A5F1B772B26009EF083 /* TimeWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeWindow.swift; sourceTree = "<group>"; };
 		DA4C7DAE1B837CB700EE6CCB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DA4C7DB01B837DD600EE6CCB /* TimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
+		DAF200D31B884DE30071F77F /* BatteryStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				DA1A4A521B772705009EF083 /* AppDelegate.swift */,
 				DA1A4A5F1B772B26009EF083 /* TimeWindow.swift */,
 				DA4C7DB01B837DD600EE6CCB /* TimeViewController.swift */,
+				DAF200D31B884DE30071F77F /* BatteryStatus.swift */,
 				DA4C7DAE1B837CB700EE6CCB /* Main.storyboard */,
 				DA1A4A541B772705009EF083 /* Assets.xcassets */,
 				DA1A4A591B772705009EF083 /* Info.plist */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA1A4A601B772B26009EF083 /* TimeWindow.swift in Sources */,
+				DAF200D41B884DE30071F77F /* BatteryStatus.swift in Sources */,
 				DA4C7DB11B837DD600EE6CCB /* TimeViewController.swift in Sources */,
 				DA1A4A531B772705009EF083 /* AppDelegate.swift in Sources */,
 			);
