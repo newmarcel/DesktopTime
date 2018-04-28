@@ -22,7 +22,7 @@ public class BatteryStatus {
             return nil
         }
         
-        let powerSource: NSDictionary = IOPSGetPowerSourceDescription(blob, sourcesList[0]).takeUnretainedValue()
+        let powerSource: NSDictionary = IOPSGetPowerSourceDescription(blob, sourcesList[0] as CFTypeRef).takeUnretainedValue()
         return powerSource
     }
 }

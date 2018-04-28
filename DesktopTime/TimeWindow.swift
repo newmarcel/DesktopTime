@@ -13,8 +13,8 @@ class TimeWindow: NSWindow {
         super.awakeFromNib()
         
         // Configure window
-        self.level = Int(CGWindowLevelForKey(CGWindowLevelKey.FloatingWindowLevelKey))
+        self.level = Level(Int(CGWindowLevelForKey(.floatingWindow)))
         self.ignoresMouseEvents = true
-        self.backgroundColor = NSColor.clearColor()
+        self.backgroundColor = .clear
     }
 }

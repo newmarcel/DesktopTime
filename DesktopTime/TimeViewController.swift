@@ -13,11 +13,10 @@ class TimeViewController: NSViewController {
     // MARK: - Properties
     @IBOutlet weak var timeLabel: NSTextField!
     
-    private weak var timer: NSTimer!
-    private var dateFormatter: NSDateFormatter = {
-        let df = NSDateFormatter()
-        df.dateFormat = NSDateFormatter.dateFormatFromTemplate("edMHHmm", options: 0, locale: NSLocale.currentLocale())
-        
+    private weak var timer: Timer!
+    private var dateFormatter: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = DateFormatter.dateFormat(fromTemplate: "edMHHmm", options: 0, locale: .current)
         return df
     }()
     
@@ -28,7 +27,7 @@ class TimeViewController: NSViewController {
         super.viewDidLoad()
         
         // Setup timer
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("tick:"), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(tick(_:)), userInfo: nil, repeats: true)
         tick(timer)  // initial tick:
     }
     
@@ -44,26 +43,26 @@ class TimeViewController: NSViewController {
         if let window = self.view.window {
             window.delegate = self
             
-            updatePositionOfWindow(window)
+            updatePosition(of: window)
         }
     }
     
     // MARK: - Actions
-    private dynamic func tick(timer: NSTimer) {
-        let time = NSDate()
-        var outputString = dateFormatter.stringFromDate(time)
+    @objc private dynamic func tick(_ timer: Timer) {
+        let time = Date()
+        var outputString = dateFormatter.string(from: time)
         if let capacity = batteryStatus.currentCapacity {
             outputString += " — \(capacity) %"
         }
         self.timeLabel.stringValue = outputString
         
         if let window = self.view.window {
-            updatePositionOfWindow(window)
+            updatePosition(of: window)
         }
     }
     
     // MARK: -
-    private func updatePositionOfWindow(window: NSWindow) {
+    private func updatePosition(of window: NSWindow) {
         var frame = window.frame
         if let screen = window.screen {
             frame.origin.y = ceil(screen.frame.size.height - frame.size.height)
@@ -77,10 +76,10 @@ class TimeViewController: NSViewController {
 }
 
 extension TimeViewController: NSWindowDelegate {
-    func windowDidChangeScreen(notification: NSNotification) {
+    func windowDidChangeScreen(_ notification: Notification) {
         if let window = notification.object as? NSWindow {
             NSLog("Window did change screen %@", window)
-            updatePositionOfWindow(window)
+            updatePosition(of: window)
         }
     }
 }

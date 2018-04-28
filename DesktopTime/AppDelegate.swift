@@ -10,24 +10,15 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
     @IBOutlet weak var window: NSWindow!
-
-
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-    }
-
-    func applicationWillTerminate(aNotification: NSNotification) {
-    }
     
-    func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true
     }
     
-    func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
         // Quit the app on a reopen request
-        NSApplication.sharedApplication().terminate(self)
-        
+        NSApplication.shared.terminate(self)
         return false
     }
     
