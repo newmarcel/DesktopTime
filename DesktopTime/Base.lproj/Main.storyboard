@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
@@ -679,12 +680,24 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7We-qm-CI8">
-                                <rect key="frame" x="14" y="12" width="452" height="19"/>
+                                <rect key="frame" x="388" y="12" width="82" height="19"/>
                                 <shadow key="shadow" blurRadius="1">
                                     <size key="offset" width="0.0" height="1"/>
                                     <color key="color" white="0.0" alpha="0.70306443798449614" colorSpace="calibratedWhite"/>
                                 </shadow>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Some Time Ago" placeholderString="" id="dWL-La-1hR">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Right Side" placeholderString="" id="dWL-La-1hR">
+                                    <font key="font" metaFont="systemSemibold" size="16"/>
+                                    <color key="textColor" red="0.97480571270000005" green="0.97469174859999996" blue="0.97476035360000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ePP-Rf-mFa">
+                                <rect key="frame" x="10" y="12" width="72" height="19"/>
+                                <shadow key="shadow" blurRadius="1">
+                                    <size key="offset" width="0.0" height="1"/>
+                                    <color key="color" white="0.0" alpha="0.70306443799999996" colorSpace="calibratedWhite"/>
+                                </shadow>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Left Side" placeholderString="" id="aG8-cB-wZa">
                                     <font key="font" metaFont="systemSemibold" size="16"/>
                                     <color key="textColor" red="0.97480571270000005" green="0.97469174859999996" blue="0.97476035360000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -692,13 +705,16 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="7We-qm-CI8" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="12" id="A4G-NH-suk"/>
-                            <constraint firstItem="7We-qm-CI8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="Evh-UJ-2Fj"/>
-                            <constraint firstAttribute="bottom" secondItem="7We-qm-CI8" secondAttribute="bottom" constant="12" id="HdT-vf-uFg"/>
-                            <constraint firstAttribute="trailing" secondItem="7We-qm-CI8" secondAttribute="trailing" constant="16" id="SRf-1a-SjU"/>
+                            <constraint firstItem="ePP-Rf-mFa" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="12" id="47h-AW-rVj"/>
+                            <constraint firstAttribute="bottom" secondItem="ePP-Rf-mFa" secondAttribute="bottom" constant="12" id="Bfb-RV-dfR"/>
+                            <constraint firstItem="ePP-Rf-mFa" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="12" id="CQA-AE-pqG"/>
+                            <constraint firstItem="7We-qm-CI8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ePP-Rf-mFa" secondAttribute="trailing" constant="12" id="G2v-82-58U"/>
+                            <constraint firstAttribute="trailing" secondItem="7We-qm-CI8" secondAttribute="trailing" constant="12" id="SRf-1a-SjU"/>
+                            <constraint firstItem="7We-qm-CI8" firstAttribute="baseline" secondItem="ePP-Rf-mFa" secondAttribute="firstBaseline" id="z0K-7c-Cde"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="batteryLabel" destination="ePP-Rf-mFa" id="5Rd-Um-YsI"/>
                         <outlet property="timeLabel" destination="7We-qm-CI8" id="yD7-Ps-UYJ"/>
                     </connections>
                 </viewController>

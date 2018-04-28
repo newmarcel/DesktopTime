@@ -8,17 +8,21 @@
 
 import Cocoa
 
-private let textPadding: CGFloat = 32.0
-
-class TimeViewController: NSViewController {
+final class TimeViewController: NSViewController {
     
     // MARK: - Properties
+    @IBOutlet weak var batteryLabel: NSTextField!
     @IBOutlet weak var timeLabel: NSTextField!
     
     private weak var timer: Timer!
     private var dateFormatter: DateFormatter = {
         let df = DateFormatter()
-        df.dateFormat = DateFormatter.dateFormat(fromTemplate: "edMHHmm", options: 0, locale: .current)
+        df.dateStyle = .long // ignore
+        df.timeStyle = .short // ignore
+        df.dateFormat = DateFormatter.dateFormat(
+            fromTemplate: "eddMMHHmm", options: 0, locale: .current
+        )
+        df.formattingContext = .standalone
         return df
     }()
     
@@ -29,7 +33,10 @@ class TimeViewController: NSViewController {
         super.viewDidLoad()
         
         // Setup timer
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(tick(_:)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(
+            timeInterval: 1.0, target: self, selector: #selector(tick(_:)),
+            userInfo: nil, repeats: true
+        )
         tick(timer)  // initial tick:
     }
     
@@ -52,11 +59,14 @@ class TimeViewController: NSViewController {
     // MARK: - Actions
     @objc private dynamic func tick(_ timer: Timer) {
         let time = Date()
-        var outputString = dateFormatter.string(from: time)
+        
         if let capacity = batteryStatus.currentCapacity {
-            outputString += " — \(capacity) %"
+            self.batteryLabel.stringValue = "\(capacity) %"
+        } else {
+            self.batteryLabel.stringValue = ""
         }
-        self.timeLabel.stringValue = outputString
+        
+        self.timeLabel.stringValue = dateFormatter.string(from: time)
         
         if let window = self.view.window {
             updatePosition(of: window)
@@ -67,11 +77,8 @@ class TimeViewController: NSViewController {
     private func updatePosition(of window: NSWindow) {
         var frame = window.frame
         if let screen = window.screen {
-            frame.origin.y = 0
-            
-            // Constrain size
-            frame.size.width = self.timeLabel.intrinsicContentSize.width + textPadding
-            frame.origin.x = floor(screen.frame.size.width - frame.size.width)
+            frame.origin = .zero
+            frame.size.width = screen.frame.size.width
         }
         window.setFrame(frame, display: true)
     }
