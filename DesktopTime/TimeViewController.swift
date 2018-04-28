@@ -8,6 +8,8 @@
 
 import Cocoa
 
+private let textPadding: CGFloat = 32.0
+
 class TimeViewController: NSViewController {
     
     // MARK: - Properties
@@ -65,11 +67,11 @@ class TimeViewController: NSViewController {
     private func updatePosition(of window: NSWindow) {
         var frame = window.frame
         if let screen = window.screen {
-            frame.origin.y = ceil(screen.frame.size.height - frame.size.height)
+            frame.origin.y = 0
             
             // Constrain size
-            frame.size.width = self.timeLabel.intrinsicContentSize.width + 16.0  // + padding
-            frame.origin.x = floor((screen.frame.size.width/2.0) - (frame.size.width/2.0))
+            frame.size.width = self.timeLabel.intrinsicContentSize.width + textPadding
+            frame.origin.x = floor(screen.frame.size.width - frame.size.width)
         }
         window.setFrame(frame, display: true)
     }

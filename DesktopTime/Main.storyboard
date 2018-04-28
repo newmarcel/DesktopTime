@@ -675,27 +675,27 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="TimeViewController" customModule="DesktopTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="21"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="43"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7We-qm-CI8">
-                                <rect key="frame" x="-2" y="2" width="484" height="17"/>
+                                <rect key="frame" x="14" y="12" width="452" height="19"/>
                                 <shadow key="shadow" blurRadius="1">
                                     <size key="offset" width="0.0" height="1"/>
                                     <color key="color" white="0.0" alpha="0.70306443798449614" colorSpace="calibratedWhite"/>
                                 </shadow>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Some Time Ago" placeholderString="" id="dWL-La-1hR">
-                                    <font key="font" metaFont="systemSemibold" size="13"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Some Time Ago" placeholderString="" id="dWL-La-1hR">
+                                    <font key="font" metaFont="systemSemibold" size="16"/>
                                     <color key="textColor" red="0.97480571270000005" green="0.97469174859999996" blue="0.97476035360000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="7We-qm-CI8" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="2" id="A4G-NH-suk"/>
-                            <constraint firstItem="7We-qm-CI8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="Evh-UJ-2Fj"/>
-                            <constraint firstAttribute="bottom" secondItem="7We-qm-CI8" secondAttribute="bottom" constant="2" id="HdT-vf-uFg"/>
-                            <constraint firstAttribute="trailing" secondItem="7We-qm-CI8" secondAttribute="trailing" id="SRf-1a-SjU"/>
+                            <constraint firstItem="7We-qm-CI8" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="12" id="A4G-NH-suk"/>
+                            <constraint firstItem="7We-qm-CI8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="Evh-UJ-2Fj"/>
+                            <constraint firstAttribute="bottom" secondItem="7We-qm-CI8" secondAttribute="bottom" constant="12" id="HdT-vf-uFg"/>
+                            <constraint firstAttribute="trailing" secondItem="7We-qm-CI8" secondAttribute="trailing" constant="16" id="SRf-1a-SjU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -704,7 +704,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="654.5"/>
         </scene>
     </scenes>
 </document>
