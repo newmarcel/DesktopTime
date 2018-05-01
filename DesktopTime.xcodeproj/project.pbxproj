@@ -26,6 +26,7 @@
 		DA1A4A591B772705009EF083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA1A4A5F1B772B26009EF083 /* TimeWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeWindow.swift; sourceTree = "<group>"; };
 		DA4C7DB01B837DD600EE6CCB /* TimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
+		DABF44B62098C297002FD143 /* Configuration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration.xcconfig; sourceTree = SOURCE_ROOT; };
 		DAF200D31B884DE30071F77F /* BatteryStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +68,7 @@
 				DA1A4A541B772705009EF083 /* Assets.xcassets */,
 				DA13CC8720950D4A007C3978 /* DesktopTime.entitlements */,
 				DA1A4A591B772705009EF083 /* Info.plist */,
+				DABF44B62098C297002FD143 /* Configuration.xcconfig */,
 			);
 			path = DesktopTime;
 			sourceTree = "<group>";
@@ -97,6 +99,7 @@
 		DA1A4A471B772705009EF083 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DTI;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Marcel Dierkes";
 				TargetAttributes = {
@@ -172,6 +175,7 @@
 /* Begin XCBuildConfiguration section */
 		DA1A4A5A1B772705009EF083 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DABF44B62098C297002FD143 /* Configuration.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -217,7 +221,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -227,6 +230,7 @@
 		};
 		DA1A4A5B1B772705009EF083 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DABF44B62098C297002FD143 /* Configuration.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -266,7 +270,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
