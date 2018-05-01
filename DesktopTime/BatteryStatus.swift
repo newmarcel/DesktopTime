@@ -9,8 +9,7 @@
 import Foundation
 import IOKit.ps
 
-public class BatteryStatus {
-    
+public final class BatteryStatus {
     public var currentCapacity: Int? {
         return (powerSourceInfos()?[kIOPSCurrentCapacityKey] as? Int)
     }

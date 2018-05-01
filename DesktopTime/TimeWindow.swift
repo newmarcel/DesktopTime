@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class TimeWindow: NSWindow {
+final class TimeWindow: NSWindow {
     override func awakeFromNib() {
         super.awakeFromNib()
         
