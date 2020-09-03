@@ -99,13 +99,14 @@
 		DA1A4A471B772705009EF083 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = DTI;
-				LastUpgradeCheck = 0930;
+				CLASSPREFIX = "";
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Marcel Dierkes";
 				TargetAttributes = {
 					DA1A4A4E1B772705009EF083 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 5KESHV9W85;
+						LastSwiftMigration = 1150;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -117,11 +118,13 @@
 			};
 			buildConfigurationList = DA1A4A4A1B772705009EF083 /* Build configuration list for PBXProject "DesktopTime" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				de,
+				fr,
 			);
 			mainGroup = DA1A4A461B772705009EF083;
 			productRefGroup = DA1A4A501B772705009EF083 /* Products */;
@@ -257,7 +260,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -285,12 +288,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5KESHV9W85;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = DesktopTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "info.marcel-dierkes.DesktopTime";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -303,12 +307,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5KESHV9W85;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = DesktopTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "info.marcel-dierkes.DesktopTime";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
