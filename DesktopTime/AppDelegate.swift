@@ -21,6 +21,5 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         NSApplication.shared.terminate(self)
         return false
     }
-    
 }
 

@@ -6,9 +6,9 @@
 //  Copyright © 2018 Marcel Dierkes. All rights reserved.
 //
 
-MACOSX_DEPLOYMENT_TARGET = 10.15
+MACOSX_DEPLOYMENT_TARGET = 11.0
 PRODUCT_BUNDLE_IDENTIFIER = info.marcel-dierkes.DesktopTime
 
-DTI_COPYRIGHT_TEXT = Copyright © 2015 – 2020 Marcel Dierkes. All rights reserved.
+DTI_COPYRIGHT_TEXT = Copyright © 2015 – 2021 Marcel Dierkes. All rights reserved.
 DTI_BUNDLE_VERSION = 2.0.0
-DTI_BUILD_NUMBER = 2000002
+DTI_BUILD_NUMBER = 2000003
