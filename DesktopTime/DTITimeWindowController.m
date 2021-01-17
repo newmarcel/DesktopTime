@@ -12,6 +12,8 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
 
 @interface DTITimeWindowController () <NSWindowDelegate>
 @property (nonatomic) NSTimer *timer;
+@property (nonatomic) NSDateFormatter *dateFormatter;
+@property (nonatomic) NSNumberFormatter *percentFormatter;
 @property (nonatomic) DTIBatteryStatus *batteryStatus;
 @property (weak, nonatomic, nullable) IBOutlet NSTextField *leadingLabel;
 @property (weak, nonatomic, nullable) IBOutlet NSTextField *trailingLabel;
@@ -35,6 +37,7 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     
     [self configureWindow];
     [self updateWindowPosition];
+    [self configureFormatters];
     [self configureTimer];
 }
 
@@ -80,32 +83,59 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
 
 - (void)tick:(NSTimer *)timer
 {
-//    let time = Date()
-//
-//    if let capacity = batteryStatus.currentCapacity {
-//        self.batteryLabel.stringValue = "\(capacity) %"
-//    } else {
-//        self.batteryLabel.stringValue = ""
-//    }
-//
-//    self.timeLabel.stringValue = dateFormatter.string(from: time)
-//
-//    if let window = self.view.window {
-//        updatePosition(of: window)
-//    }
+    // Leading
+    CGFloat capacity = self.batteryStatus.currentCapacity;
+    if(capacity == KYABatteryStatusUnavailable)
+    {
+        self.leadingLabel.stringValue = @"";
+    }
+    else
+    {
+        self.leadingLabel.stringValue = [self.percentFormatter stringFromNumber:@(capacity / 100.0f)];
+    }
     
-    // --
+    // Trailing
+    Auto now = [NSDate date];
+    self.trailingLabel.stringValue = [self.dateFormatter stringFromDate:now];
+
+    [self updateWindowPosition];
+}
+
+#pragma mark - Formatters
+
+- (void)configureFormatters
+{
+    [self configureDateFormatter];
+    [self configureNumberFormatter];
+}
+
+- (void)configureDateFormatter
+{
+    Auto locale = NSLocale.currentLocale;
+    Auto df = [NSDateFormatter new];
+    df.dateStyle = NSDateFormatterLongStyle;
+    df.timeStyle = NSDateFormatterShortStyle;
+    df.dateFormat = [NSDateFormatter dateFormatFromTemplate:@"eddMMHHmm"
+                                                    options:0
+                                                     locale:locale];
+    df.formattingContext = NSFormattingContextStandalone;
+    self.dateFormatter = df;
+}
+
+- (void)configureNumberFormatter
+{
+    Auto locale = NSLocale.currentLocale;
+    Auto nf = [NSNumberFormatter new];
+    nf.numberStyle = NSNumberFormatterPercentStyle;
+    nf.locale = locale;
+    nf.allowsFloats = NO;
+    nf.formattingContext = NSFormattingContextStandalone;
+    nf.lenient = YES;
     
-//    private var dateFormatter: DateFormatter = {
-//        let df = DateFormatter()
-//        df.dateStyle = .long // ignore
-//        df.timeStyle = .short // ignore
-//        df.dateFormat = DateFormatter.dateFormat(
-//                                                 fromTemplate: "eddMMHHmm", options: 0, locale: .current
-//                                                 )
-//        df.formattingContext = .standalone
-//        return df
-//    }()
+    nf.minimum = @0.0f;
+    nf.maximum = @100.0f;
+    
+    self.percentFormatter = nf;
 }
 
 #pragma mark - NSWindowDelegate
