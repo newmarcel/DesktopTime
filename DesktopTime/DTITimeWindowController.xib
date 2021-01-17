@@ -7,6 +7,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="DTITimeWindowController">
             <connections>
+                <outlet property="leadingLabel" destination="KBO-Og-ess" id="cUb-Ao-Dfi"/>
+                <outlet property="trailingLabel" destination="thR-88-xdq" id="PsJ-MQ-1rY"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -22,14 +24,26 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KBO-Og-ess">
-                        <rect key="frame" x="14" y="16" width="79" height="19"/>
+                        <rect key="frame" x="14" y="16" width="109" height="19"/>
                         <shadow key="shadow" blurRadius="1">
                             <size key="offset" width="0.0" height="1"/>
                             <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.69579087819484686" colorSpace="custom" customColorSpace="displayP3"/>
                         </shadow>
-                        <textFieldCell key="cell" lineBreakMode="clipping" title="Left Label" id="wox-aL-I0P">
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Leading Label" id="wox-aL-I0P">
                             <font key="font" metaFont="systemSemibold" size="16"/>
                             <color key="textColor" white="0.93825741222926551" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="thR-88-xdq">
+                        <rect key="frame" x="361" y="16" width="105" height="19"/>
+                        <shadow key="shadow" blurRadius="1">
+                            <size key="offset" width="0.0" height="1"/>
+                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.69579087819999996" colorSpace="custom" customColorSpace="displayP3"/>
+                        </shadow>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Trailing Label" id="Jtp-fv-FHI">
+                            <font key="font" metaFont="systemSemibold" size="16"/>
+                            <color key="textColor" white="0.93825741220000003" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -37,6 +51,9 @@
                 <constraints>
                     <constraint firstItem="KBO-Og-ess" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="16" id="DGQ-vW-3fZ"/>
                     <constraint firstItem="KBO-Og-ess" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="16" id="Im9-gG-uKa"/>
+                    <constraint firstItem="thR-88-xdq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KBO-Og-ess" secondAttribute="trailing" constant="16" id="KVj-0O-vT3"/>
+                    <constraint firstItem="thR-88-xdq" firstAttribute="firstBaseline" secondItem="KBO-Og-ess" secondAttribute="firstBaseline" id="dPj-NM-r4u"/>
+                    <constraint firstAttribute="trailing" secondItem="thR-88-xdq" secondAttribute="trailing" constant="16" id="iQX-u2-lqD"/>
                     <constraint firstAttribute="bottom" secondItem="KBO-Og-ess" secondAttribute="bottom" constant="16" id="mv2-wV-WpE"/>
                 </constraints>
             </view>

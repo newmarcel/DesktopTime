@@ -18,6 +18,8 @@
 		DAAD1D3C25B43F0400F6902D /* DesktopTimeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAF8E60E25B4465F00E3FA43 /* DTITimeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF8E60C25B4465F00E3FA43 /* DTITimeWindowController.m */; };
 		DAF8E60F25B4465F00E3FA43 /* DTITimeWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF8E60D25B4465F00E3FA43 /* DTITimeWindowController.xib */; };
+		DAF8E61E25B451E700E3FA43 /* KYABatteryStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF8E61C25B451E700E3FA43 /* KYABatteryStatus.m */; };
+		DAF8E61F25B451E700E3FA43 /* KYABatteryStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF8E61D25B451E700E3FA43 /* KYABatteryStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		DAF8E60C25B4465F00E3FA43 /* DTITimeWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTITimeWindowController.m; sourceTree = "<group>"; };
 		DAF8E60D25B4465F00E3FA43 /* DTITimeWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTITimeWindowController.xib; sourceTree = "<group>"; };
 		DAF8E61825B44AFD00E3FA43 /* DTIDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIDefines.h; sourceTree = "<group>"; };
+		DAF8E61C25B451E700E3FA43 /* KYABatteryStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYABatteryStatus.m; sourceTree = "<group>"; };
+		DAF8E61D25B451E700E3FA43 /* KYABatteryStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYABatteryStatus.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				DAAD1D2825B43F0400F6902D /* DesktopTimeKit.h */,
+				DAF8E61B25B451E700E3FA43 /* KYABatteryStatus */,
 				DAAD1D2925B43F0400F6902D /* Info.plist */,
 			);
 			path = DesktopTimeKit;
@@ -172,6 +177,15 @@
 			name = "Other…";
 			sourceTree = "<group>";
 		};
+		DAF8E61B25B451E700E3FA43 /* KYABatteryStatus */ = {
+			isa = PBXGroup;
+			children = (
+				DAF8E61D25B451E700E3FA43 /* KYABatteryStatus.h */,
+				DAF8E61C25B451E700E3FA43 /* KYABatteryStatus.m */,
+			);
+			path = KYABatteryStatus;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -179,6 +193,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF8E61F25B451E700E3FA43 /* KYABatteryStatus.h in Headers */,
 				DAAD1D3825B43F0400F6902D /* DesktopTimeKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF8E61E25B451E700E3FA43 /* KYABatteryStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
