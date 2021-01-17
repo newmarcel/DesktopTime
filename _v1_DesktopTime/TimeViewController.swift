@@ -46,16 +46,6 @@ final class TimeViewController: NSViewController {
         }
     }
     
-    override func viewWillAppear() {
-        super.viewWillAppear()
-        
-        if let window = self.view.window {
-            window.delegate = self
-            
-            updatePosition(of: window)
-        }
-    }
-    
     // MARK: - Actions
     @objc private dynamic func tick(_ timer: Timer) {
         let time = Date()
@@ -69,25 +59,6 @@ final class TimeViewController: NSViewController {
         self.timeLabel.stringValue = dateFormatter.string(from: time)
         
         if let window = self.view.window {
-            updatePosition(of: window)
-        }
-    }
-    
-    // MARK: -
-    private func updatePosition(of window: NSWindow) {
-        var frame = window.frame
-        if let screen = window.screen {
-            frame.origin = .zero
-            frame.size.width = screen.frame.size.width
-        }
-        window.setFrame(frame, display: true)
-    }
-}
-
-extension TimeViewController: NSWindowDelegate {
-    func windowDidChangeScreen(_ notification: Notification) {
-        if let window = notification.object as? NSWindow {
-            NSLog("Window did change screen %@", window)
             updatePosition(of: window)
         }
     }
