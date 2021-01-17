@@ -24,6 +24,16 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
+    
+    [self configureWindow];
+}
+
+- (void)configureWindow
+{
+    NSWindow *window = self.window;
+    window.level = CGWindowLevelForKey(kCGFloatingWindowLevelKey);
+    window.ignoresMouseEvents = YES;
+    window.backgroundColor = NSColor.clearColor;
 }
 
 @end
