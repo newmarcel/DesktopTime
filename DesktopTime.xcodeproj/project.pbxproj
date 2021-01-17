@@ -126,7 +126,6 @@
 			children = (
 				DAAD1D0F25B43ECE00F6902D /* DTIAppDelegate.h */,
 				DAAD1D1025B43ECE00F6902D /* DTIAppDelegate.m */,
-				DAAD1D1225B43ECF00F6902D /* Assets.xcassets */,
 				DAAD1D1425B43ECF00F6902D /* MainMenu.xib */,
 				DAF8E5F525B43FFA00E3FA43 /* Other… */,
 			);
@@ -154,6 +153,7 @@
 		DAF8E5F525B43FFA00E3FA43 /* Other… */ = {
 			isa = PBXGroup;
 			children = (
+				DAAD1D1225B43ECF00F6902D /* Assets.xcassets */,
 				DAAD1D1725B43ECF00F6902D /* Info.plist */,
 				DAAD1D1825B43ECF00F6902D /* main.m */,
 				DAAD1D1A25B43ECF00F6902D /* DesktopTime.entitlements */,

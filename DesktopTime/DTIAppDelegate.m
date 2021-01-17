@@ -8,7 +8,6 @@
 #import "DTIAppDelegate.h"
 
 @interface DTIAppDelegate ()
-@property (weak, nonatomic) IBOutlet NSWindow *window;
 @end
 
 @implementation DTIAppDelegate
