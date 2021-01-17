@@ -6,6 +6,7 @@
 //
 
 #import "DTITimeWindowController.h"
+#import "DTIDefines.h"
 
 @interface DTITimeWindowController ()
 @end
@@ -30,7 +31,7 @@
 
 - (void)configureWindow
 {
-    NSWindow *window = self.window;
+    Auto window = self.window;
     window.level = CGWindowLevelForKey(kCGFloatingWindowLevelKey);
     window.ignoresMouseEvents = YES;
     window.backgroundColor = NSColor.clearColor;
