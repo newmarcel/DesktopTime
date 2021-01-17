@@ -58,10 +58,11 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
 {
     Auto window = self.window;
     AutoVar frame = window.frame;
-    Auto screen = window.screen;
+    Auto screen = self.targetScreen ?: window.screen;
+    
     if(screen != nil)
     {
-        frame.origin = CGPointZero;
+        frame.origin = screen.frame.origin;
         frame.size.width = screen.frame.size.width;
         
         [window setFrame:frame display:YES];

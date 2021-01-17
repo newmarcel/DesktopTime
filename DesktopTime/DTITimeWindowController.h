@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DTITimeWindowController : NSWindowController
+@property (weak, nonatomic) NSScreen *targetScreen;
 
 - (instancetype)init;
 

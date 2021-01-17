@@ -18,9 +18,14 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
     Auto controllers = [NSHashTable weakObjectsHashTable];
-    Auto controller = [DTITimeWindowController new];
-    [controllers addObject:controller];
-    [controller showWindow:self];
+    
+    for(NSScreen *screen in NSScreen.screens)
+    {
+        Auto controller = [DTITimeWindowController new];
+        controller.targetScreen = screen;
+        [controllers addObject:controller];
+        [controller showWindow:self];
+    }
     
     self.timeWindowControllers = controllers;
 }
