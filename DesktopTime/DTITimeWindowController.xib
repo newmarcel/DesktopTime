@@ -15,17 +15,21 @@
         <window title="DesktopTime" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" hasShadow="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES"/>
             <windowCollectionBehavior key="collectionBehavior" canJoinAllSpaces="YES" stationary="YES" fullScreenDisallowsTiling="YES"/>
-            <rect key="contentRect" x="196" y="240" width="480" height="48"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="51"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
             <view key="contentView" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="48"/>
+                <rect key="frame" x="0.0" y="0.0" width="480" height="51"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KBO-Og-ess">
-                        <rect key="frame" x="14" y="16" width="65" height="16"/>
+                    <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KBO-Og-ess">
+                        <rect key="frame" x="14" y="16" width="79" height="19"/>
+                        <shadow key="shadow" blurRadius="1">
+                            <size key="offset" width="0.0" height="1"/>
+                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.69579087819484686" colorSpace="custom" customColorSpace="displayP3"/>
+                        </shadow>
                         <textFieldCell key="cell" lineBreakMode="clipping" title="Left Label" id="wox-aL-I0P">
-                            <font key="font" usesAppearanceFont="YES"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <font key="font" metaFont="systemSemibold" size="16"/>
+                            <color key="textColor" white="0.93825741222926551" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -39,7 +43,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="-128" y="134"/>
+            <point key="canvasLocation" x="-128" y="125.5"/>
         </window>
     </objects>
 </document>
