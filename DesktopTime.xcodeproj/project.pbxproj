@@ -16,6 +16,8 @@
 		DAAD1D3825B43F0400F6902D /* DesktopTimeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DAAD1D2825B43F0400F6902D /* DesktopTimeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAAD1D3B25B43F0400F6902D /* DesktopTimeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; };
 		DAAD1D3C25B43F0400F6902D /* DesktopTimeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DAF8E60E25B4465F00E3FA43 /* DTITimeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF8E60C25B4465F00E3FA43 /* DTITimeWindowController.m */; };
+		DAF8E60F25B4465F00E3FA43 /* DTITimeWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF8E60D25B4465F00E3FA43 /* DTITimeWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,9 @@
 		DAAD1D3525B43F0400F6902D /* DesktopTimeKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesktopTimeKitTests.m; sourceTree = "<group>"; };
 		DAAD1D3725B43F0400F6902D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAF8E5F625B4402000E3FA43 /* Configuration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration.xcconfig; sourceTree = SOURCE_ROOT; };
+		DAF8E60B25B4465F00E3FA43 /* DTITimeWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTITimeWindowController.h; sourceTree = "<group>"; };
+		DAF8E60C25B4465F00E3FA43 /* DTITimeWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTITimeWindowController.m; sourceTree = "<group>"; };
+		DAF8E60D25B4465F00E3FA43 /* DTITimeWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTITimeWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +131,9 @@
 			children = (
 				DAAD1D0F25B43ECE00F6902D /* DTIAppDelegate.h */,
 				DAAD1D1025B43ECE00F6902D /* DTIAppDelegate.m */,
-				DAAD1D1425B43ECF00F6902D /* MainMenu.xib */,
+				DAF8E60B25B4465F00E3FA43 /* DTITimeWindowController.h */,
+				DAF8E60C25B4465F00E3FA43 /* DTITimeWindowController.m */,
+				DAF8E60D25B4465F00E3FA43 /* DTITimeWindowController.xib */,
 				DAF8E5F525B43FFA00E3FA43 /* Other… */,
 			);
 			path = DesktopTime;
@@ -154,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				DAAD1D1225B43ECF00F6902D /* Assets.xcassets */,
+				DAAD1D1425B43ECF00F6902D /* MainMenu.xib */,
 				DAAD1D1725B43ECF00F6902D /* Info.plist */,
 				DAAD1D1825B43ECF00F6902D /* main.m */,
 				DAAD1D1A25B43ECF00F6902D /* DesktopTime.entitlements */,
@@ -278,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF8E60F25B4465F00E3FA43 /* DTITimeWindowController.xib in Resources */,
 				DAAD1D1325B43ECF00F6902D /* Assets.xcassets in Resources */,
 				DAAD1D1625B43ECF00F6902D /* MainMenu.xib in Resources */,
 			);
@@ -305,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAAD1D1925B43ECF00F6902D /* main.m in Sources */,
+				DAF8E60E25B4465F00E3FA43 /* DTITimeWindowController.m in Sources */,
 				DAAD1D1125B43ECE00F6902D /* DTIAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

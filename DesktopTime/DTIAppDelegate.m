@@ -6,11 +6,23 @@
 //
 
 #import "DTIAppDelegate.h"
+#import "DTITimeWindowController.h"
 
 @interface DTIAppDelegate ()
+@property (nonatomic) NSHashTable<DTITimeWindowController *> *timeWindowControllers;
 @end
 
 @implementation DTIAppDelegate
+
+- (void)applicationDidFinishLaunching:(NSNotification *)notification
+{
+    self.timeWindowControllers = [NSHashTable weakObjectsHashTable];
+    
+    id ctl = [DTITimeWindowController new];
+    [self.timeWindowControllers addObject:ctl];
+    
+    [ctl showWindow:self];
+}
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
 {
