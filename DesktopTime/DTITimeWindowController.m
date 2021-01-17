@@ -49,7 +49,7 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
 - (void)configureWindow
 {
     Auto window = self.window;
-    window.level = CGWindowLevelForKey(kCGFloatingWindowLevelKey);
+    window.level = CGWindowLevelForKey(kCGDesktopWindowLevel);
     window.ignoresMouseEvents = YES;
     window.backgroundColor = NSColor.clearColor;
 }
