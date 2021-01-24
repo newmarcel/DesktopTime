@@ -14,3 +14,4 @@ FOUNDATION_EXPORT double DesktopTimeKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char DesktopTimeKitVersionString[];
 
 #import <DesktopTimeKit/KYABatteryStatus.h>
+#import <DesktopTimeKit/DTIAppGroup.h>

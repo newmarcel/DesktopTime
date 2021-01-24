@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA826ADF25BDACEE009ED73A /* DTIAppGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */; };
+		DA826AE025BDACEE009ED73A /* DTIAppGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAAD1D1125B43ECE00F6902D /* DTIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAD1D1025B43ECE00F6902D /* DTIAppDelegate.m */; };
 		DAAD1D1325B43ECF00F6902D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAD1D1225B43ECF00F6902D /* Assets.xcassets */; };
 		DAAD1D1625B43ECF00F6902D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAAD1D1425B43ECF00F6902D /* MainMenu.xib */; };
@@ -61,6 +63,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTIAppGroup.m; sourceTree = "<group>"; };
+		DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIAppGroup.h; sourceTree = "<group>"; };
 		DAAD1D0C25B43ECE00F6902D /* DesktopTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAD1D0F25B43ECE00F6902D /* DTIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIAppDelegate.h; sourceTree = "<group>"; };
 		DAAD1D1025B43ECE00F6902D /* DTIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTIAppDelegate.m; sourceTree = "<group>"; };
@@ -113,6 +117,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA826ADC25BDACEE009ED73A /* DTIAppGroup */ = {
+			isa = PBXGroup;
+			children = (
+				DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */,
+				DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */,
+			);
+			path = DTIAppGroup;
+			sourceTree = "<group>";
+		};
 		DAAD1D0325B43ECE00F6902D = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +164,7 @@
 			children = (
 				DAAD1D2825B43F0400F6902D /* DesktopTimeKit.h */,
 				DAF8E61B25B451E700E3FA43 /* KYABatteryStatus */,
+				DA826ADC25BDACEE009ED73A /* DTIAppGroup */,
 				DAAD1D2925B43F0400F6902D /* Info.plist */,
 			);
 			path = DesktopTimeKit;
@@ -196,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAF8E61F25B451E700E3FA43 /* KYABatteryStatus.h in Headers */,
+				DA826AE025BDACEE009ED73A /* DTIAppGroup.h in Headers */,
 				DAAD1D3825B43F0400F6902D /* DesktopTimeKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA826ADF25BDACEE009ED73A /* DTIAppGroup.m in Sources */,
 				DAF8E61E25B451E700E3FA43 /* KYABatteryStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
