@@ -37,7 +37,8 @@
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag
 {
-    [sender terminate:self];
+//    [sender terminate:self];
+    [NSWorkspace.sharedWorkspace dti_openPreferencesWithCompletionHandler:nil];
     return NO;
 }
 

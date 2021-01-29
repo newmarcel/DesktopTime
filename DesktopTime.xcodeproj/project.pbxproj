@@ -18,6 +18,22 @@
 		DAAD1D3825B43F0400F6902D /* DesktopTimeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DAAD1D2825B43F0400F6902D /* DesktopTimeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAAD1D3B25B43F0400F6902D /* DesktopTimeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; };
 		DAAD1D3C25B43F0400F6902D /* DesktopTimeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DAC70DAB25C49BE9009787A1 /* DTIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC70DAA25C49BE9009787A1 /* DTIAppDelegate.m */; };
+		DAC70DB025C49BEA009787A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC70DAF25C49BEA009787A1 /* Assets.xcassets */; };
+		DAC70DB325C49BEA009787A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC70DB125C49BEA009787A1 /* Main.storyboard */; };
+		DAC70DB625C49BEA009787A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC70DB525C49BEA009787A1 /* main.m */; };
+		DAC70DC525C49C8D009787A1 /* DesktopTimeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; };
+		DAC70DD125C49D4B009787A1 /* DesktopTime Preferences.app in Embed Preferences */ = {isa = PBXBuildFile; fileRef = DAC70DA725C49BE9009787A1 /* DesktopTime Preferences.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DAC70DE725C49E4D009787A1 /* DTIPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC70DE625C49E4D009787A1 /* DTIPreferencesWindowController.m */; };
+		DAC70DF125C550D0009787A1 /* DTINotificationCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC70DEF25C550D0009787A1 /* DTINotificationCenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAC70DF225C550D0009787A1 /* DTINotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC70DF025C550D0009787A1 /* DTINotificationCenter.m */; };
+		DAC70E0E25C55175009787A1 /* DTIDefaultsProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC70E0625C55175009787A1 /* DTIDefaultsProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAC70E0F25C55175009787A1 /* NSURL+DTIPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC70E0825C55175009787A1 /* NSURL+DTIPreferences.m */; };
+		DAC70E1025C55175009787A1 /* NSWorkspace+DTIPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC70E0925C55175009787A1 /* NSWorkspace+DTIPreferences.m */; };
+		DAC70E1125C55175009787A1 /* NSWorkspace+DTIPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC70E0A25C55175009787A1 /* NSWorkspace+DTIPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAC70E1225C55175009787A1 /* NSURL+DTIPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC70E0B25C55175009787A1 /* NSURL+DTIPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAC70E1325C55175009787A1 /* DTIPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC70E0C25C55175009787A1 /* DTIPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAC70E1425C55175009787A1 /* DTIPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC70E0D25C55175009787A1 /* DTIPreferences.m */; };
 		DAF8E60E25B4465F00E3FA43 /* DTITimeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF8E60C25B4465F00E3FA43 /* DTITimeWindowController.m */; };
 		DAF8E60F25B4465F00E3FA43 /* DTITimeWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF8E60D25B4465F00E3FA43 /* DTITimeWindowController.xib */; };
 		DAF8E61E25B451E700E3FA43 /* KYABatteryStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF8E61C25B451E700E3FA43 /* KYABatteryStatus.m */; };
@@ -46,6 +62,13 @@
 			remoteGlobalIDString = DAAD1D2525B43F0400F6902D;
 			remoteInfo = DesktopTimeKit;
 		};
+		DAC70DC725C49C8D009787A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAAD1D0425B43ECE00F6902D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAAD1D2525B43F0400F6902D;
+			remoteInfo = DesktopTimeKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +81,17 @@
 				DAAD1D3C25B43F0400F6902D /* DesktopTimeKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC70DD025C49D39009787A1 /* Embed Preferences */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				DAC70DD125C49D4B009787A1 /* DesktopTime Preferences.app in Embed Preferences */,
+			);
+			name = "Embed Preferences";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -79,6 +113,25 @@
 		DAAD1D2E25B43F0400F6902D /* DesktopTimeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesktopTimeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAD1D3525B43F0400F6902D /* DesktopTimeKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesktopTimeKitTests.m; sourceTree = "<group>"; };
 		DAAD1D3725B43F0400F6902D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAC70DA725C49BE9009787A1 /* DesktopTime Preferences.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DesktopTime Preferences.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC70DA925C49BE9009787A1 /* DTIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIAppDelegate.h; sourceTree = "<group>"; };
+		DAC70DAA25C49BE9009787A1 /* DTIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTIAppDelegate.m; sourceTree = "<group>"; };
+		DAC70DAF25C49BEA009787A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAC70DB225C49BEA009787A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAC70DB425C49BEA009787A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAC70DB525C49BEA009787A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAC70DB725C49BEA009787A1 /* DTIPreferences.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DTIPreferences.entitlements; sourceTree = "<group>"; };
+		DAC70DE525C49E4D009787A1 /* DTIPreferencesWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIPreferencesWindowController.h; sourceTree = "<group>"; };
+		DAC70DE625C49E4D009787A1 /* DTIPreferencesWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTIPreferencesWindowController.m; sourceTree = "<group>"; };
+		DAC70DEF25C550D0009787A1 /* DTINotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTINotificationCenter.h; sourceTree = "<group>"; };
+		DAC70DF025C550D0009787A1 /* DTINotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTINotificationCenter.m; sourceTree = "<group>"; };
+		DAC70E0625C55175009787A1 /* DTIDefaultsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIDefaultsProvider.h; sourceTree = "<group>"; };
+		DAC70E0825C55175009787A1 /* NSURL+DTIPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+DTIPreferences.m"; sourceTree = "<group>"; };
+		DAC70E0925C55175009787A1 /* NSWorkspace+DTIPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWorkspace+DTIPreferences.m"; sourceTree = "<group>"; };
+		DAC70E0A25C55175009787A1 /* NSWorkspace+DTIPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWorkspace+DTIPreferences.h"; sourceTree = "<group>"; };
+		DAC70E0B25C55175009787A1 /* NSURL+DTIPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+DTIPreferences.h"; sourceTree = "<group>"; };
+		DAC70E0C25C55175009787A1 /* DTIPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIPreferences.h; sourceTree = "<group>"; };
+		DAC70E0D25C55175009787A1 /* DTIPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTIPreferences.m; sourceTree = "<group>"; };
 		DAF8E5F625B4402000E3FA43 /* Configuration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration.xcconfig; sourceTree = SOURCE_ROOT; };
 		DAF8E60B25B4465F00E3FA43 /* DTITimeWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTITimeWindowController.h; sourceTree = "<group>"; };
 		DAF8E60C25B4465F00E3FA43 /* DTITimeWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTITimeWindowController.m; sourceTree = "<group>"; };
@@ -114,6 +167,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DAC70DA425C49BE9009787A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAC70DC525C49C8D009787A1 /* DesktopTimeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -130,9 +191,11 @@
 			isa = PBXGroup;
 			children = (
 				DAAD1D0E25B43ECE00F6902D /* DesktopTime */,
+				DAC70DA825C49BE9009787A1 /* DTIPreferences */,
 				DAAD1D2725B43F0400F6902D /* DesktopTimeKit */,
 				DAAD1D3425B43F0400F6902D /* DesktopTimeKitTests */,
 				DAAD1D0D25B43ECE00F6902D /* Products */,
+				DAC70DC425C49C8D009787A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +205,7 @@
 				DAAD1D0C25B43ECE00F6902D /* DesktopTime.app */,
 				DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */,
 				DAAD1D2E25B43F0400F6902D /* DesktopTimeKitTests.xctest */,
+				DAC70DA725C49BE9009787A1 /* DesktopTime Preferences.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +229,8 @@
 				DAAD1D2825B43F0400F6902D /* DesktopTimeKit.h */,
 				DAF8E61B25B451E700E3FA43 /* KYABatteryStatus */,
 				DA826ADC25BDACEE009ED73A /* DTIAppGroup */,
+				DAC70E0525C55175009787A1 /* DTIPreferences */,
+				DAC70DEE25C550D0009787A1 /* DTINotificationCenter */,
 				DAAD1D2925B43F0400F6902D /* Info.plist */,
 			);
 			path = DesktopTimeKit;
@@ -177,6 +243,68 @@
 				DAAD1D3725B43F0400F6902D /* Info.plist */,
 			);
 			path = DesktopTimeKitTests;
+			sourceTree = "<group>";
+		};
+		DAC70DA825C49BE9009787A1 /* DTIPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				DAC70DA925C49BE9009787A1 /* DTIAppDelegate.h */,
+				DAC70DAA25C49BE9009787A1 /* DTIAppDelegate.m */,
+				DAC70DB125C49BEA009787A1 /* Main.storyboard */,
+				DAC70DE525C49E4D009787A1 /* DTIPreferencesWindowController.h */,
+				DAC70DE625C49E4D009787A1 /* DTIPreferencesWindowController.m */,
+				DAC70DAF25C49BEA009787A1 /* Assets.xcassets */,
+				DAC70DDE25C49D9C009787A1 /* Other… */,
+			);
+			path = DTIPreferences;
+			sourceTree = "<group>";
+		};
+		DAC70DC425C49C8D009787A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAC70DDE25C49D9C009787A1 /* Other… */ = {
+			isa = PBXGroup;
+			children = (
+				DAC70DB425C49BEA009787A1 /* Info.plist */,
+				DAC70DB525C49BEA009787A1 /* main.m */,
+				DAC70DB725C49BEA009787A1 /* DTIPreferences.entitlements */,
+			);
+			name = "Other…";
+			sourceTree = "<group>";
+		};
+		DAC70DEE25C550D0009787A1 /* DTINotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				DAC70DEF25C550D0009787A1 /* DTINotificationCenter.h */,
+				DAC70DF025C550D0009787A1 /* DTINotificationCenter.m */,
+			);
+			path = DTINotificationCenter;
+			sourceTree = "<group>";
+		};
+		DAC70E0525C55175009787A1 /* DTIPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				DAC70E0625C55175009787A1 /* DTIDefaultsProvider.h */,
+				DAC70E0C25C55175009787A1 /* DTIPreferences.h */,
+				DAC70E0D25C55175009787A1 /* DTIPreferences.m */,
+				DAC70E0725C55175009787A1 /* Extensions */,
+			);
+			path = DTIPreferences;
+			sourceTree = "<group>";
+		};
+		DAC70E0725C55175009787A1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DAC70E0B25C55175009787A1 /* NSURL+DTIPreferences.h */,
+				DAC70E0825C55175009787A1 /* NSURL+DTIPreferences.m */,
+				DAC70E0A25C55175009787A1 /* NSWorkspace+DTIPreferences.h */,
+				DAC70E0925C55175009787A1 /* NSWorkspace+DTIPreferences.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DAF8E5F525B43FFA00E3FA43 /* Other… */ = {
@@ -209,9 +337,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC70E1325C55175009787A1 /* DTIPreferences.h in Headers */,
 				DAF8E61F25B451E700E3FA43 /* KYABatteryStatus.h in Headers */,
+				DAC70DF125C550D0009787A1 /* DTINotificationCenter.h in Headers */,
 				DA826AE025BDACEE009ED73A /* DTIAppGroup.h in Headers */,
+				DAC70E1225C55175009787A1 /* NSURL+DTIPreferences.h in Headers */,
+				DAC70E0E25C55175009787A1 /* DTIDefaultsProvider.h in Headers */,
 				DAAD1D3825B43F0400F6902D /* DesktopTimeKit.h in Headers */,
+				DAC70E1125C55175009787A1 /* NSWorkspace+DTIPreferences.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +359,7 @@
 				DAAD1D0925B43ECE00F6902D /* Frameworks */,
 				DAAD1D0A25B43ECE00F6902D /* Resources */,
 				DAAD1D4025B43F0400F6902D /* Embed Frameworks */,
+				DAC70DD025C49D39009787A1 /* Embed Preferences */,
 			);
 			buildRules = (
 			);
@@ -274,6 +408,24 @@
 			productReference = DAAD1D2E25B43F0400F6902D /* DesktopTimeKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		DAC70DA625C49BE9009787A1 /* DesktopTime Preferences */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAC70DBA25C49BEA009787A1 /* Build configuration list for PBXNativeTarget "DesktopTime Preferences" */;
+			buildPhases = (
+				DAC70DA325C49BE9009787A1 /* Sources */,
+				DAC70DA425C49BE9009787A1 /* Frameworks */,
+				DAC70DA525C49BE9009787A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAC70DC825C49C8D009787A1 /* PBXTargetDependency */,
+			);
+			name = "DesktopTime Preferences";
+			productName = DTIPreferences;
+			productReference = DAC70DA725C49BE9009787A1 /* DesktopTime Preferences.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -293,6 +445,9 @@
 						CreatedOnToolsVersion = 12.3;
 						TestTargetID = DAAD1D0B25B43ECE00F6902D;
 					};
+					DAC70DA625C49BE9009787A1 = {
+						CreatedOnToolsVersion = 12.4;
+					};
 				};
 			};
 			buildConfigurationList = DAAD1D0725B43ECE00F6902D /* Build configuration list for PBXProject "DesktopTime" */;
@@ -311,6 +466,7 @@
 			projectRoot = "";
 			targets = (
 				DAAD1D0B25B43ECE00F6902D /* DesktopTime */,
+				DAC70DA625C49BE9009787A1 /* DesktopTime Preferences */,
 				DAAD1D2525B43F0400F6902D /* DesktopTimeKit */,
 				DAAD1D2D25B43F0400F6902D /* DesktopTimeKitTests */,
 			);
@@ -342,6 +498,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DAC70DA525C49BE9009787A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAC70DB025C49BEA009787A1 /* Assets.xcassets in Resources */,
+				DAC70DB325C49BEA009787A1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -359,8 +524,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC70E0F25C55175009787A1 /* NSURL+DTIPreferences.m in Sources */,
 				DA826ADF25BDACEE009ED73A /* DTIAppGroup.m in Sources */,
+				DAC70DF225C550D0009787A1 /* DTINotificationCenter.m in Sources */,
 				DAF8E61E25B451E700E3FA43 /* KYABatteryStatus.m in Sources */,
+				DAC70E1025C55175009787A1 /* NSWorkspace+DTIPreferences.m in Sources */,
+				DAC70E1425C55175009787A1 /* DTIPreferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +538,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAAD1D3625B43F0400F6902D /* DesktopTimeKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC70DA325C49BE9009787A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAC70DE725C49E4D009787A1 /* DTIPreferencesWindowController.m in Sources */,
+				DAC70DB625C49BEA009787A1 /* main.m in Sources */,
+				DAC70DAB25C49BE9009787A1 /* DTIAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +569,11 @@
 			target = DAAD1D2525B43F0400F6902D /* DesktopTimeKit */;
 			targetProxy = DAAD1D3925B43F0400F6902D /* PBXContainerItemProxy */;
 		};
+		DAC70DC825C49C8D009787A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAAD1D2525B43F0400F6902D /* DesktopTimeKit */;
+			targetProxy = DAC70DC725C49C8D009787A1 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -401,6 +585,14 @@
 				DAF8E63925B45D9B00E3FA43 /* fr */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		DAC70DB125C49BEA009787A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAC70DB225C49BEA009787A1 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -647,6 +839,48 @@
 			};
 			name = Release;
 		};
+		DAC70DB825C49BEA009787A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DTIPreferences/DTIPreferences.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5KESHV9W85;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = DTIPreferences/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.marcel-dierkes.DesktopTime.Preferences";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DAC70DB925C49BEA009787A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DTIPreferences/DTIPreferences.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5KESHV9W85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = DTIPreferences/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.marcel-dierkes.DesktopTime.Preferences";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -682,6 +916,15 @@
 			buildConfigurations = (
 				DAAD1D4225B43F0400F6902D /* Debug */,
 				DAAD1D4325B43F0400F6902D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAC70DBA25C49BEA009787A1 /* Build configuration list for PBXNativeTarget "DesktopTime Preferences" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC70DB825C49BEA009787A1 /* Debug */,
+				DAC70DB925C49BEA009787A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

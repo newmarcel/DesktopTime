@@ -1,12 +1,11 @@
 //
 //  DTIAppDelegate.h
-//  DesktopTime
+//  DTIPreferences
 //
-//  Created by Marcel Dierkes on 17.01.21.
+//  Created by Marcel Dierkes on 29.01.21.
 //
 
 #import <Cocoa/Cocoa.h>
-#import <DesktopTimeKit/DesktopTimeKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
