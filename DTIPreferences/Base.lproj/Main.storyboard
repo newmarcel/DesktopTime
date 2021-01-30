@@ -849,7 +849,6 @@
                 <viewController storyboardIdentifier="DTILayoutPreferencesViewController" id="BQG-bk-7MS" customClass="DTILayoutPreferencesViewController" sceneMemberID="viewController">
                     <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="xFo-35-U3Q">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
-                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="L1s-ne-2Cg">
                                 <rect key="frame" x="18" y="232" width="45" height="16"/>
@@ -859,11 +858,63 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xog-k1-ZQ1">
+                                <rect key="frame" x="-1" y="-1" width="482" height="225"/>
+                                <clipView key="contentView" drawsBackground="NO" id="SdH-5B-f3L">
+                                    <rect key="frame" x="1" y="1" width="480" height="223"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="bar" smartInsertDelete="YES" id="pa6-dj-peg">
+                                            <rect key="frame" x="0.0" y="0.0" width="480" height="223"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="480" height="223"/>
+                                            <size key="maxSize" width="480" height="10000000"/>
+                                            <attributedString key="textStorage">
+                                                <fragment>
+                                                    <string key="content">TODO:
+- Show on: only main | only secondary | all
+- date: top | bottom, left | right, center, off
+</string>
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content">- battery: top | bottom, left | right, center, off
+- offset the Dock on | off</string>
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="9ks-ag-X54">
+                                    <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="z8m-Vm-yy6">
+                                    <rect key="frame" x="465" y="1" width="16" height="223"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="L1s-ne-2Cg" firstAttribute="leading" secondItem="uZt-9t-po6" secondAttribute="leading" id="3gK-HN-jEr"/>
+                            <constraint firstAttribute="trailing" secondItem="Xog-k1-ZQ1" secondAttribute="trailing" constant="-1" id="Bas-m5-mjP"/>
+                            <constraint firstItem="Xog-k1-ZQ1" firstAttribute="leading" secondItem="xFo-35-U3Q" secondAttribute="leading" constant="-1" id="F7g-FX-Rw2"/>
+                            <constraint firstAttribute="bottom" secondItem="Xog-k1-ZQ1" secondAttribute="bottom" constant="-1" id="YB2-Ra-anl"/>
                             <constraint firstItem="L1s-ne-2Cg" firstAttribute="top" secondItem="uZt-9t-po6" secondAttribute="top" id="os6-Rr-rGG"/>
                             <constraint firstItem="uZt-9t-po6" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="L1s-ne-2Cg" secondAttribute="trailing" id="xBU-39-DeP"/>
+                            <constraint firstItem="Xog-k1-ZQ1" firstAttribute="top" secondItem="L1s-ne-2Cg" secondAttribute="bottom" constant="8" symbolic="YES" id="zLP-9N-ADj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Z3t-Lo-DgF"/>
                         <viewLayoutGuide key="layoutMargins" id="uZt-9t-po6"/>
