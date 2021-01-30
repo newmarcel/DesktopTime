@@ -6,7 +6,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <DesktopTimeKit/DesktopTimeKit.h>
 
 #import "DTIPreferencesChildViewController.h"
 

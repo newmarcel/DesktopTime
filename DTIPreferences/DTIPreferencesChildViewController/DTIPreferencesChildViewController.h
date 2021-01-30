@@ -6,6 +6,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <DesktopTimeKit/DesktopTimeKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
