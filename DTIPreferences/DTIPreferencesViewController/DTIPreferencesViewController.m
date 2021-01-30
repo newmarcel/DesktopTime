@@ -31,6 +31,12 @@ static const NSUserInterfaceItemIdentifier DTIDataCellIdentifier = @"DataCell";
     [self.outlineView reloadData];
     
     [self expandAllGroups];
+}
+
+- (void)viewWillAppear
+{
+    [super viewWillAppear];
+    
     [self selectFirstItem];
 }
 
