@@ -13,9 +13,9 @@
 
 @implementation DTIDateTimePreferencesViewController
 
-+ (NSUserInterfaceItemIdentifier)identifier
+- (NSString *)preferredTitle
 {
-    return NSStringFromClass(self);
+    return NSLocalizedString(@"Date & Time", @"Date & Time");
 }
 
 - (void)viewDidLoad

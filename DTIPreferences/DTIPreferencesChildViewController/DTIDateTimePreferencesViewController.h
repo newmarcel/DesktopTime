@@ -6,12 +6,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <DesktopTimeKit/DesktopTimeKit.h>
+#import "DTIPreferencesChildViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DTIDateTimePreferencesViewController : NSViewController
-@property (class, nonatomic, readonly) NSUserInterfaceItemIdentifier identifier;
+@interface DTIDateTimePreferencesViewController : DTIPreferencesChildViewController
 @end
 
 NS_ASSUME_NONNULL_END

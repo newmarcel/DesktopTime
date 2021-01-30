@@ -13,9 +13,9 @@
 
 @implementation DTILayoutPreferencesViewController
 
-+ (NSUserInterfaceItemIdentifier)identifier
+- (NSString *)preferredTitle
 {
-    return NSStringFromClass(self);
+    return NSLocalizedString(@"Layout", @"Layout");
 }
 
 - (void)viewDidLoad

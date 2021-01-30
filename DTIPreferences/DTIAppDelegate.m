@@ -1,6 +1,6 @@
 //
 //  DTIAppDelegate.m
-//  DTIPreferences
+//  DesktopTime Preferences
 //
 //  Created by Marcel Dierkes on 29.01.21.
 //

@@ -13,9 +13,9 @@
 
 @implementation DTIBatteryPreferencesViewController
 
-+ (NSUserInterfaceItemIdentifier)identifier
+- (NSString *)preferredTitle
 {
-    return NSStringFromClass(self);
+    return NSLocalizedString(@"Battery", @"Battery");
 }
 
 - (void)viewDidLoad

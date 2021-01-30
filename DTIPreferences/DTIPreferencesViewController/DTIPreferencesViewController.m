@@ -8,9 +8,7 @@
 #import "DTIPreferencesViewController.h"
 #import "DTIDefines.h"
 #import "DTIPreferenceItemViewModel.h"
-#import "DTILayoutPreferencesViewController.h"
-#import "DTIDateTimePreferencesViewController.h"
-#import "DTIBatteryPreferencesViewController.h"
+#import "DTIPreferencesChildViewControllers.h"
 
 static const NSUserInterfaceItemIdentifier DTIHeaderCellIdentifier = @"HeaderCell";
 static const NSUserInterfaceItemIdentifier DTIDataCellIdentifier = @"DataCell";
