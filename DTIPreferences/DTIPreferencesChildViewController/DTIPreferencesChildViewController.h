@@ -10,8 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class DTIPreferenceItem;
+
 @interface DTIPreferencesChildViewController : NSViewController
 @property (class, nonatomic, readonly) NSUserInterfaceItemIdentifier identifier;
+@property (class, nonatomic, readonly) DTIPreferenceItem *preferenceItem;
 @property (nonatomic, readonly) NSString *preferredTitle;
 @end
 

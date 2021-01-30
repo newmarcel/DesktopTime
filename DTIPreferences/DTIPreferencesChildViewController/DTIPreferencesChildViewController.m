@@ -7,6 +7,7 @@
 
 #import "DTIPreferencesChildViewController.h"
 #import "DTIDefines.h"
+#import "DTIPreferenceItem.h"
 
 @interface DTIPreferencesChildViewController ()
 @end
@@ -16,6 +17,13 @@
 + (NSUserInterfaceItemIdentifier)identifier
 {
     return NSStringFromClass(self);
+}
+
++ (DTIPreferenceItem *)preferenceItem
+{
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"+preferenceItem needs to be implemented by the subclass."
+                                 userInfo:nil];
 }
 
 - (void)viewDidAppear

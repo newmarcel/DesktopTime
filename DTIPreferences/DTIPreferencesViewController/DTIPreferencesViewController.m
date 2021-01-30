@@ -10,6 +10,8 @@
 #import "DTIPreferenceItem.h"
 #import "DTIPreferencesChildViewControllers.h"
 
+#define DTI_L10N_PREFERENCES NSLocalizedString(@"Preferences", @"Preferences")
+
 static const NSUserInterfaceItemIdentifier DTIHeaderCellIdentifier = @"HeaderCell";
 static const NSUserInterfaceItemIdentifier DTIDataCellIdentifier = @"DataCell";
 
@@ -39,27 +41,17 @@ static const NSUserInterfaceItemIdentifier DTIDataCellIdentifier = @"DataCell";
 
 - (void)configurePreferenceItems
 {
-    Auto layoutItem = [[DTIPreferenceItem alloc] initWithUUID:[NSUUID UUID]
-                                                         name:NSLocalizedString(@"Layout", @"Layout")];
-    layoutItem.image = [NSImage imageWithSystemSymbolName:@"dock.rectangle"
-                                 accessibilityDescription:nil];
-    layoutItem.representedObject = DTILayoutPreferencesViewController.identifier;
-    Auto dateItem = [[DTIPreferenceItem alloc] initWithUUID:[NSUUID UUID]
-                                                       name:NSLocalizedString(@"Date & Time", @"Date & Time")];
-    dateItem.image = [NSImage imageWithSystemSymbolName:@"calendar.badge.clock"
-                               accessibilityDescription:nil];
-    dateItem.representedObject = DTIDateTimePreferencesViewController.identifier;
-    Auto batteryItem = [[DTIPreferenceItem alloc] initWithUUID:[NSUUID UUID]
-                                                          name:NSLocalizedString(@"Battery", @"Battery")];
-    batteryItem.image = [NSImage imageWithSystemSymbolName:@"battery.100.bolt"
-                                  accessibilityDescription:nil];
-    batteryItem.representedObject = DTIBatteryPreferencesViewController.identifier;
+    Auto items = @[
+        DTILayoutPreferencesViewController.preferenceItem,
+        DTIDateTimePreferencesViewController.preferenceItem,
+        DTIBatteryPreferencesViewController.preferenceItem
+    ];
     
     self.preferenceItems = @[
         [[DTIPreferenceItem alloc] initWithUUID:[NSUUID UUID]
-                                     headerName:NSLocalizedString(@"Preferences", @"Preferences")
+                                     headerName:DTI_L10N_PREFERENCES
                                           image:nil
-                                       children:@[layoutItem, dateItem, batteryItem]]
+                                       children:items]
     ];
 }
 
