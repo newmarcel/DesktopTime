@@ -101,7 +101,7 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     Auto df = [NSDateFormatter new];
     df.dateStyle = NSDateFormatterLongStyle;
     df.timeStyle = NSDateFormatterShortStyle;
-    df.dateFormat = [NSDateFormatter dateFormatFromTemplate:@"eddMMHHmm"
+    df.dateFormat = [NSDateFormatter dateFormatFromTemplate:@"eddMMMHHmm"
                                                     options:0
                                                      locale:locale];
     df.formattingContext = NSFormattingContextStandalone;
