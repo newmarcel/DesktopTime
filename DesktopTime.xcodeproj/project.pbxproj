@@ -264,6 +264,33 @@
 			path = DesktopTimeKitTests;
 			sourceTree = "<group>";
 		};
+		DAB350FE25C5F619000D76B9 /* DTIBatteryPreferencesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DABD508D25C5B14500A28FB8 /* DTIBatteryPreferencesViewController.h */,
+				DABD508E25C5B14500A28FB8 /* DTIBatteryPreferencesViewController.m */,
+			);
+			path = DTIBatteryPreferencesViewController;
+			sourceTree = "<group>";
+		};
+		DAB3510225C5F620000D76B9 /* DTIDateTimePreferencesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DABD508725C5B13700A28FB8 /* DTIDateTimePreferencesViewController.h */,
+				DABD508825C5B13700A28FB8 /* DTIDateTimePreferencesViewController.m */,
+			);
+			path = DTIDateTimePreferencesViewController;
+			sourceTree = "<group>";
+		};
+		DAB3510625C5F626000D76B9 /* DTILayoutPreferencesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DABD508125C5AEB200A28FB8 /* DTILayoutPreferencesViewController.h */,
+				DABD508225C5AEB200A28FB8 /* DTILayoutPreferencesViewController.m */,
+			);
+			path = DTILayoutPreferencesViewController;
+			sourceTree = "<group>";
+		};
 		DABD509A25C5B36600A28FB8 /* DTIPreferencesViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,12 +310,9 @@
 				DABD50AC25C5B47A00A28FB8 /* DTIPreferencesChildViewControllers.h */,
 				DABD509F25C5B39800A28FB8 /* DTIPreferencesChildViewController.h */,
 				DABD50A025C5B39800A28FB8 /* DTIPreferencesChildViewController.m */,
-				DABD508125C5AEB200A28FB8 /* DTILayoutPreferencesViewController.h */,
-				DABD508225C5AEB200A28FB8 /* DTILayoutPreferencesViewController.m */,
-				DABD508725C5B13700A28FB8 /* DTIDateTimePreferencesViewController.h */,
-				DABD508825C5B13700A28FB8 /* DTIDateTimePreferencesViewController.m */,
-				DABD508D25C5B14500A28FB8 /* DTIBatteryPreferencesViewController.h */,
-				DABD508E25C5B14500A28FB8 /* DTIBatteryPreferencesViewController.m */,
+				DAB3510625C5F626000D76B9 /* DTILayoutPreferencesViewController */,
+				DAB3510225C5F620000D76B9 /* DTIDateTimePreferencesViewController */,
+				DAB350FE25C5F619000D76B9 /* DTIBatteryPreferencesViewController */,
 			);
 			path = DTIPreferencesChildViewController;
 			sourceTree = "<group>";
