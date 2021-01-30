@@ -155,7 +155,7 @@
                                         <rect key="frame" x="64" y="47" width="49" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Display" id="TvG-RZ-yXm">
                                             <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
