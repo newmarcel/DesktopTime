@@ -13,7 +13,6 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
 @interface DTITimeWindowController () <NSWindowDelegate>
 @property (nonatomic) NSTimer *timer;
 @property (nonatomic) NSDateFormatter *dateFormatter;
-@property (nonatomic) NSNumberFormatter *percentFormatter;
 @property (nonatomic) DTIBatteryStatus *batteryStatus;
 @property (weak, nonatomic, nullable) IBOutlet NSTextField *leadingLabel;
 @property (weak, nonatomic, nullable) IBOutlet NSTextField *trailingLabel;
@@ -37,7 +36,7 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     
     [self configureWindow];
     [self updateWindowPosition];
-    [self configureFormatters];
+    [self configureDateFormatter];
     [self configureTimer];
 }
 
@@ -85,15 +84,7 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
 - (void)tick:(NSTimer *)timer
 {
     // Leading
-    CGFloat capacity = self.batteryStatus.currentCapacity;
-    if(capacity == KYABatteryStatusUnavailable)
-    {
-        self.leadingLabel.stringValue = @"";
-    }
-    else
-    {
-        self.leadingLabel.stringValue = [self.percentFormatter stringFromNumber:@(capacity / 100.0f)];
-    }
+    self.leadingLabel.stringValue = self.batteryStatus.localizedCurrentCapacity;
     
     // Trailing
     Auto now = [NSDate date];
@@ -102,13 +93,7 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     [self updateWindowPosition];
 }
 
-#pragma mark - Formatters
-
-- (void)configureFormatters
-{
-    [self configureDateFormatter];
-    [self configureNumberFormatter];
-}
+#pragma mark - Date Formatter
 
 - (void)configureDateFormatter
 {
@@ -121,22 +106,6 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
                                                      locale:locale];
     df.formattingContext = NSFormattingContextStandalone;
     self.dateFormatter = df;
-}
-
-- (void)configureNumberFormatter
-{
-    Auto locale = NSLocale.currentLocale;
-    Auto nf = [NSNumberFormatter new];
-    nf.numberStyle = NSNumberFormatterPercentStyle;
-    nf.locale = locale;
-    nf.allowsFloats = NO;
-    nf.formattingContext = NSFormattingContextStandalone;
-    nf.lenient = YES;
-    
-    nf.minimum = @0.0f;
-    nf.maximum = @100.0f;
-    
-    self.percentFormatter = nf;
 }
 
 #pragma mark - NSWindowDelegate

@@ -21,8 +21,8 @@
     self.windowFrameAutosaveName = @"DTIPreferencesWindow";
     
     // Split auto save identifier
-    Auto splitViewController = (NSSplitViewController *)self.contentViewController;
-    splitViewController.splitView.autosaveName = @"DTIPreferencesSplit";
+//    Auto splitViewController = (NSSplitViewController *)self.contentViewController;
+//    splitViewController.splitView.autosaveName = @"DTIPreferencesSplit";
 }
 
 @end

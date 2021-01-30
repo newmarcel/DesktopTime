@@ -1,24 +1,34 @@
 //
-//  KYABatteryStatus.m
+//  DTIBatteryStatus.m
 //  KeepingYouAwake
 //
 //  Created by Marcel Dierkes on 21.12.15.
 //  Copyright © 2015 Marcel Dierkes. All rights reserved.
 //
 
-#import "KYABatteryStatus.h"
+#import "DTIBatteryStatus.h"
 #import "DTIDefines.h"
 #import <IOKit/ps/IOPowerSources.h>
 
-const CGFloat KYABatteryStatusUnavailable = -1.0;
+const CGFloat DTIBatteryStatusUnavailable = -1.0;
 
-static void KYABatteryStatusChangeHandler(void *context);
+static void DTIBatteryStatusChangeHandler(void *context);
 
-@interface KYABatteryStatus ()
+@interface DTIBatteryStatus ()
 @property (nonatomic, nullable) CFRunLoopSourceRef runLoopSource;
+@property (nonatomic) NSNumberFormatter *percentFormatter;
 @end
 
-@implementation KYABatteryStatus
+@implementation DTIBatteryStatus
+
+- (instancetype)init
+{
+    self = [super init];
+    if(self)
+    {
+    }
+    return self;
+}
 
 - (void)dealloc
 {
@@ -39,19 +49,48 @@ static void KYABatteryStatusChangeHandler(void *context);
     return [batteryType isEqualToString:internalBatteryTypeKey];
 }
 
+- (void)configurePercentFormatter
+{
+    Auto locale = NSLocale.currentLocale;
+    Auto nf = [NSNumberFormatter new];
+    nf.numberStyle = NSNumberFormatterPercentStyle;
+    nf.locale = locale;
+    nf.allowsFloats = NO;
+    nf.formattingContext = NSFormattingContextStandalone;
+    nf.lenient = YES;
+    
+    nf.minimum = @0.0f;
+    nf.maximum = @100.0f;
+    
+    self.percentFormatter = nf;
+}
+
+- (NSString *)localizedCurrentCapacity
+{
+    CGFloat capacity = self.currentCapacity;
+    if(capacity == DTIBatteryStatusUnavailable) { return @""; }
+    
+    if(self.percentFormatter == nil)
+    {
+        [self configurePercentFormatter];
+    }
+    
+    return [self.percentFormatter stringFromNumber:@(capacity / 100.0f)];
+}
+
 - (CGFloat)currentCapacity
 {
     Auto powerSourceInfos = [self powerSourceInfos];
     if(powerSourceInfos == nil)
     {
-        return KYABatteryStatusUnavailable;
+        return DTIBatteryStatusUnavailable;
     }
     
     Auto key = [NSString stringWithUTF8String:kIOPSCurrentCapacityKey];
     NSNumber *capacity = powerSourceInfos[key];
     if(capacity == nil)
     {
-        return KYABatteryStatusUnavailable;
+        return DTIBatteryStatusUnavailable;
     }
     
     return capacity.floatValue;
@@ -85,7 +124,7 @@ static void KYABatteryStatusChangeHandler(void *context);
         return;
     }
     
-    Auto runLoopSource = IOPSNotificationCreateRunLoopSource(KYABatteryStatusChangeHandler, (__bridge void *)self);
+    Auto runLoopSource = IOPSNotificationCreateRunLoopSource(DTIBatteryStatusChangeHandler, (__bridge void *)self);
     CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource, kCFRunLoopDefaultMode);
     
     self.runLoopSource = runLoopSource;
@@ -105,11 +144,11 @@ static void KYABatteryStatusChangeHandler(void *context);
 
 @end
 
-#pragma mark - KYABatteryStatusChangeHandler
+#pragma mark - DTIBatteryStatusChangeHandler
 
-static void KYABatteryStatusChangeHandler(void *context)
+static void DTIBatteryStatusChangeHandler(void *context)
 {
-    Auto batteryStatus = (__bridge KYABatteryStatus *)context;
+    Auto batteryStatus = (__bridge DTIBatteryStatus *)context;
     if(batteryStatus.capacityChangeHandler)
     {
         batteryStatus.capacityChangeHandler(batteryStatus.currentCapacity);

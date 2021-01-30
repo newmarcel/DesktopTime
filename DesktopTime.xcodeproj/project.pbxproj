@@ -36,8 +36,8 @@
 		DAC70E1425C55175009787A1 /* DTIPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC70E0D25C55175009787A1 /* DTIPreferences.m */; };
 		DAF8E60E25B4465F00E3FA43 /* DTITimeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF8E60C25B4465F00E3FA43 /* DTITimeWindowController.m */; };
 		DAF8E60F25B4465F00E3FA43 /* DTITimeWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF8E60D25B4465F00E3FA43 /* DTITimeWindowController.xib */; };
-		DAF8E61E25B451E700E3FA43 /* KYABatteryStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF8E61C25B451E700E3FA43 /* KYABatteryStatus.m */; };
-		DAF8E61F25B451E700E3FA43 /* KYABatteryStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF8E61D25B451E700E3FA43 /* KYABatteryStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAF8E61E25B451E700E3FA43 /* DTIBatteryStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF8E61C25B451E700E3FA43 /* DTIBatteryStatus.m */; };
+		DAF8E61F25B451E700E3FA43 /* DTIBatteryStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF8E61D25B451E700E3FA43 /* DTIBatteryStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,8 +137,8 @@
 		DAF8E60C25B4465F00E3FA43 /* DTITimeWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTITimeWindowController.m; sourceTree = "<group>"; };
 		DAF8E60D25B4465F00E3FA43 /* DTITimeWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTITimeWindowController.xib; sourceTree = "<group>"; };
 		DAF8E61825B44AFD00E3FA43 /* DTIDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIDefines.h; sourceTree = "<group>"; };
-		DAF8E61C25B451E700E3FA43 /* KYABatteryStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYABatteryStatus.m; sourceTree = "<group>"; };
-		DAF8E61D25B451E700E3FA43 /* KYABatteryStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYABatteryStatus.h; sourceTree = "<group>"; };
+		DAF8E61C25B451E700E3FA43 /* DTIBatteryStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTIBatteryStatus.m; sourceTree = "<group>"; };
+		DAF8E61D25B451E700E3FA43 /* DTIBatteryStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIBatteryStatus.h; sourceTree = "<group>"; };
 		DAF8E63725B45D9A00E3FA43 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		DAF8E63925B45D9B00E3FA43 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -324,8 +324,8 @@
 		DAF8E61B25B451E700E3FA43 /* KYABatteryStatus */ = {
 			isa = PBXGroup;
 			children = (
-				DAF8E61D25B451E700E3FA43 /* KYABatteryStatus.h */,
-				DAF8E61C25B451E700E3FA43 /* KYABatteryStatus.m */,
+				DAF8E61D25B451E700E3FA43 /* DTIBatteryStatus.h */,
+				DAF8E61C25B451E700E3FA43 /* DTIBatteryStatus.m */,
 			);
 			path = KYABatteryStatus;
 			sourceTree = "<group>";
@@ -338,7 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAC70E1325C55175009787A1 /* DTIPreferences.h in Headers */,
-				DAF8E61F25B451E700E3FA43 /* KYABatteryStatus.h in Headers */,
+				DAF8E61F25B451E700E3FA43 /* DTIBatteryStatus.h in Headers */,
 				DAC70DF125C550D0009787A1 /* DTINotificationCenter.h in Headers */,
 				DA826AE025BDACEE009ED73A /* DTIAppGroup.h in Headers */,
 				DAC70E1225C55175009787A1 /* NSURL+DTIPreferences.h in Headers */,
@@ -527,7 +527,7 @@
 				DAC70E0F25C55175009787A1 /* NSURL+DTIPreferences.m in Sources */,
 				DA826ADF25BDACEE009ED73A /* DTIAppGroup.m in Sources */,
 				DAC70DF225C550D0009787A1 /* DTINotificationCenter.m in Sources */,
-				DAF8E61E25B451E700E3FA43 /* KYABatteryStatus.m in Sources */,
+				DAF8E61E25B451E700E3FA43 /* DTIBatteryStatus.m in Sources */,
 				DAC70E1025C55175009787A1 /* NSWorkspace+DTIPreferences.m in Sources */,
 				DAC70E1425C55175009787A1 /* DTIPreferences.m in Sources */,
 			);
