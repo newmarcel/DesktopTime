@@ -18,6 +18,9 @@
 		DAAD1D3825B43F0400F6902D /* DesktopTimeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DAAD1D2825B43F0400F6902D /* DesktopTimeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAAD1D3B25B43F0400F6902D /* DesktopTimeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; };
 		DAAD1D3C25B43F0400F6902D /* DesktopTimeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DAB3510E25C5F9ED000D76B9 /* DTIBatteryPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB3510D25C5F9ED000D76B9 /* DTIBatteryPreferencesViewController.xib */; };
+		DAB3511325C5FB2A000D76B9 /* DTIDateTimePreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB3511225C5FB2A000D76B9 /* DTIDateTimePreferencesViewController.xib */; };
+		DAB3511825C5FC25000D76B9 /* DTILayoutPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB3511725C5FC25000D76B9 /* DTILayoutPreferencesViewController.xib */; };
 		DABD506525C5640E00A28FB8 /* DTIPreferenceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DABD506425C5640E00A28FB8 /* DTIPreferenceItem.m */; };
 		DABD506E25C5669B00A28FB8 /* DTIPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABD506D25C5669B00A28FB8 /* DTIPreferencesViewController.m */; };
 		DABD508325C5AEB200A28FB8 /* DTILayoutPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABD508225C5AEB200A28FB8 /* DTILayoutPreferencesViewController.m */; };
@@ -119,6 +122,9 @@
 		DAAD1D2E25B43F0400F6902D /* DesktopTimeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesktopTimeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAD1D3525B43F0400F6902D /* DesktopTimeKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesktopTimeKitTests.m; sourceTree = "<group>"; };
 		DAAD1D3725B43F0400F6902D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAB3510D25C5F9ED000D76B9 /* DTIBatteryPreferencesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTIBatteryPreferencesViewController.xib; sourceTree = "<group>"; };
+		DAB3511225C5FB2A000D76B9 /* DTIDateTimePreferencesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTIDateTimePreferencesViewController.xib; sourceTree = "<group>"; };
+		DAB3511725C5FC25000D76B9 /* DTILayoutPreferencesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTILayoutPreferencesViewController.xib; sourceTree = "<group>"; };
 		DABD506325C5640E00A28FB8 /* DTIPreferenceItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIPreferenceItem.h; sourceTree = "<group>"; };
 		DABD506425C5640E00A28FB8 /* DTIPreferenceItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTIPreferenceItem.m; sourceTree = "<group>"; };
 		DABD506C25C5669B00A28FB8 /* DTIPreferencesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIPreferencesViewController.h; sourceTree = "<group>"; };
@@ -269,6 +275,7 @@
 			children = (
 				DABD508D25C5B14500A28FB8 /* DTIBatteryPreferencesViewController.h */,
 				DABD508E25C5B14500A28FB8 /* DTIBatteryPreferencesViewController.m */,
+				DAB3510D25C5F9ED000D76B9 /* DTIBatteryPreferencesViewController.xib */,
 			);
 			path = DTIBatteryPreferencesViewController;
 			sourceTree = "<group>";
@@ -278,6 +285,7 @@
 			children = (
 				DABD508725C5B13700A28FB8 /* DTIDateTimePreferencesViewController.h */,
 				DABD508825C5B13700A28FB8 /* DTIDateTimePreferencesViewController.m */,
+				DAB3511225C5FB2A000D76B9 /* DTIDateTimePreferencesViewController.xib */,
 			);
 			path = DTIDateTimePreferencesViewController;
 			sourceTree = "<group>";
@@ -287,6 +295,7 @@
 			children = (
 				DABD508125C5AEB200A28FB8 /* DTILayoutPreferencesViewController.h */,
 				DABD508225C5AEB200A28FB8 /* DTILayoutPreferencesViewController.m */,
+				DAB3511725C5FC25000D76B9 /* DTILayoutPreferencesViewController.xib */,
 			);
 			path = DTILayoutPreferencesViewController;
 			sourceTree = "<group>";
@@ -574,8 +583,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB3511325C5FB2A000D76B9 /* DTIDateTimePreferencesViewController.xib in Resources */,
+				DAB3510E25C5F9ED000D76B9 /* DTIBatteryPreferencesViewController.xib in Resources */,
 				DAC70DB025C49BEA009787A1 /* Assets.xcassets in Resources */,
 				DAC70DB325C49BEA009787A1 /* Main.storyboard in Resources */,
+				DAB3511825C5FC25000D76B9 /* DTILayoutPreferencesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

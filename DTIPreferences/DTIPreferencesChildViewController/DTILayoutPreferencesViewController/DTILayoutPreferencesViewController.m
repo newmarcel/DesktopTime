@@ -22,7 +22,6 @@
                                                    name:DTI_L10N_LAYOUT];
     item.image = [NSImage imageWithSystemSymbolName:@"dock.rectangle"
                            accessibilityDescription:nil];
-    item.representedObject = self.identifier;
     item.viewControllerClass = [self class];
     return item;
 }

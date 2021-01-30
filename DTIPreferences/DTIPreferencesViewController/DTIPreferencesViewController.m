@@ -85,14 +85,11 @@ static const NSUserInterfaceItemIdentifier DTIDataCellIdentifier = @"DataCell";
     Auto split = self.splitViewController;
     Auto detailItem = split.splitViewItems.lastObject;
 
-    NSUserInterfaceItemIdentifier identifier = preferenceItem.representedObject;
-    if(identifier != nil)
+    Class viewControllerClass = preferenceItem.viewControllerClass;
+    if(viewControllerClass != nil && ![detailItem isKindOfClass:viewControllerClass])
     {
-        Auto controller = (NSViewController *)[self.storyboard instantiateControllerWithIdentifier:identifier];
-        if(![detailItem.viewController isKindOfClass:[controller class]])
-        {
-            [self setSplitDetailViewController:controller];
-        }
+        Auto controller = (__kindof DTIPreferencesChildViewController *)[viewControllerClass new];
+        [self setSplitDetailViewController:controller];
     }
 }
 

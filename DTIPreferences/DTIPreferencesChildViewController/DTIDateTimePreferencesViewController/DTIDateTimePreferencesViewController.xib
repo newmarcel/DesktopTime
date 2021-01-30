@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="NSView safe area layout guides" minToolsVersion="12.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="DTIDateTimePreferencesViewController">
+            <connections>
+                <outlet property="view" destination="c22-O7-iKe" id="Ydf-JZ-qEj"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="B1G-Ih-Omh">
+                    <rect key="frame" x="18" y="184" width="79" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Date &amp; Time" id="Vdl-M7-Gpk">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="ccB-dK-AmK" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="B1G-Ih-Omh" secondAttribute="trailing" id="AUT-8b-UQT"/>
+                <constraint firstItem="B1G-Ih-Omh" firstAttribute="leading" secondItem="ccB-dK-AmK" secondAttribute="leading" id="DgC-Zt-40v"/>
+                <constraint firstItem="B1G-Ih-Omh" firstAttribute="top" secondItem="ccB-dK-AmK" secondAttribute="top" id="dC8-8S-QZb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Gz6-PC-MDV"/>
+            <viewLayoutGuide key="layoutMargins" id="ccB-dK-AmK"/>
+            <point key="canvasLocation" x="-122" y="144"/>
+        </customView>
+    </objects>
+</document>
