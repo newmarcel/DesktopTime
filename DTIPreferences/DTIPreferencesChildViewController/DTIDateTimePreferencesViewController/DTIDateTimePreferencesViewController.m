@@ -23,6 +23,7 @@
     item.image = [NSImage imageWithSystemSymbolName:@"calendar.badge.clock"
                            accessibilityDescription:nil];
     item.representedObject = self.identifier;
+    item.viewControllerClass = [self class];
     return item;
 }
 

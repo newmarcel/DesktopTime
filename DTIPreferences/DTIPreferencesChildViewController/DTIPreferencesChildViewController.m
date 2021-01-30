@@ -26,6 +26,16 @@
                                  userInfo:nil];
 }
 
+- (instancetype)init
+{
+    Auto nibName = NSStringFromClass([self class]);
+    self = [super initWithNibName:nibName bundle:nil];
+    if(self)
+    {
+    }
+    return self;
+}
+
 - (void)viewDidAppear
 {
     [super viewDidAppear];

@@ -23,6 +23,7 @@
     item.image = [NSImage imageWithSystemSymbolName:@"battery.100.bolt"
                            accessibilityDescription:nil];
     item.representedObject = self.identifier;
+    item.viewControllerClass = [self class];
     return item;
 }
 
