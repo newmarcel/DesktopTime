@@ -1,5 +1,5 @@
 //
-//  DTIAppDelegate.h
+//  DTIAppController.h
 //  DesktopTime
 //
 //  Created by Marcel Dierkes on 17.01.21.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DTIAppDelegate : NSObject <NSApplicationDelegate>
+@interface DTIAppController : NSObject <NSApplicationDelegate>
 @end
 
 NS_ASSUME_NONNULL_END

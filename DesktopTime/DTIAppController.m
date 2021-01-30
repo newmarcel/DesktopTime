@@ -1,19 +1,21 @@
 //
-//  DTIAppDelegate.m
+//  DTIAppController.m
 //  DesktopTime
 //
 //  Created by Marcel Dierkes on 17.01.21.
 //
 
-#import "DTIAppDelegate.h"
+#import "DTIAppController.h"
 #import "DTITimeWindowController.h"
 #import "DTIDefines.h"
 
-@interface DTIAppDelegate ()
+@interface DTIAppController ()
 @property (nonatomic) NSHashTable<DTITimeWindowController *> *timeWindowControllers;
 @end
 
-@implementation DTIAppDelegate
+@implementation DTIAppController
+
+#pragma mark - NSApplicationDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
@@ -37,7 +39,6 @@
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag
 {
-//    [sender terminate:self];
     [NSWorkspace.sharedWorkspace dti_openPreferencesWithCompletionHandler:nil];
     return NO;
 }

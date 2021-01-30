@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA826ADF25BDACEE009ED73A /* DTIAppGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */; };
 		DA826AE025BDACEE009ED73A /* DTIAppGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DAAD1D1125B43ECE00F6902D /* DTIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAD1D1025B43ECE00F6902D /* DTIAppDelegate.m */; };
+		DAAD1D1125B43ECE00F6902D /* DTIAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAD1D1025B43ECE00F6902D /* DTIAppController.m */; };
 		DAAD1D1325B43ECF00F6902D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAD1D1225B43ECF00F6902D /* Assets.xcassets */; };
 		DAAD1D1625B43ECF00F6902D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAAD1D1425B43ECF00F6902D /* MainMenu.xib */; };
 		DAAD1D1925B43ECF00F6902D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAD1D1825B43ECF00F6902D /* main.m */; };
@@ -100,8 +100,8 @@
 		DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTIAppGroup.m; sourceTree = "<group>"; };
 		DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIAppGroup.h; sourceTree = "<group>"; };
 		DAAD1D0C25B43ECE00F6902D /* DesktopTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAAD1D0F25B43ECE00F6902D /* DTIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIAppDelegate.h; sourceTree = "<group>"; };
-		DAAD1D1025B43ECE00F6902D /* DTIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTIAppDelegate.m; sourceTree = "<group>"; };
+		DAAD1D0F25B43ECE00F6902D /* DTIAppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIAppController.h; sourceTree = "<group>"; };
+		DAAD1D1025B43ECE00F6902D /* DTIAppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTIAppController.m; sourceTree = "<group>"; };
 		DAAD1D1225B43ECF00F6902D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAAD1D1525B43ECF00F6902D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		DAAD1D1725B43ECF00F6902D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -213,8 +213,8 @@
 		DAAD1D0E25B43ECE00F6902D /* DesktopTime */ = {
 			isa = PBXGroup;
 			children = (
-				DAAD1D0F25B43ECE00F6902D /* DTIAppDelegate.h */,
-				DAAD1D1025B43ECE00F6902D /* DTIAppDelegate.m */,
+				DAAD1D0F25B43ECE00F6902D /* DTIAppController.h */,
+				DAAD1D1025B43ECE00F6902D /* DTIAppController.m */,
 				DAF8E60B25B4465F00E3FA43 /* DTITimeWindowController.h */,
 				DAF8E60C25B4465F00E3FA43 /* DTITimeWindowController.m */,
 				DAF8E60D25B4465F00E3FA43 /* DTITimeWindowController.xib */,
@@ -516,7 +516,7 @@
 			files = (
 				DAAD1D1925B43ECF00F6902D /* main.m in Sources */,
 				DAF8E60E25B4465F00E3FA43 /* DTITimeWindowController.m in Sources */,
-				DAAD1D1125B43ECE00F6902D /* DTIAppDelegate.m in Sources */,
+				DAAD1D1125B43ECE00F6902D /* DTIAppController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
