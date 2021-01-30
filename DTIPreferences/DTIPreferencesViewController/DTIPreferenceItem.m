@@ -1,17 +1,17 @@
 //
-//  DTIPreferenceItemViewModel.m
+//  DTIPreferenceItem.m
 //  DesktopTime Preferences
 //
 //  Created by Marcel Dierkes on 30.01.21.
 //
 
-#import "DTIPreferenceItemViewModel.h"
+#import "DTIPreferenceItem.h"
 #import "DTIDefines.h"
 
-@interface DTIPreferenceItemViewModel ()
+@interface DTIPreferenceItem ()
 @end
 
-@implementation DTIPreferenceItemViewModel
+@implementation DTIPreferenceItem
 
 - (instancetype)initWithUUID:(NSUUID *)UUID name:(NSString *)name
 {
@@ -27,7 +27,7 @@
     return self;
 }
 
-- (instancetype)initWithUUID:(NSUUID *)UUID headerName:(NSString *)name image:(NSImage *)image children:(NSArray<DTIPreferenceItemViewModel *> *)children
+- (instancetype)initWithUUID:(NSUUID *)UUID headerName:(NSString *)name image:(NSImage *)image children:(NSArray<DTIPreferenceItem *> *)children
 {
     NSParameterAssert(UUID);
     NSParameterAssert(name);

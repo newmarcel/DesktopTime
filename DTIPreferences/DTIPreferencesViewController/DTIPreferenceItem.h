@@ -1,5 +1,5 @@
 //
-//  DTIPreferenceItemViewModel.h
+//  DTIPreferenceItem.h
 //  DesktopTime Preferences
 //
 //  Created by Marcel Dierkes on 30.01.21.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DTIPreferenceItemViewModel : NSObject
+@interface DTIPreferenceItem : NSObject
 @property (nonatomic) NSUUID *UUID;
 @property (nonatomic) NSString *name;
 
@@ -19,8 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, getter=isHeader) BOOL header;
 @property (nonatomic, getter=isExpanded) BOOL expanded;
 
-@property (nonatomic, nullable) NSArray<DTIPreferenceItemViewModel *> *children;
-@property (weak, nonatomic, nullable) DTIPreferenceItemViewModel *parent;
+@property (nonatomic, nullable) NSArray<DTIPreferenceItem *> *children;
+@property (weak, nonatomic, nullable) DTIPreferenceItem *parent;
 
 @property (nonatomic, nullable) NSImage *image;
 @property (nonatomic, nullable) NSColor *tintColor;
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithUUID:(NSUUID *)UUID
                   headerName:(NSString *)name
                        image:(nullable NSImage *)image
-                    children:(nullable NSArray<DTIPreferenceItemViewModel *> *)children;
+                    children:(nullable NSArray<DTIPreferenceItem *> *)children;
 
 @end
 

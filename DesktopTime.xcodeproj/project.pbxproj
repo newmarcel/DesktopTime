@@ -18,7 +18,7 @@
 		DAAD1D3825B43F0400F6902D /* DesktopTimeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DAAD1D2825B43F0400F6902D /* DesktopTimeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAAD1D3B25B43F0400F6902D /* DesktopTimeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; };
 		DAAD1D3C25B43F0400F6902D /* DesktopTimeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DABD506525C5640E00A28FB8 /* DTIPreferenceItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DABD506425C5640E00A28FB8 /* DTIPreferenceItemViewModel.m */; };
+		DABD506525C5640E00A28FB8 /* DTIPreferenceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DABD506425C5640E00A28FB8 /* DTIPreferenceItem.m */; };
 		DABD506E25C5669B00A28FB8 /* DTIPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABD506D25C5669B00A28FB8 /* DTIPreferencesViewController.m */; };
 		DABD508325C5AEB200A28FB8 /* DTILayoutPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABD508225C5AEB200A28FB8 /* DTILayoutPreferencesViewController.m */; };
 		DABD508925C5B13700A28FB8 /* DTIDateTimePreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABD508825C5B13700A28FB8 /* DTIDateTimePreferencesViewController.m */; };
@@ -119,8 +119,8 @@
 		DAAD1D2E25B43F0400F6902D /* DesktopTimeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesktopTimeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAD1D3525B43F0400F6902D /* DesktopTimeKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesktopTimeKitTests.m; sourceTree = "<group>"; };
 		DAAD1D3725B43F0400F6902D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DABD506325C5640E00A28FB8 /* DTIPreferenceItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIPreferenceItemViewModel.h; sourceTree = "<group>"; };
-		DABD506425C5640E00A28FB8 /* DTIPreferenceItemViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTIPreferenceItemViewModel.m; sourceTree = "<group>"; };
+		DABD506325C5640E00A28FB8 /* DTIPreferenceItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIPreferenceItem.h; sourceTree = "<group>"; };
+		DABD506425C5640E00A28FB8 /* DTIPreferenceItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTIPreferenceItem.m; sourceTree = "<group>"; };
 		DABD506C25C5669B00A28FB8 /* DTIPreferencesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIPreferencesViewController.h; sourceTree = "<group>"; };
 		DABD506D25C5669B00A28FB8 /* DTIPreferencesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTIPreferencesViewController.m; sourceTree = "<group>"; };
 		DABD508125C5AEB200A28FB8 /* DTILayoutPreferencesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTILayoutPreferencesViewController.h; sourceTree = "<group>"; };
@@ -271,8 +271,8 @@
 				DAC70DE625C49E4D009787A1 /* DTIPreferencesWindowController.m */,
 				DABD506C25C5669B00A28FB8 /* DTIPreferencesViewController.h */,
 				DABD506D25C5669B00A28FB8 /* DTIPreferencesViewController.m */,
-				DABD506325C5640E00A28FB8 /* DTIPreferenceItemViewModel.h */,
-				DABD506425C5640E00A28FB8 /* DTIPreferenceItemViewModel.m */,
+				DABD506325C5640E00A28FB8 /* DTIPreferenceItem.h */,
+				DABD506425C5640E00A28FB8 /* DTIPreferenceItem.m */,
 			);
 			path = DTIPreferencesViewController;
 			sourceTree = "<group>";
@@ -601,7 +601,7 @@
 				DABD508925C5B13700A28FB8 /* DTIDateTimePreferencesViewController.m in Sources */,
 				DABD508F25C5B14500A28FB8 /* DTIBatteryPreferencesViewController.m in Sources */,
 				DABD506E25C5669B00A28FB8 /* DTIPreferencesViewController.m in Sources */,
-				DABD506525C5640E00A28FB8 /* DTIPreferenceItemViewModel.m in Sources */,
+				DABD506525C5640E00A28FB8 /* DTIPreferenceItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
