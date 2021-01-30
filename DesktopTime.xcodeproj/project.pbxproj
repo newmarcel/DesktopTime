@@ -252,7 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				DAAD1D2825B43F0400F6902D /* DesktopTimeKit.h */,
-				DAF8E61B25B451E700E3FA43 /* KYABatteryStatus */,
+				DAF8E61B25B451E700E3FA43 /* DTIBatteryStatus */,
 				DA826ADC25BDACEE009ED73A /* DTIAppGroup */,
 				DAC70E0525C55175009787A1 /* DTIPreferences */,
 				DAC70DEE25C550D0009787A1 /* DTINotificationCenter */,
@@ -319,9 +319,6 @@
 				DABD50AC25C5B47A00A28FB8 /* DTIPreferencesChildViewControllers.h */,
 				DABD509F25C5B39800A28FB8 /* DTIPreferencesChildViewController.h */,
 				DABD50A025C5B39800A28FB8 /* DTIPreferencesChildViewController.m */,
-				DAB3510625C5F626000D76B9 /* DTILayoutPreferencesViewController */,
-				DAB3510225C5F620000D76B9 /* DTIDateTimePreferencesViewController */,
-				DAB350FE25C5F619000D76B9 /* DTIBatteryPreferencesViewController */,
 			);
 			path = DTIPreferencesChildViewController;
 			sourceTree = "<group>";
@@ -334,7 +331,9 @@
 				DAC70DB125C49BEA009787A1 /* Main.storyboard */,
 				DABD509A25C5B36600A28FB8 /* DTIPreferencesViewController */,
 				DABD509B25C5B37500A28FB8 /* DTIPreferencesChildViewController */,
-				DAC70DAF25C49BEA009787A1 /* Assets.xcassets */,
+				DAB3510625C5F626000D76B9 /* DTILayoutPreferencesViewController */,
+				DAB3510225C5F620000D76B9 /* DTIDateTimePreferencesViewController */,
+				DAB350FE25C5F619000D76B9 /* DTIBatteryPreferencesViewController */,
 				DAC70DDE25C49D9C009787A1 /* Other… */,
 			);
 			path = DTIPreferences;
@@ -350,6 +349,7 @@
 		DAC70DDE25C49D9C009787A1 /* Other… */ = {
 			isa = PBXGroup;
 			children = (
+				DAC70DAF25C49BEA009787A1 /* Assets.xcassets */,
 				DAC70DB425C49BEA009787A1 /* Info.plist */,
 				DAC70DB525C49BEA009787A1 /* main.m */,
 				DAC70DB725C49BEA009787A1 /* DTIPreferences.entitlements */,
@@ -402,13 +402,13 @@
 			name = "Other…";
 			sourceTree = "<group>";
 		};
-		DAF8E61B25B451E700E3FA43 /* KYABatteryStatus */ = {
+		DAF8E61B25B451E700E3FA43 /* DTIBatteryStatus */ = {
 			isa = PBXGroup;
 			children = (
 				DAF8E61D25B451E700E3FA43 /* DTIBatteryStatus.h */,
 				DAF8E61C25B451E700E3FA43 /* DTIBatteryStatus.m */,
 			);
-			path = KYABatteryStatus;
+			path = DTIBatteryStatus;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
