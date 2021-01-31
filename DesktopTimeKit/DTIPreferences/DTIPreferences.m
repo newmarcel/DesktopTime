@@ -6,11 +6,53 @@
 //
 
 #import "DTIPreferences.h"
+#import "DTIDefines.h"
 #import "DTIAppGroup.h"
 
-//NSString * const DPLNonRetinaDisplayModesEnabledDefaultsKey = @"info.marcel-dierkes.Displace.NonRetinaDisplayModesEnabled";
-//NSString * const DPLIncreaseResolutionShortcutDefaultsKey = @"info.marcel-dierkes.Displace.IncreaseResolutionShortcut";
-//NSString * const DPLDecreaseResolutionShortcutDefaultsKey =  @"info.marcel-dierkes.Displace.DecreaseResolutionShortcut";
+NSString * const DTIFirstLaunchFinishedKey = @"info.marcel-dierkes.DesktopTime.FirstLaunchFinshed";
+NSString * const DTIDateTimeFontKey = @"info.marcel-dierkes.DesktopTime.DateTimeFont";
+NSString * const DTIBatteryLevelFontKey = @"info.marcel-dierkes.DesktopTime.BatteryLevelFont";
+
+NS_INLINE NSFont *_Nullable DTIFontForKey(id<DTIDefaultsProvider> defaults, NSString *key)
+{
+    NSCParameterAssert(defaults);
+    
+    Auto data = [defaults dataForKey:key];
+    if(data == nil) { return nil; }
+    
+    NSError *error;
+    Auto font = (NSFont *)[NSKeyedUnarchiver unarchivedObjectOfClass:[NSFont class] fromData:data error:&error];
+    if(error != nil)
+    {
+        DTILog(@"Failed to unarchive font. %@", error.userInfo);
+        return nil;
+    }
+    
+    return font;
+}
+
+NS_INLINE void DTISetFontForKey(id<DTIDefaultsProvider> defaults, NSFont *_Nullable font, NSString *key)
+{
+    NSCParameterAssert(defaults);
+    
+    if(font == nil)
+    {
+        [defaults removeObjectForKey:key];
+        return;
+    }
+    
+    NSError *error;
+    Auto data = [NSKeyedArchiver archivedDataWithRootObject:font
+                                      requiringSecureCoding:YES
+                                                      error:&error];
+    if(error != nil)
+    {
+        DTILog(@"Failed to archive font. %@", error.userInfo);
+        return;
+    }
+    
+    [defaults setObject:data forKey:key];
+}
 
 @interface DTIPreferences ()
 @property (nonatomic, readwrite) id<DTIDefaultsProvider> defaults;
@@ -45,16 +87,54 @@
     return self;
 }
 
-#pragma mark - Properties
+#pragma mark - First Launch
 
-//- (BOOL)isLaunchAtLoginEnabled
-//{
-//    return [self.defaults boolForKey:Key::LaunchAtLoginEnabled];
-//}
-//
-//- (void)setLaunchAtLoginEnabled:(BOOL)enabled
-//{
-//    [self.defaults setBool:enabled forKey:Key::LaunchAtLoginEnabled];
-//}
+- (BOOL)isFirstLaunchFinished
+{
+    return [self.defaults boolForKey:DTIFirstLaunchFinishedKey];
+}
+
+- (void)setFirstLaunchFinished:(BOOL)firstLaunchFinished
+{
+    if(firstLaunchFinished == YES)
+    {
+        [self.defaults setBool:firstLaunchFinished forKey:DTIFirstLaunchFinishedKey];
+    }
+    else
+    {
+        [self.defaults removeObjectForKey:DTIFirstLaunchFinishedKey];
+    }
+}
+
+- (void)performBlockOnFirstLaunch:(void(^)(void))block
+{
+    if([self isFirstLaunchFinished] == NO)
+    {
+        self.firstLaunchFinished = YES;
+        block();
+    }
+}
+
+#pragma mark -
+
+- (NSFont *)dateTimeFont
+{
+    return DTIFontForKey(self.defaults, DTIDateTimeFontKey);
+}
+
+- (void)setDateTimeFont:(NSFont *)font
+{
+    DTISetFontForKey(self.defaults, font, DTIDateTimeFontKey);
+}
+
+- (NSFont *)batteryLevelFont
+{
+    return DTIFontForKey(self.defaults, DTIBatteryLevelFontKey);
+}
+
+- (void)setBatteryLevelFont:(NSFont *)font
+{
+    DTISetFontForKey(self.defaults, font, DTIBatteryLevelFontKey);
+}
 
 @end
