@@ -6,11 +6,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "DTIPreferencesChildViewController.h"
+#import "DTIPreferencesContentViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DTIBatteryPreferencesViewController : DTIPreferencesChildViewController
+@interface DTIBatteryPreferencesViewController : DTIPreferencesContentViewController
 @end
 
 NS_ASSUME_NONNULL_END

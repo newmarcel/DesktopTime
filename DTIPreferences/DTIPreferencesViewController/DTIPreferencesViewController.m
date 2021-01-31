@@ -8,7 +8,7 @@
 #import "DTIPreferencesViewController.h"
 #import "DTIDefines.h"
 #import "DTIPreferenceItem.h"
-#import "DTIPreferencesChildViewControllers.h"
+#import "DTIPreferencesContentViewControllers.h"
 
 #define DTI_L10N_PREFERENCES NSLocalizedString(@"Preferences", @"Preferences")
 
@@ -88,7 +88,7 @@ static const NSUserInterfaceItemIdentifier DTIDataCellIdentifier = @"DataCell";
     Class viewControllerClass = preferenceItem.viewControllerClass;
     if(viewControllerClass != nil && ![detailItem isKindOfClass:viewControllerClass])
     {
-        Auto controller = (__kindof DTIPreferencesChildViewController *)[viewControllerClass new];
+        Auto controller = (__kindof DTIPreferencesContentViewController *)[viewControllerClass new];
         [self setSplitDetailViewController:controller];
     }
 }

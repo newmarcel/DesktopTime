@@ -1,18 +1,18 @@
 //
-//  DTIPreferencesChildViewController.m
+//  DTIPreferencesContentViewController.m
 //  DesktopTime Preferences
 //
 //  Created by Marcel Dierkes on 30.01.21.
 //
 
-#import "DTIPreferencesChildViewController.h"
+#import "DTIPreferencesContentViewController.h"
 #import "DTIDefines.h"
 #import "DTIPreferenceItem.h"
 
-@interface DTIPreferencesChildViewController ()
+@interface DTIPreferencesContentViewController ()
 @end
 
-@implementation DTIPreferencesChildViewController
+@implementation DTIPreferencesContentViewController
 
 + (NSUserInterfaceItemIdentifier)identifier
 {
