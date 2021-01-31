@@ -8,10 +8,11 @@
 #import "DTIBatteryPreferencesViewController.h"
 #import "DTIDefines.h"
 #import "DTIPreferenceItem.h"
+#import "NSFont+DTILocalizedDisplayName.h"
 
 #define DTI_L10N_BATTERY_LEVEL NSLocalizedString(@"Battery Level", @"Battery Level")
 
-@interface DTIBatteryPreferencesViewController ()
+@interface DTIBatteryPreferencesViewController () <NSFontChanging>
 @end
 
 @implementation DTIBatteryPreferencesViewController
@@ -34,6 +35,39 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear
+{
+    [super viewWillAppear];
+    
+    Auto fontManager = NSFontManager.sharedFontManager;
+    fontManager.target = self;
+    
+    Auto font = [NSFont preferredFontForTextStyle:NSFontTextStyleBody options:@{}];
+    [fontManager setSelectedFont:font isMultiple:NO];
+    self.fontTextField.stringValue = font.dti_localizedDisplayName;
+}
+
+- (void)viewWillDisappear
+{
+    Auto fontManager = NSFontManager.sharedFontManager;
+    fontManager.target = nil;
+}
+
+#pragma mark - NSFontChanging
+
+- (void)changeFont:(NSFontManager *)fontManager
+{
+    NSLog(@"Selected: %@", fontManager.selectedFont.dti_localizedDisplayName);
+    self.fontTextField.stringValue = fontManager.selectedFont.dti_localizedDisplayName;
+}
+
+- (NSFontPanelModeMask)validModesForFontPanel:(NSFontPanel *)fontPanel
+{
+    return NSFontPanelModeMaskCollection
+        | NSFontPanelModeMaskFace
+        | NSFontPanelModeMaskSize;
 }
 
 @end

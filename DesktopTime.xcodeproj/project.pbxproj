@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA826ADF25BDACEE009ED73A /* DTIAppGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */; };
 		DA826AE025BDACEE009ED73A /* DTIAppGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAA400E725C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA400E625C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m */; };
 		DAAD1D1125B43ECE00F6902D /* DTIAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAD1D1025B43ECE00F6902D /* DTIAppController.m */; };
 		DAAD1D1325B43ECF00F6902D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAD1D1225B43ECF00F6902D /* Assets.xcassets */; };
 		DAAD1D1625B43ECF00F6902D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAAD1D1425B43ECF00F6902D /* MainMenu.xib */; };
@@ -108,6 +109,8 @@
 /* Begin PBXFileReference section */
 		DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTIAppGroup.m; sourceTree = "<group>"; };
 		DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIAppGroup.h; sourceTree = "<group>"; };
+		DAA400E525C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFont+DTILocalizedDisplayName.h"; sourceTree = "<group>"; };
+		DAA400E625C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFont+DTILocalizedDisplayName.m"; sourceTree = "<group>"; };
 		DAAD1D0C25B43ECE00F6902D /* DesktopTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAD1D0F25B43ECE00F6902D /* DTIAppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIAppController.h; sourceTree = "<group>"; };
 		DAAD1D1025B43ECE00F6902D /* DTIAppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTIAppController.m; sourceTree = "<group>"; };
@@ -210,6 +213,15 @@
 				DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */,
 			);
 			path = DTIAppGroup;
+			sourceTree = "<group>";
+		};
+		DAA400EB25C6B25300A45F50 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DAA400E525C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.h */,
+				DAA400E625C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DAAD1D0325B43ECE00F6902D = {
@@ -334,6 +346,7 @@
 				DAB3510625C5F626000D76B9 /* DTILayoutPreferencesViewController */,
 				DAB3510225C5F620000D76B9 /* DTIDateTimePreferencesViewController */,
 				DAB350FE25C5F619000D76B9 /* DTIBatteryPreferencesViewController */,
+				DAA400EB25C6B25300A45F50 /* Extensions */,
 				DAC70DDE25C49D9C009787A1 /* Other… */,
 			);
 			path = DTIPreferences;
@@ -635,6 +648,7 @@
 				DAC70DAB25C49BE9009787A1 /* DTIAppDelegate.m in Sources */,
 				DABD50A825C5B3A100A28FB8 /* DTIPreferencesContentViewController.m in Sources */,
 				DABD508925C5B13700A28FB8 /* DTIDateTimePreferencesViewController.m in Sources */,
+				DAA400E725C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m in Sources */,
 				DABD508F25C5B14500A28FB8 /* DTIBatteryPreferencesViewController.m in Sources */,
 				DABD506E25C5669B00A28FB8 /* DTIPreferencesViewController.m in Sources */,
 				DABD506525C5640E00A28FB8 /* DTIPreferenceItem.m in Sources */,
