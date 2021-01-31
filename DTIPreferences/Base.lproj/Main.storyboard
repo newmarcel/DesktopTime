@@ -691,10 +691,8 @@
                         <rect key="contentRect" x="196" y="240" width="500" height="390"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="400" height="300"/>
-                        <toolbar key="toolbar" implicitIdentifier="9C68B32F-5055-4348-B50D-6F5AF43ECE0B" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="OV9-wv-cw3">
+                        <toolbar key="toolbar" implicitIdentifier="9C68B32F-5055-4348-B50D-6F5AF43ECE0B" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="OV9-wv-cw3">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="V9l-8K-cwm"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="gMN-Gr-One"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="nsM-ui-Dl8"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="r9l-Wz-bds"/>
                             </allowedToolbarItems>
@@ -712,7 +710,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="278"/>
+            <point key="canvasLocation" x="75.5" y="278"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="SKt-bg-dII">
@@ -777,7 +775,7 @@
                                                             <rect key="frame" x="11" y="0.0" width="217" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" fixedFrame="YES" id="v6q-ae-wOj">
+                                                                <textField verticalHuggingPriority="750" id="v6q-ae-wOj">
                                                                     <rect key="frame" x="0.0" y="1" width="217" height="14"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="HEADER CELL" id="BMO-he-haG">
@@ -795,12 +793,12 @@
                                                             <rect key="frame" x="11" y="17" width="217" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <imageView wantsLayer="YES" fixedFrame="YES" id="ZY9-F1-KZk">
+                                                                <imageView wantsLayer="YES" id="ZY9-F1-KZk">
                                                                     <rect key="frame" x="3" y="0.5" width="17.5" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" imageScaling="proportionallyDown" image="gear" catalog="system" id="Rge-kv-67g"/>
                                                                 </imageView>
-                                                                <textField verticalHuggingPriority="750" fixedFrame="YES" id="rQz-57-5kG">
+                                                                <textField verticalHuggingPriority="750" id="rQz-57-5kG">
                                                                     <rect key="frame" x="25" y="0.0" width="192" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="OyS-CT-Xfs">
