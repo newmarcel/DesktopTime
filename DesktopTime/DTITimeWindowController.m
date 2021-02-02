@@ -37,6 +37,7 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     [self configureWindow];
     [self updateWindowPosition];
     [self configureDateFormatter];
+    [self configureAppearance];
     [self configureTimer];
 }
 
@@ -66,6 +67,19 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
         
         [window setFrame:frame display:YES];
     }
+}
+
+- (void)configureAppearance
+{
+    Auto prefs = DTIPreferences.sharedPreferences;
+    Auto font = prefs.batteryLevelFont;
+    Auto textColor = prefs.batteryLevelTextColor;
+    Auto shadowColor = prefs.batteryLevelShadowColor;
+    
+    Auto label = self.leadingLabel;
+    label.font = font;
+    label.textColor = textColor;
+    label.layer.shadowColor = shadowColor.CGColor;
 }
 
 #pragma mark - Timer

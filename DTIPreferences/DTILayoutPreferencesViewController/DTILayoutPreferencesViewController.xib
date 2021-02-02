@@ -314,6 +314,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="completelyTerminate:" target="-2" id="sDO-5s-G3U"/>
+                    </connections>
                 </button>
                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="uwD-iS-1Wz">
                     <rect key="frame" x="20" y="60" width="501" height="5"/>

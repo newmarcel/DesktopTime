@@ -36,4 +36,12 @@
     [super viewDidLoad];
 }
 
+#pragma mark - Actions
+
+- (IBAction)completelyTerminate:(id)sender
+{
+    [DTINotificationCenter.defaultCenter postNotification:DTIAppShouldTerminateNotification];
+    [NSApplication.sharedApplication terminate:sender];
+}
+
 @end

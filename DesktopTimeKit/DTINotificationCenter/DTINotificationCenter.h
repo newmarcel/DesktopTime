@@ -11,9 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef NSNotificationName DTINotificationName NS_EXTENSIBLE_STRING_ENUM;
 
-/// A distributed notification that gets fired when a
-/// keyboard shortcut has been changed.
-//FOUNDATION_EXPORT const DPLNotificationName DPLShortcutDidChangeNotification;
+FOUNDATION_EXPORT const DTINotificationName DTIAppShouldTerminateNotification;
 
 @interface DTINotificationCenter : NSObject
 @property (class, nonatomic, readonly) DTINotificationCenter *defaultCenter;

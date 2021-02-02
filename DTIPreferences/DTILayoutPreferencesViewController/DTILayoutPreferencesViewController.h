@@ -11,6 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DTILayoutPreferencesViewController : DTIPreferencesContentViewController
+
+- (IBAction)completelyTerminate:(id)sender;
+
 @end
 
 NS_ASSUME_NONNULL_END

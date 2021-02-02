@@ -15,6 +15,23 @@
 
 @implementation DTIAppController
 
+- (instancetype)init
+{
+    self = [super init];
+    if(self)
+    {
+        [DTINotificationCenter.defaultCenter addObserver:self
+                                                selector:@selector(handleShouldTerminate:)
+                                                    name:DTIAppShouldTerminateNotification];
+    }
+    return self;
+}
+
+- (void)handleShouldTerminate:(id)sender
+{
+    [NSApplication.sharedApplication terminate:sender];
+}
+
 #pragma mark - NSApplicationDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification

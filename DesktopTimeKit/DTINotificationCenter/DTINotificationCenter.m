@@ -8,7 +8,7 @@
 #import "DTINotificationCenter.h"
 #import "DTIDefines.h"
 
-//const DTINotificationName DPLShortcutDidChangeNotification = @"DPLShortcutDidChangeNotification";
+const DTINotificationName DTIAppShouldTerminateNotification = @"DTIAppShouldTerminateNotification";
 
 @interface DTINotificationCenter ()
 @property (nonatomic) NSDistributedNotificationCenter *distributedCenter;
