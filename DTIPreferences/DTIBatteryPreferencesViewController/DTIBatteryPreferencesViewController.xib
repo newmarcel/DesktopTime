@@ -23,6 +23,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="resetDefaultValues:" target="-2" id="Ayo-G3-HMo"/>
+                    </connections>
                 </button>
                 <box title="Appearance" translatesAutoresizingMaskIntoConstraints="NO" id="axf-8Y-cNV">
                     <rect key="frame" x="17" y="138" width="472" height="135"/>
@@ -43,6 +46,13 @@
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
+                                                <connections>
+                                                    <binding destination="-2" name="value" keyPath="self.textFont" id="kl9-SM-gOQ">
+                                                        <dictionary key="options">
+                                                            <string key="NSValueTransformerName">DTIFontLocalizedDisplayNameValueTransformer</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DG3-fE-vb3">
                                                 <rect key="frame" x="350" y="-6" width="91" height="32"/>
@@ -74,6 +84,9 @@
                                                     <constraint firstAttribute="height" constant="24" id="dJa-u9-S1p"/>
                                                 </constraints>
                                                 <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <binding destination="-2" name="value" keyPath="self.textColor" id="3ie-id-gaP"/>
+                                                </connections>
                                             </colorWell>
                                             <textField horizontalHuggingPriority="200" verticalHuggingPriority="750" horizontalCompressionResistancePriority="800" translatesAutoresizingMaskIntoConstraints="NO" id="kX0-ZN-LiF">
                                                 <rect key="frame" x="54" y="4" width="382" height="16"/>
@@ -103,6 +116,9 @@
                                                     <constraint firstAttribute="height" constant="24" id="udJ-tH-tGL"/>
                                                 </constraints>
                                                 <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <binding destination="-2" name="value" keyPath="self.shadowColor" id="wmS-tI-Z9F"/>
+                                                </connections>
                                             </colorWell>
                                             <textField horizontalHuggingPriority="200" verticalHuggingPriority="750" horizontalCompressionResistancePriority="800" translatesAutoresizingMaskIntoConstraints="NO" id="Lnp-sQ-rCh">
                                                 <rect key="frame" x="54" y="4" width="382" height="16"/>

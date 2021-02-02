@@ -11,7 +11,9 @@
 
 NSString * const DTIFirstLaunchFinishedKey = @"info.marcel-dierkes.DesktopTime.FirstLaunchFinshed";
 NSString * const DTIDateTimeFontKey = @"info.marcel-dierkes.DesktopTime.DateTimeFont";
-NSString * const DTIBatteryLevelFontKey = @"info.marcel-dierkes.DesktopTime.BatteryLevelFont";
+NSString * const DTIBatteryLevelFontKey = @"info.marcel-dierkes.DesktopTime.BatteryLevel.Font";
+NSString * const DTIBatteryLevelTextColorKey = @"info.marcel-dierkes.DesktopTime.BatteryLevel.TextColor";
+NSString * const DTIBatteryLevelShadowColorKey = @"info.marcel-dierkes.DesktopTime.BatteryLevel.ShadowColor";
 
 NS_INLINE NSFont *_Nullable DTIFontForKey(id<DTIDefaultsProvider> defaults, NSString *key)
 {
@@ -21,7 +23,8 @@ NS_INLINE NSFont *_Nullable DTIFontForKey(id<DTIDefaultsProvider> defaults, NSSt
     if(data == nil) { return nil; }
     
     NSError *error;
-    Auto font = (NSFont *)[NSKeyedUnarchiver unarchivedObjectOfClass:[NSFont class] fromData:data error:&error];
+    Auto font = (NSFont *)[NSKeyedUnarchiver unarchivedObjectOfClass:[NSFont class]
+                                                            fromData:data error:&error];
     if(error != nil)
     {
         DTILog(@"Failed to unarchive font. %@", error.userInfo);
@@ -48,6 +51,48 @@ NS_INLINE void DTISetFontForKey(id<DTIDefaultsProvider> defaults, NSFont *_Nulla
     if(error != nil)
     {
         DTILog(@"Failed to archive font. %@", error.userInfo);
+        return;
+    }
+    
+    [defaults setObject:data forKey:key];
+}
+
+NS_INLINE NSColor *_Nullable DTIColorForKey(id<DTIDefaultsProvider> defaults, NSString *key)
+{
+    NSCParameterAssert(defaults);
+    
+    Auto data = [defaults dataForKey:key];
+    if(data == nil) { return nil; }
+    
+    NSError *error;
+    Auto color = (NSColor *)[NSKeyedUnarchiver unarchivedObjectOfClass:[NSColor class]
+                                                              fromData:data error:&error];
+    if(error != nil)
+    {
+        DTILog(@"Failed to unarchive color. %@", error.userInfo);
+        return nil;
+    }
+    
+    return color;
+}
+
+NS_INLINE void DTISetColorForKey(id<DTIDefaultsProvider> defaults, NSColor *_Nullable color, NSString *key)
+{
+    NSCParameterAssert(defaults);
+    
+    if(color == nil)
+    {
+        [defaults removeObjectForKey:key];
+        return;
+    }
+    
+    NSError *error;
+    Auto data = [NSKeyedArchiver archivedDataWithRootObject:color
+                                      requiringSecureCoding:YES
+                                                      error:&error];
+    if(error != nil)
+    {
+        DTILog(@"Failed to archive color. %@", error.userInfo);
         return;
     }
     
@@ -129,12 +174,35 @@ NS_INLINE void DTISetFontForKey(id<DTIDefaultsProvider> defaults, NSFont *_Nulla
 
 - (NSFont *)batteryLevelFont
 {
-    return DTIFontForKey(self.defaults, DTIBatteryLevelFontKey);
+    return DTIFontForKey(self.defaults, DTIBatteryLevelFontKey)
+        ?: [NSFont systemFontOfSize:16.0f weight:NSFontWeightSemibold];;
 }
 
 - (void)setBatteryLevelFont:(NSFont *)font
 {
     DTISetFontForKey(self.defaults, font, DTIBatteryLevelFontKey);
+}
+
+- (NSColor *)batteryLevelTextColor
+{
+    return DTIColorForKey(self.defaults, DTIBatteryLevelTextColorKey)
+        ?: [NSColor colorWithWhite:0.94 alpha:1.0f];
+}
+
+- (void)setBatteryLevelTextColor:(NSColor *)textColor
+{
+    DTISetColorForKey(self.defaults, textColor, DTIBatteryLevelTextColorKey);
+}
+
+- (NSColor *)batteryLevelShadowColor
+{
+    return DTIColorForKey(self.defaults, DTIBatteryLevelShadowColorKey)
+        ?: [NSColor.blackColor colorWithAlphaComponent:0.7f];
+}
+
+- (void)setBatteryLevelShadowColor:(NSColor *)shadowColor
+{
+    DTISetColorForKey(self.defaults, shadowColor, DTIBatteryLevelShadowColorKey);
 }
 
 @end

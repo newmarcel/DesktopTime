@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DTIBatteryPreferencesViewController : DTIPreferencesContentViewController
 @property (weak, nonatomic, nullable) IBOutlet NSTextField *fontTextField;
+
+- (IBAction)resetDefaultValues:(id)sender;
+
 @end
 
 NS_ASSUME_NONNULL_END

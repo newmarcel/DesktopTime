@@ -22,6 +22,7 @@
 		DAB3510E25C5F9ED000D76B9 /* DTIBatteryPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB3510D25C5F9ED000D76B9 /* DTIBatteryPreferencesViewController.xib */; };
 		DAB3511325C5FB2A000D76B9 /* DTIDateTimePreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB3511225C5FB2A000D76B9 /* DTIDateTimePreferencesViewController.xib */; };
 		DAB3511825C5FC25000D76B9 /* DTILayoutPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB3511725C5FC25000D76B9 /* DTILayoutPreferencesViewController.xib */; };
+		DABC051625C9C67F0024E30B /* DTIFontLocalizedDisplayNameValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = DABC051525C9C67F0024E30B /* DTIFontLocalizedDisplayNameValueTransformer.m */; };
 		DABD506525C5640E00A28FB8 /* DTIPreferenceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DABD506425C5640E00A28FB8 /* DTIPreferenceItem.m */; };
 		DABD506E25C5669B00A28FB8 /* DTIPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABD506D25C5669B00A28FB8 /* DTIPreferencesViewController.m */; };
 		DABD508325C5AEB200A28FB8 /* DTILayoutPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABD508225C5AEB200A28FB8 /* DTILayoutPreferencesViewController.m */; };
@@ -128,6 +129,8 @@
 		DAB3510D25C5F9ED000D76B9 /* DTIBatteryPreferencesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTIBatteryPreferencesViewController.xib; sourceTree = "<group>"; };
 		DAB3511225C5FB2A000D76B9 /* DTIDateTimePreferencesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTIDateTimePreferencesViewController.xib; sourceTree = "<group>"; };
 		DAB3511725C5FC25000D76B9 /* DTILayoutPreferencesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTILayoutPreferencesViewController.xib; sourceTree = "<group>"; };
+		DABC051425C9C67F0024E30B /* DTIFontLocalizedDisplayNameValueTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIFontLocalizedDisplayNameValueTransformer.h; sourceTree = "<group>"; };
+		DABC051525C9C67F0024E30B /* DTIFontLocalizedDisplayNameValueTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTIFontLocalizedDisplayNameValueTransformer.m; sourceTree = "<group>"; };
 		DABD506325C5640E00A28FB8 /* DTIPreferenceItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIPreferenceItem.h; sourceTree = "<group>"; };
 		DABD506425C5640E00A28FB8 /* DTIPreferenceItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTIPreferenceItem.m; sourceTree = "<group>"; };
 		DABD506C25C5669B00A28FB8 /* DTIPreferencesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIPreferencesViewController.h; sourceTree = "<group>"; };
@@ -288,6 +291,8 @@
 				DABD508D25C5B14500A28FB8 /* DTIBatteryPreferencesViewController.h */,
 				DABD508E25C5B14500A28FB8 /* DTIBatteryPreferencesViewController.m */,
 				DAB3510D25C5F9ED000D76B9 /* DTIBatteryPreferencesViewController.xib */,
+				DABC051425C9C67F0024E30B /* DTIFontLocalizedDisplayNameValueTransformer.h */,
+				DABC051525C9C67F0024E30B /* DTIFontLocalizedDisplayNameValueTransformer.m */,
 			);
 			path = DTIBatteryPreferencesViewController;
 			sourceTree = "<group>";
@@ -645,6 +650,7 @@
 				DAC70DE725C49E4D009787A1 /* DTIPreferencesWindowController.m in Sources */,
 				DABD508325C5AEB200A28FB8 /* DTILayoutPreferencesViewController.m in Sources */,
 				DAC70DB625C49BEA009787A1 /* main.m in Sources */,
+				DABC051625C9C67F0024E30B /* DTIFontLocalizedDisplayNameValueTransformer.m in Sources */,
 				DAC70DAB25C49BE9009787A1 /* DTIAppDelegate.m in Sources */,
 				DABD50A825C5B3A100A28FB8 /* DTIPreferencesContentViewController.m in Sources */,
 				DABD508925C5B13700A28FB8 /* DTIDateTimePreferencesViewController.m in Sources */,

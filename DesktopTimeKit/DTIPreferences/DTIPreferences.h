@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AppKit/NSFont.h>
+#import <AppKit/NSColor.h>
 #import <DesktopTimeKit/DTIDefaultsProvider.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -14,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 FOUNDATION_EXPORT NSString * const DTIFirstLaunchFinishedKey;
 FOUNDATION_EXPORT NSString * const DTIDateTimeFontKey;
 FOUNDATION_EXPORT NSString * const DTIBatteryLevelFontKey;
+FOUNDATION_EXPORT NSString * const DTIBatteryLevelTextColorKey;
+FOUNDATION_EXPORT NSString * const DTIBatteryLevelShadowColorKey;
 
 @interface DTIPreferences : NSObject
 @property (class, nonatomic, readonly) DTIPreferences *sharedPreferences;
@@ -22,7 +25,10 @@ FOUNDATION_EXPORT NSString * const DTIBatteryLevelFontKey;
 @property (nonatomic, getter=isFirstLaunchFinished) BOOL firstLaunchFinished;
 
 @property (nonatomic, nullable) NSFont *dateTimeFont;
-@property (nonatomic, nullable) NSFont *batteryLevelFont;
+
+@property (nonatomic, null_resettable) NSFont *batteryLevelFont;
+@property (nonatomic, null_resettable) NSColor *batteryLevelTextColor;
+@property (nonatomic, null_resettable) NSColor *batteryLevelShadowColor;
 
 - (instancetype)init;
 - (instancetype)initWithDefaultsProvider:(id<DTIDefaultsProvider>)defaults NS_DESIGNATED_INITIALIZER;

@@ -8,11 +8,13 @@
 #import "DTIBatteryPreferencesViewController.h"
 #import "DTIDefines.h"
 #import "DTIPreferenceItem.h"
-#import "NSFont+DTILocalizedDisplayName.h"
 
 #define DTI_L10N_BATTERY_LEVEL NSLocalizedString(@"Battery Level", @"Battery Level")
 
 @interface DTIBatteryPreferencesViewController () <NSFontChanging>
+@property (nonatomic) NSFont *textFont;
+@property (nonatomic) NSColor *textColor;
+@property (nonatomic) NSColor *shadowColor;
 @end
 
 @implementation DTIBatteryPreferencesViewController
@@ -44,9 +46,8 @@
     Auto fontManager = NSFontManager.sharedFontManager;
     fontManager.target = self;
     
-    Auto font = [NSFont preferredFontForTextStyle:NSFontTextStyleBody options:@{}];
+    Auto font = self.textFont;
     [fontManager setSelectedFont:font isMultiple:NO];
-    self.fontTextField.stringValue = font.dti_localizedDisplayName;
 }
 
 - (void)viewWillDisappear
@@ -55,12 +56,54 @@
     fontManager.target = nil;
 }
 
+#pragma mark - Actions
+
+- (void)resetDefaultValues:(id)sender
+{
+    self.textFont = nil;
+    self.textColor = nil;
+    self.shadowColor = nil;
+}
+
+#pragma mark - Fonts & Colors
+
+- (NSFont *)textFont
+{
+    return DTIPreferences.sharedPreferences.batteryLevelFont;
+}
+
+- (void)setTextFont:(NSFont *)textFont
+{
+    [self willChangeValueForKey:@"textFont"];
+    DTIPreferences.sharedPreferences.batteryLevelFont = textFont;
+    [self didChangeValueForKey:@"textFont"];
+}
+
+- (NSColor *)textColor
+{
+    return DTIPreferences.sharedPreferences.batteryLevelTextColor;
+}
+
+- (void)setTextColor:(NSColor *)textColor
+{
+    DTIPreferences.sharedPreferences.batteryLevelTextColor = textColor;
+}
+
+- (NSColor *)shadowColor
+{
+    return DTIPreferences.sharedPreferences.batteryLevelShadowColor;
+}
+
+- (void)setShadowColor:(NSColor *)shadowColor
+{
+    DTIPreferences.sharedPreferences.batteryLevelShadowColor = shadowColor;
+}
+
 #pragma mark - NSFontChanging
 
 - (void)changeFont:(NSFontManager *)fontManager
 {
-    NSLog(@"Selected: %@", fontManager.selectedFont.dti_localizedDisplayName);
-    self.fontTextField.stringValue = fontManager.selectedFont.dti_localizedDisplayName;
+    self.textFont = [fontManager convertFont:self.textFont];
 }
 
 - (NSFontPanelModeMask)validModesForFontPanel:(NSFontPanel *)fontPanel
