@@ -52,6 +52,8 @@
 
 - (void)viewWillDisappear
 {
+    [super viewWillDisappear];
+    
     Auto fontManager = NSFontManager.sharedFontManager;
     fontManager.target = nil;
 }
