@@ -8,8 +8,10 @@
 #import "DTIPreferences.h"
 #import "DTIDefines.h"
 #import "DTIAppGroup.h"
+#import "DTILayout.h"
 
 NSString * const DTIFirstLaunchFinishedKey = @"info.marcel-dierkes.DesktopTime.FirstLaunchFinshed";
+NSString * const DTILayoutKey = @"info.marcel-dierkes.DesktopTime.Layout";
 NSString * const DTIDateTimeFontKey = @"info.marcel-dierkes.DesktopTime.DateTimeFont";
 NSString * const DTIBatteryLevelFontKey = @"info.marcel-dierkes.DesktopTime.BatteryLevel.Font";
 NSString * const DTIBatteryLevelTextColorKey = @"info.marcel-dierkes.DesktopTime.BatteryLevel.TextColor";
@@ -160,7 +162,45 @@ NS_INLINE void DTISetColorForKey(id<DTIDefaultsProvider> defaults, NSColor *_Nul
     }
 }
 
-#pragma mark -
+#pragma mark - Layout
+
+- (DTILayout *)layout
+{
+    Auto data = [self.defaults dataForKey:DTILayoutKey];
+    if(data == nil) { return nil; }
+    
+    NSError *error;
+    Auto layout = (DTILayout *)[NSKeyedUnarchiver unarchivedObjectOfClass:[DTILayout class]
+                                                                 fromData:data error:&error];
+    if(error != nil)
+    {
+        DTILog(@"Failed to unarchive layout. %@", error.userInfo);
+        return nil;
+    }
+    
+    return layout;
+}
+
+- (void)setLayout:(DTILayout *)layout
+{
+    if(layout == nil)
+    {
+        [self.defaults removeObjectForKey:DTILayoutKey];
+        return;
+    }
+    
+    NSError *error;
+    Auto data = [NSKeyedArchiver archivedDataWithRootObject:layout requiringSecureCoding:YES error:&error];
+    if(error != nil)
+    {
+        DTILog(@"Failed to archive layout. %@", error.userInfo);
+        return;
+    }
+    
+    [self.defaults setObject:data forKey:DTILayoutKey];
+}
+
+#pragma mark - Date & Time Appearance
 
 - (NSFont *)dateTimeFont
 {
@@ -171,6 +211,8 @@ NS_INLINE void DTISetColorForKey(id<DTIDefaultsProvider> defaults, NSColor *_Nul
 {
     DTISetFontForKey(self.defaults, font, DTIDateTimeFontKey);
 }
+
+#pragma mark - Battery Level Appearance
 
 - (NSFont *)batteryLevelFont
 {

@@ -13,16 +13,21 @@
 NS_ASSUME_NONNULL_BEGIN
 
 FOUNDATION_EXPORT NSString * const DTIFirstLaunchFinishedKey;
+FOUNDATION_EXPORT NSString * const DTILayoutKey;
 FOUNDATION_EXPORT NSString * const DTIDateTimeFontKey;
 FOUNDATION_EXPORT NSString * const DTIBatteryLevelFontKey;
 FOUNDATION_EXPORT NSString * const DTIBatteryLevelTextColorKey;
 FOUNDATION_EXPORT NSString * const DTIBatteryLevelShadowColorKey;
+
+@class DTILayout;
 
 @interface DTIPreferences : NSObject
 @property (class, nonatomic, readonly) DTIPreferences *sharedPreferences;
 @property (nonatomic, readonly) id<DTIDefaultsProvider> defaults;
 
 @property (nonatomic, getter=isFirstLaunchFinished) BOOL firstLaunchFinished;
+
+@property (nonatomic, nullable) DTILayout *layout;
 
 @property (nonatomic, nullable) NSFont *dateTimeFont;
 
