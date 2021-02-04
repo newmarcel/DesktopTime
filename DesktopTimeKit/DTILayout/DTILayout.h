@@ -20,13 +20,13 @@ typedef NS_ENUM(NSUInteger, DTILayoutDisplayMode)
 @interface DTILayout : NSObject <NSSecureCoding>
 @property (nonatomic) DTILayoutDisplayMode displayMode;
 
-@property (nonatomic, nullable) __kindof DTILayoutElement *topLeftElement;
-@property (nonatomic, nullable) __kindof DTILayoutElement *topMiddleElement;
-@property (nonatomic, nullable) __kindof DTILayoutElement *topRightElement;
+@property (nonatomic) DTILayoutElement topLeftElement;
+@property (nonatomic) DTILayoutElement topMiddleElement;
+@property (nonatomic) DTILayoutElement topRightElement;
 
-@property (nonatomic, nullable) __kindof DTILayoutElement *bottomLeftElement;
-@property (nonatomic, nullable) __kindof DTILayoutElement *bottomMiddleElement;
-@property (nonatomic, nullable) __kindof DTILayoutElement *bottomRightElement;
+@property (nonatomic) DTILayoutElement bottomLeftElement;
+@property (nonatomic) DTILayoutElement bottomMiddleElement;
+@property (nonatomic) DTILayoutElement bottomRightElement;
 
 @end
 

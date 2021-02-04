@@ -9,7 +9,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DTILayoutElement : NSObject <NSSecureCoding>
-@end
+typedef NS_ENUM(NSUInteger, DTILayoutElement) {
+    DTILayoutElementNone = 0,
+    DTILayoutElementDateTime,
+    DTILayoutElementDate,
+    DTILayoutElementTime,
+    DTILayoutElementBatteryLevel,
+};
+
+NSString *DTILayoutElementGetLocalizedName(DTILayoutElement);
 
 NS_ASSUME_NONNULL_END

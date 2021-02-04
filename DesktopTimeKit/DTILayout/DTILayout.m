@@ -13,11 +13,6 @@
 
 @implementation DTILayout
 
-+ (NSSet<Class> *)knownElementClasses
-{
-    return [NSSet setWithArray:@[[DTILayoutElement class]]];
-}
-
 #pragma mark - NSSecureCoding
 
 #define kCodingKeyDisplayMode @"DTIDisplayMode"
@@ -29,9 +24,6 @@
 #define kCodingKeyBottomLeftElement @"DTIBottomLeftElement"
 #define kCodingKeyBottomMiddleElement @"DTIBottomMiddleElement"
 #define kCodingKeyBottomRightElement @"DTIBottomRightElement"
-
-#define DTI_DECODE_LAYOUT_ELEMENT(__klasses, __key) (__kindof DTILayoutElement *)[coder \
-    decodeObjectOfClasses:__klasses forKey:__key];
 
 + (BOOL)supportsSecureCoding
 {
@@ -45,14 +37,13 @@
     {
         self.displayMode = (DTILayoutDisplayMode)[coder decodeIntegerForKey:kCodingKeyDisplayMode];
         
-        Auto klasses = [[self class] knownElementClasses];
-        self.topLeftElement = DTI_DECODE_LAYOUT_ELEMENT(klasses, kCodingKeyTopLeftElement);
-        self.topMiddleElement = DTI_DECODE_LAYOUT_ELEMENT(klasses, kCodingKeyTopMiddleElement);
-        self.topRightElement = DTI_DECODE_LAYOUT_ELEMENT(klasses, kCodingKeyTopRightElement);
+        self.topLeftElement = (DTILayoutElement)[coder decodeIntegerForKey:kCodingKeyTopLeftElement];
+        self.topMiddleElement = (DTILayoutElement)[coder decodeIntegerForKey:kCodingKeyTopMiddleElement];
+        self.topRightElement = (DTILayoutElement)[coder decodeIntegerForKey:kCodingKeyTopRightElement];
         
-        self.bottomLeftElement = DTI_DECODE_LAYOUT_ELEMENT(klasses, kCodingKeyBottomLeftElement);
-        self.bottomMiddleElement = DTI_DECODE_LAYOUT_ELEMENT(klasses, kCodingKeyBottomMiddleElement);
-        self.bottomRightElement = DTI_DECODE_LAYOUT_ELEMENT(klasses, kCodingKeyBottomRightElement);
+        self.bottomLeftElement = (DTILayoutElement)[coder decodeIntegerForKey:kCodingKeyBottomLeftElement];
+        self.bottomMiddleElement = (DTILayoutElement)[coder decodeIntegerForKey:kCodingKeyBottomMiddleElement];
+        self.bottomRightElement = (DTILayoutElement)[coder decodeIntegerForKey:kCodingKeyBottomRightElement];
     }
     return self;
 }
@@ -61,13 +52,13 @@
 {
     [coder encodeInteger:(NSInteger)self.displayMode forKey:kCodingKeyDisplayMode];
     
-    [coder encodeObject:self.topLeftElement forKey:kCodingKeyTopLeftElement];
-    [coder encodeObject:self.topMiddleElement forKey:kCodingKeyTopMiddleElement];
-    [coder encodeObject:self.topRightElement forKey:kCodingKeyTopRightElement];
+    [coder encodeInteger:(NSInteger)self.topLeftElement forKey:kCodingKeyTopLeftElement];
+    [coder encodeInteger:(NSInteger)self.topMiddleElement forKey:kCodingKeyTopMiddleElement];
+    [coder encodeInteger:(NSInteger)self.topRightElement forKey:kCodingKeyTopRightElement];
     
-    [coder encodeObject:self.bottomLeftElement forKey:kCodingKeyBottomLeftElement];
-    [coder encodeObject:self.bottomMiddleElement forKey:kCodingKeyBottomMiddleElement];
-    [coder encodeObject:self.bottomRightElement forKey:kCodingKeyBottomRightElement];
+    [coder encodeInteger:(NSInteger)self.bottomLeftElement forKey:kCodingKeyBottomLeftElement];
+    [coder encodeInteger:(NSInteger)self.bottomMiddleElement forKey:kCodingKeyBottomMiddleElement];
+    [coder encodeInteger:(NSInteger)self.bottomRightElement forKey:kCodingKeyBottomRightElement];
 }
 
 @end
