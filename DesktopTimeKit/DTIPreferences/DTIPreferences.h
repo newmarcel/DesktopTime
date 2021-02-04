@@ -27,7 +27,7 @@ FOUNDATION_EXPORT NSString * const DTIBatteryLevelShadowColorKey;
 
 @property (nonatomic, getter=isFirstLaunchFinished) BOOL firstLaunchFinished;
 
-@property (nonatomic, nullable) DTILayout *layout;
+@property (nonatomic, null_resettable) DTILayout *layout;
 
 @property (nonatomic, nullable) NSFont *dateTimeFont;
 

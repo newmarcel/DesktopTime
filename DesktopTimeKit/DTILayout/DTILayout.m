@@ -13,6 +13,22 @@
 
 @implementation DTILayout
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:
+            @"%@:\n"
+            @"[%@] - [%@] - [%@]\n"
+            @"[%@] - [%@] - [%@]",
+            super.description,
+            DTILayoutElementGetLocalizedName(self.topLeftElement),
+            DTILayoutElementGetLocalizedName(self.topMiddleElement),
+            DTILayoutElementGetLocalizedName(self.topRightElement),
+            DTILayoutElementGetLocalizedName(self.bottomLeftElement),
+            DTILayoutElementGetLocalizedName(self.bottomMiddleElement),
+            DTILayoutElementGetLocalizedName(self.bottomRightElement)
+            ];
+}
+
 #pragma mark - NSSecureCoding
 
 #define kCodingKeyDisplayMode @"DTIDisplayMode"

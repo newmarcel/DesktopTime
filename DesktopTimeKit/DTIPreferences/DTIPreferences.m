@@ -166,19 +166,22 @@ NS_INLINE void DTISetColorForKey(id<DTIDefaultsProvider> defaults, NSColor *_Nul
 
 - (DTILayout *)layout
 {
-    Auto data = [self.defaults dataForKey:DTILayoutKey];
-    if(data == nil) { return nil; }
+    Auto loadLayout = ^DTILayout *{
+        Auto data = [self.defaults dataForKey:DTILayoutKey];
+        if(data == nil) { return nil; }
+        
+        NSError *error;
+        Auto layout = (DTILayout *)[NSKeyedUnarchiver unarchivedObjectOfClass:[DTILayout class]
+                                                                     fromData:data error:&error];
+        if(error != nil)
+        {
+            DTILog(@"Failed to unarchive layout. %@", error.userInfo);
+            return nil;
+        }
+        return layout;
+    };
     
-    NSError *error;
-    Auto layout = (DTILayout *)[NSKeyedUnarchiver unarchivedObjectOfClass:[DTILayout class]
-                                                                 fromData:data error:&error];
-    if(error != nil)
-    {
-        DTILog(@"Failed to unarchive layout. %@", error.userInfo);
-        return nil;
-    }
-    
-    return layout;
+    return loadLayout() ?: [DTILayout new];
 }
 
 - (void)setLayout:(DTILayout *)layout
