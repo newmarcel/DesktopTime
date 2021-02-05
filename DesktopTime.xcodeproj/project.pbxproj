@@ -11,8 +11,6 @@
 		DA1DE52B25CC6B5100EEC86F /* DTILayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1DE52925CC6B5100EEC86F /* DTILayout.m */; };
 		DA1DE53825CC6E6300EEC86F /* DTILayoutElement.h in Headers */ = {isa = PBXBuildFile; fileRef = DA1DE53625CC6E6300EEC86F /* DTILayoutElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA1DE53925CC6E6300EEC86F /* DTILayoutElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1DE53725CC6E6300EEC86F /* DTILayoutElement.m */; };
-		DA1DE54225CC767C00EEC86F /* DTILayoutElementValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = DA1DE54025CC767C00EEC86F /* DTILayoutElementValueTransformer.h */; };
-		DA1DE54A25CC768400EEC86F /* DTILayoutElementValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1DE54125CC767C00EEC86F /* DTILayoutElementValueTransformer.m */; };
 		DA826ADF25BDACEE009ED73A /* DTIAppGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */; };
 		DA826AE025BDACEE009ED73A /* DTIAppGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAA400E725C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA400E625C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m */; };
@@ -118,8 +116,6 @@
 		DA1DE52925CC6B5100EEC86F /* DTILayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTILayout.m; sourceTree = "<group>"; };
 		DA1DE53625CC6E6300EEC86F /* DTILayoutElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTILayoutElement.h; sourceTree = "<group>"; };
 		DA1DE53725CC6E6300EEC86F /* DTILayoutElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTILayoutElement.m; sourceTree = "<group>"; };
-		DA1DE54025CC767C00EEC86F /* DTILayoutElementValueTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTILayoutElementValueTransformer.h; sourceTree = "<group>"; };
-		DA1DE54125CC767C00EEC86F /* DTILayoutElementValueTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTILayoutElementValueTransformer.m; sourceTree = "<group>"; };
 		DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTIAppGroup.m; sourceTree = "<group>"; };
 		DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIAppGroup.h; sourceTree = "<group>"; };
 		DAA400E525C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFont+DTILocalizedDisplayName.h"; sourceTree = "<group>"; };
@@ -337,8 +333,6 @@
 				DABD508125C5AEB200A28FB8 /* DTILayoutPreferencesViewController.h */,
 				DABD508225C5AEB200A28FB8 /* DTILayoutPreferencesViewController.m */,
 				DAB3511725C5FC25000D76B9 /* DTILayoutPreferencesViewController.xib */,
-				DA1DE54025CC767C00EEC86F /* DTILayoutElementValueTransformer.h */,
-				DA1DE54125CC767C00EEC86F /* DTILayoutElementValueTransformer.m */,
 			);
 			path = DTILayoutPreferencesViewController;
 			sourceTree = "<group>";
@@ -472,7 +466,6 @@
 				DA1DE53825CC6E6300EEC86F /* DTILayoutElement.h in Headers */,
 				DAAD1D3825B43F0400F6902D /* DesktopTimeKit.h in Headers */,
 				DAC70E1125C55175009787A1 /* NSWorkspace+DTIPreferences.h in Headers */,
-				DA1DE54225CC767C00EEC86F /* DTILayoutElementValueTransformer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,7 +681,6 @@
 				DAA400E725C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m in Sources */,
 				DABD508F25C5B14500A28FB8 /* DTIBatteryPreferencesViewController.m in Sources */,
 				DABD506E25C5669B00A28FB8 /* DTIPreferencesViewController.m in Sources */,
-				DA1DE54A25CC768400EEC86F /* DTILayoutElementValueTransformer.m in Sources */,
 				DABD506525C5640E00A28FB8 /* DTIPreferenceItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

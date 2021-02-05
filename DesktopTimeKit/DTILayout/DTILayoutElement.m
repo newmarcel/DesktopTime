@@ -20,3 +20,14 @@ NSString *DTILayoutElementGetLocalizedName(DTILayoutElement layoutElement)
         default: return @"";
     }
 }
+
+NSArray<NSString *> *DTILayoutElementGetAllElements()
+{
+    return @[
+        DTILayoutElementGetLocalizedName(DTILayoutElementNone),
+        DTILayoutElementGetLocalizedName(DTILayoutElementDateTime),
+        DTILayoutElementGetLocalizedName(DTILayoutElementDate),
+        DTILayoutElementGetLocalizedName(DTILayoutElementTime),
+        DTILayoutElementGetLocalizedName(DTILayoutElementBatteryLevel)
+    ];
+}

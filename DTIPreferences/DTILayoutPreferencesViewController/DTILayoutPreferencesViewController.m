@@ -12,6 +12,8 @@
 #define DTI_L10N_LAYOUT NSLocalizedString(@"Layout", @"Layout")
 
 @interface DTILayoutPreferencesViewController ()
+@property (nonatomic, readwrite) DTILayout *layout;
+@property (nonatomic, readwrite) NSArray<NSString *> *availableLayoutElements;
 @end
 
 @implementation DTILayoutPreferencesViewController
@@ -34,6 +36,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.layout = DTIPreferences.sharedPreferences.layout;
+    self.availableLayoutElements = DTILayoutElementGetAllElements();
 }
 
 #pragma mark - Actions

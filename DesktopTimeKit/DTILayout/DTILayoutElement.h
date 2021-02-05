@@ -18,5 +18,6 @@ typedef NS_ENUM(NSUInteger, DTILayoutElement) {
 };
 
 NSString *DTILayoutElementGetLocalizedName(DTILayoutElement);
+NSArray<NSString *> *DTILayoutElementGetAllElements(void);
 
 NS_ASSUME_NONNULL_END

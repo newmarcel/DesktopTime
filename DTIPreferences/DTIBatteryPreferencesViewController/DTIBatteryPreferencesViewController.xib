@@ -181,6 +181,9 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="nWA-OK-n5M"/>
             <viewLayoutGuide key="layoutMargins" id="k2U-rR-fc5"/>
+            <connections>
+                <outlet property="nextKeyView" destination="DG3-fE-vb3" id="2N9-Vx-MIS"/>
+            </connections>
             <point key="canvasLocation" x="-122" y="143.5"/>
         </customView>
     </objects>

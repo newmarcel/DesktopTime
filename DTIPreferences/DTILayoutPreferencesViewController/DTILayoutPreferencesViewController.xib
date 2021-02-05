@@ -31,17 +31,16 @@
                                             <items>
                                                 <menuItem title="–" state="on" id="FwY-fs-iKy"/>
                                                 <menuItem isSeparatorItem="YES" id="uvl-Dg-eQV"/>
-                                                <menuItem title="Date &amp; Time" id="7xS-84-ZWJ"/>
-                                                <menuItem title="Date" id="DIm-kb-Czc"/>
-                                                <menuItem title="Time" id="eQe-bq-nSX">
-                                                    <modifierMask key="keyEquivalentModifierMask"/>
-                                                </menuItem>
                                                 <menuItem title="Battery Level" id="uY9-Lp-zLp">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                 </menuItem>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
+                                    <connections>
+                                        <binding destination="-2" name="content" keyPath="self.availableLayoutElements" id="kJh-mh-NDG"/>
+                                        <binding destination="-2" name="selectedIndex" keyPath="self.layout.topLeftElement" previousBinding="kJh-mh-NDG" id="btt-M3-DeB"/>
+                                    </connections>
                                 </popUpButton>
                                 <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b2T-jQ-lmq">
                                     <rect key="frame" x="192" y="-4" width="119" height="25"/>
@@ -52,17 +51,16 @@
                                             <items>
                                                 <menuItem title="–" state="on" id="ZlD-3o-1jO"/>
                                                 <menuItem isSeparatorItem="YES" id="Sfv-W8-D2v"/>
-                                                <menuItem title="Date &amp; Time" id="DPA-dS-JXs"/>
-                                                <menuItem title="Date" id="Iv3-9K-MJL"/>
-                                                <menuItem title="Time" id="9C1-f1-mrb">
-                                                    <modifierMask key="keyEquivalentModifierMask"/>
-                                                </menuItem>
                                                 <menuItem title="Battery Level" id="is2-YP-UaJ">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                 </menuItem>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
+                                    <connections>
+                                        <binding destination="-2" name="content" keyPath="self.availableLayoutElements" id="HYc-Y1-ETC"/>
+                                        <binding destination="-2" name="selectedIndex" keyPath="self.layout.topMiddleElement" previousBinding="HYc-Y1-ETC" id="wZW-Nz-kEF"/>
+                                    </connections>
                                 </popUpButton>
                                 <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="evG-xk-BWa">
                                     <rect key="frame" x="386" y="-4" width="119" height="25"/>
@@ -73,17 +71,16 @@
                                             <items>
                                                 <menuItem title="–" state="on" id="zDX-xN-rhq"/>
                                                 <menuItem isSeparatorItem="YES" id="qoW-uT-bE7"/>
-                                                <menuItem title="Date &amp; Time" id="TKp-1m-ajN"/>
-                                                <menuItem title="Date" id="TpI-JZ-NAT"/>
-                                                <menuItem title="Time" id="Kwa-E9-vr5">
-                                                    <modifierMask key="keyEquivalentModifierMask"/>
-                                                </menuItem>
                                                 <menuItem title="Battery Level" id="hNc-LO-iQd">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                 </menuItem>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
+                                    <connections>
+                                        <binding destination="-2" name="content" keyPath="self.availableLayoutElements" id="c3R-H6-3vM"/>
+                                        <binding destination="-2" name="selectedIndex" keyPath="self.layout.topRightElement" previousBinding="c3R-H6-3vM" id="GN4-Kx-gfx"/>
+                                    </connections>
                                 </popUpButton>
                             </subviews>
                             <visibilityPriorities>
@@ -185,17 +182,16 @@
                                             <items>
                                                 <menuItem title="–" state="on" id="NfG-dr-cML"/>
                                                 <menuItem isSeparatorItem="YES" id="7zL-I4-LEo"/>
-                                                <menuItem title="Date &amp; Time" id="7W5-pz-me4"/>
-                                                <menuItem title="Date" id="fye-JA-b9j"/>
-                                                <menuItem title="Time" id="vnw-bL-jAi">
-                                                    <modifierMask key="keyEquivalentModifierMask"/>
-                                                </menuItem>
                                                 <menuItem title="Battery Level" id="Teb-DI-6nO">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                 </menuItem>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
+                                    <connections>
+                                        <binding destination="-2" name="content" keyPath="self.availableLayoutElements" id="ClJ-Gp-UKR"/>
+                                        <binding destination="-2" name="selectedIndex" keyPath="self.layout.bottomLeftElement" previousBinding="ClJ-Gp-UKR" id="q5T-FC-B3M"/>
+                                    </connections>
                                 </popUpButton>
                                 <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9vy-aY-h8j">
                                     <rect key="frame" x="192" y="-4" width="119" height="25"/>
@@ -206,17 +202,16 @@
                                             <items>
                                                 <menuItem title="–" state="on" id="xSd-rM-qOc"/>
                                                 <menuItem isSeparatorItem="YES" id="Mh1-yX-Fch"/>
-                                                <menuItem title="Date &amp; Time" id="6fq-9k-dVL"/>
-                                                <menuItem title="Date" id="nit-Td-BjQ"/>
-                                                <menuItem title="Time" id="1OG-Da-pda">
-                                                    <modifierMask key="keyEquivalentModifierMask"/>
-                                                </menuItem>
                                                 <menuItem title="Battery Level" id="TcI-Kq-HzT">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                 </menuItem>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
+                                    <connections>
+                                        <binding destination="-2" name="content" keyPath="self.availableLayoutElements" id="44S-xU-sJa"/>
+                                        <binding destination="-2" name="selectedIndex" keyPath="self.layout.bottomMiddleElement" previousBinding="44S-xU-sJa" id="TTu-oA-dNV"/>
+                                    </connections>
                                 </popUpButton>
                                 <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b4M-6H-keB">
                                     <rect key="frame" x="386" y="-4" width="119" height="25"/>
@@ -227,17 +222,16 @@
                                             <items>
                                                 <menuItem title="–" state="on" id="s1P-rW-JNI"/>
                                                 <menuItem isSeparatorItem="YES" id="nPe-TT-iRM"/>
-                                                <menuItem title="Date &amp; Time" id="RJu-2P-7Bl"/>
-                                                <menuItem title="Date" id="e0o-ei-KLb"/>
-                                                <menuItem title="Time" id="TRD-Pg-HvX">
-                                                    <modifierMask key="keyEquivalentModifierMask"/>
-                                                </menuItem>
                                                 <menuItem title="Battery Level" id="ca8-ej-lAT">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                 </menuItem>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
+                                    <connections>
+                                        <binding destination="-2" name="content" keyPath="self.availableLayoutElements" id="f0N-s9-Oee"/>
+                                        <binding destination="-2" name="selectedIndex" keyPath="self.layout.bottomRightElement" previousBinding="f0N-s9-Oee" id="7O6-5J-dwM"/>
+                                    </connections>
                                 </popUpButton>
                             </subviews>
                             <visibilityPriorities>
@@ -290,6 +284,9 @@
                                     </items>
                                 </menu>
                             </popUpButtonCell>
+                            <connections>
+                                <binding destination="-2" name="selectedIndex" keyPath="self.layout.displayMode" id="hCs-U8-bvx"/>
+                            </connections>
                         </popUpButton>
                     </subviews>
                     <visibilityPriorities>
@@ -346,6 +343,9 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="QLK-0i-xzr"/>
             <viewLayoutGuide key="layoutMargins" id="p3q-HZ-lZ0"/>
+            <connections>
+                <outlet property="nextKeyView" destination="Tw7-sO-ddZ" id="lkU-oY-Egg"/>
+            </connections>
             <point key="canvasLocation" x="-85" y="-267"/>
         </view>
     </objects>
