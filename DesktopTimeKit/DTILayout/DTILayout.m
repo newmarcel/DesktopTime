@@ -29,6 +29,19 @@
             ];
 }
 
+#pragma mark - KVO
+
+- (void)didChangeValueForKey:(NSString *)key
+{
+    [super didChangeValueForKey:key];
+    
+    Auto delegate = self.delegate;
+    if([delegate respondsToSelector:@selector(layoutDidChange:keyPath:)])
+    {
+        [delegate layoutDidChange:self keyPath:key];
+    }
+}
+
 #pragma mark - NSSecureCoding
 
 #define kCodingKeyDisplayMode @"DTIDisplayMode"

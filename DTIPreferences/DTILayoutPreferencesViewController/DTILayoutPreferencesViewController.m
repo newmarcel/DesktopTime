@@ -11,7 +11,7 @@
 
 #define DTI_L10N_LAYOUT NSLocalizedString(@"Layout", @"Layout")
 
-@interface DTILayoutPreferencesViewController ()
+@interface DTILayoutPreferencesViewController () <DTILayoutDelegate>
 @property (nonatomic, readwrite) DTILayout *layout;
 @property (nonatomic, readwrite) NSArray<NSString *> *availableLayoutElements;
 @end
@@ -38,6 +38,7 @@
     [super viewDidLoad];
     
     self.layout = DTIPreferences.sharedPreferences.layout;
+    self.layout.delegate = self;
     self.availableLayoutElements = DTILayoutElementGetAllElements();
 }
 
@@ -47,6 +48,13 @@
 {
     [DTINotificationCenter.defaultCenter postNotification:DTIAppShouldTerminateNotification];
     [NSApplication.sharedApplication terminate:sender];
+}
+
+#pragma mark - DTILayoutDelegate
+
+- (void)layoutDidChange:(DTILayout *)layout keyPath:(NSString *)keyPath
+{
+    DTIPreferences.sharedPreferences.layout = layout;
 }
 
 @end
