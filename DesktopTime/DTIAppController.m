@@ -8,8 +8,10 @@
 #import "DTIAppController.h"
 #import "DTIDefines.h"
 #import "DTITimeWindowController.h"
+#import "DTILayoutController.h"
 
 @interface DTIAppController ()
+@property (nonatomic) DTILayoutController *layoutController;
 @property (nonatomic) NSHashTable<DTITimeWindowController *> *timeWindowControllers;
 @end
 
@@ -45,74 +47,28 @@
 
 - (void)handleLayoutDidChange:(NSNotification *)notification
 {
-    [self reloadLayout];
-}
-
-#pragma mark - Layout Management
-
-- (void)reloadLayout
-{
-    Auto preferences = DTIPreferences.sharedPreferences;
-    [self createWindowsForLayout:preferences.layout];
-}
-
-- (void)createWindowsForLayout:(DTILayout *)layout
-{
-    NSParameterAssert(layout);
-    
-    Auto screens = NSScreen.screens;
-    Auto mainScreen = NSScreen.mainScreen;
-    
-    switch(layout.displayMode)
-    {
-        case DTILayoutDisplayModeAllDisplays:
-        {
-            for(NSScreen *screen in screens)
-            {
-                [self createWindowsForLayout:layout onScreen:screen];
-            }
-            break;
-        }
-        case DTILayoutDisplayModeOnlyMainDisplay:
-        {
-            [self createWindowsForLayout:layout onScreen:mainScreen];
-            break;
-        }
-        case DTILayoutDisplayModeOnlySecondaryDisplays:
-        {
-            for(NSScreen *screen in screens)
-            {
-                if([screen isEqual:mainScreen]) { continue; }
-                [self createWindowsForLayout:layout onScreen:screen];
-            }
-            break;
-        }
-    }
-}
-
-- (void)createWindowsForLayout:(DTILayout *)layout onScreen:(NSScreen *)screen
-{
-    NSParameterAssert(layout);
-    NSParameterAssert(screen);
+    [self.layoutController reloadLayout];
 }
 
 #pragma mark - NSApplicationDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
-    Auto controllers = [NSHashTable weakObjectsHashTable];
+//    Auto controllers = [NSHashTable weakObjectsHashTable];
+//
+//    for(NSScreen *screen in NSScreen.screens)
+//    {
+//        Auto controller = [DTITimeWindowController new];
+//        controller.targetScreen = screen;
+//        [controllers addObject:controller];
+//        [controller showWindow:self];
+//    }
+//
+//    self.timeWindowControllers = controllers;
     
-    for(NSScreen *screen in NSScreen.screens)
-    {
-        Auto controller = [DTITimeWindowController new];
-        controller.targetScreen = screen;
-        [controllers addObject:controller];
-        [controller showWindow:self];
-    }
-    
-    self.timeWindowControllers = controllers;
-    
-    [self reloadLayout];
+    Auto layoutController = [DTILayoutController new];
+    [layoutController reloadLayout];
+    self.layoutController = layoutController;
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender

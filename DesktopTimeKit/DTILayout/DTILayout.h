@@ -17,6 +17,16 @@ typedef NS_ENUM(NSUInteger, DTILayoutDisplayMode)
     DTILayoutDisplayModeOnlySecondaryDisplays,
 };
 
+typedef NS_ENUM(NSUInteger, DTILayoutPosition) {
+    DTILayoutPositionUndefined = 0,
+    DTILayoutPositionTopLeft,
+    DTILayoutPositionTopMiddle,
+    DTILayoutPositionTopRight,
+    DTILayoutPositionBottomLeft,
+    DTILayoutPositionBottomMiddle,
+    DTILayoutPositionBottomRight
+};
+
 @protocol DTILayoutDelegate;
 
 @interface DTILayout : NSObject <NSSecureCoding>
@@ -31,6 +41,8 @@ typedef NS_ENUM(NSUInteger, DTILayoutDisplayMode)
 @property (nonatomic) DTILayoutElement bottomLeftElement;
 @property (nonatomic) DTILayoutElement bottomMiddleElement;
 @property (nonatomic) DTILayoutElement bottomRightElement;
+
+- (DTILayoutElement)elementAtPosition:(DTILayoutPosition)position;
 
 @end
 

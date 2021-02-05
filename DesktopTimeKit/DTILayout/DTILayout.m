@@ -13,6 +13,32 @@
 
 @implementation DTILayout
 
+- (instancetype)init
+{
+    self = [super init];
+    if(self)
+    {
+        self.bottomRightElement = DTILayoutElementDateTime;
+    }
+    return self;
+}
+
+- (DTILayoutElement)elementAtPosition:(DTILayoutPosition)position
+{
+    switch(position)
+    {
+        case DTILayoutPositionUndefined: return DTILayoutElementNone;
+        case DTILayoutPositionTopLeft: return self.topLeftElement;
+        case DTILayoutPositionTopMiddle: return self.topMiddleElement;
+        case DTILayoutPositionTopRight: return self.topRightElement;
+        case DTILayoutPositionBottomLeft: return self.bottomLeftElement;
+        case DTILayoutPositionBottomMiddle: return self.bottomMiddleElement;
+        case DTILayoutPositionBottomRight: return self.bottomRightElement;
+    }
+}
+
+#pragma mark - Description
+
 - (NSString *)description
 {
     return [NSString stringWithFormat:

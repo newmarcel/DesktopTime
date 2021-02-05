@@ -187,9 +187,25 @@ NS_INLINE void DTISetColorForKey(id<DTIDefaultsProvider> defaults, NSColor *_Nul
 
 - (void)setLayout:(DTILayout *)layout
 {
+    Auto notificationCenter = DTINotificationCenter.defaultCenter;
     if(layout == nil)
     {
         [self.defaults removeObjectForKey:DTILayoutKey];
+        
+        [notificationCenter postNotification:DTILayoutDidChangeNotification];
+        return;
+    }
+    
+    // Discard empty layouts
+    if(layout.topLeftElement == DTILayoutElementNone
+       && layout.topMiddleElement == DTILayoutElementNone
+       && layout.topRightElement == DTILayoutElementNone
+       && layout.bottomLeftElement == DTILayoutElementNone
+       && layout.bottomMiddleElement == DTILayoutElementNone
+       && layout.bottomRightElement == DTILayoutElementNone) {
+        [self.defaults removeObjectForKey:DTILayoutKey];
+        
+        [notificationCenter postNotification:DTILayoutDidChangeNotification];
         return;
     }
     
@@ -203,7 +219,7 @@ NS_INLINE void DTISetColorForKey(id<DTIDefaultsProvider> defaults, NSColor *_Nul
     
     [self.defaults setObject:data forKey:DTILayoutKey];
     
-    [DTINotificationCenter.defaultCenter postNotification:DTILayoutDidChangeNotification];
+    [notificationCenter postNotification:DTILayoutDidChangeNotification];
 }
 
 #pragma mark - Date & Time Appearance
