@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NSNotificationName DTINotificationName NS_EXTENSIBLE_STRING_ENUM;
 
 FOUNDATION_EXPORT const DTINotificationName DTIAppShouldTerminateNotification;
+FOUNDATION_EXPORT const DTINotificationName DTILayoutDidChangeNotification;
 
 @interface DTINotificationCenter : NSObject
 @property (class, nonatomic, readonly) DTINotificationCenter *defaultCenter;

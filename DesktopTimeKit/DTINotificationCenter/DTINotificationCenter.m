@@ -9,6 +9,7 @@
 #import "DTIDefines.h"
 
 const DTINotificationName DTIAppShouldTerminateNotification = @"DTIAppShouldTerminateNotification";
+const DTINotificationName DTILayoutDidChangeNotification = @"DTILayoutDidChangeNotification";
 
 @interface DTINotificationCenter ()
 @property (nonatomic) NSDistributedNotificationCenter *distributedCenter;

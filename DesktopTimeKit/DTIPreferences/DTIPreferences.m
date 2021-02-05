@@ -9,6 +9,7 @@
 #import "DTIDefines.h"
 #import "DTIAppGroup.h"
 #import "DTILayout.h"
+#import "DTINotificationCenter.h"
 
 NSString * const DTIFirstLaunchFinishedKey = @"info.marcel-dierkes.DesktopTime.FirstLaunchFinshed";
 NSString * const DTILayoutKey = @"info.marcel-dierkes.DesktopTime.Layout";
@@ -201,6 +202,8 @@ NS_INLINE void DTISetColorForKey(id<DTIDefaultsProvider> defaults, NSColor *_Nul
     }
     
     [self.defaults setObject:data forKey:DTILayoutKey];
+    
+    [DTINotificationCenter.defaultCenter postNotification:DTILayoutDidChangeNotification];
 }
 
 #pragma mark - Date & Time Appearance

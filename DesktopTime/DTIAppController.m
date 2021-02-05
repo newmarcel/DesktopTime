@@ -6,8 +6,8 @@
 //
 
 #import "DTIAppController.h"
-#import "DTITimeWindowController.h"
 #import "DTIDefines.h"
+#import "DTITimeWindowController.h"
 
 @interface DTIAppController ()
 @property (nonatomic) NSHashTable<DTITimeWindowController *> *timeWindowControllers;
@@ -20,19 +20,41 @@
     self = [super init];
     if(self)
     {
-        [DTINotificationCenter.defaultCenter addObserver:self
-                                                selector:@selector(handleShouldTerminate:)
-                                                    name:DTIAppShouldTerminateNotification];
+        [self configureNotifications];
     }
     return self;
 }
 
-- (void)handleShouldTerminate:(id)sender
+#pragma mark - Notifications
+
+- (void)configureNotifications
 {
-    [NSApplication.sharedApplication terminate:sender];
+    Auto center = DTINotificationCenter.defaultCenter;
+    [center addObserver:self
+               selector:@selector(handleShouldTerminate:)
+                   name:DTIAppShouldTerminateNotification];
+    [center addObserver:self
+               selector:@selector(handleLayoutDidChange:)
+                   name:DTILayoutDidChangeNotification];
+}
+
+- (void)handleShouldTerminate:(NSNotification *)notification
+{
+    [NSApplication.sharedApplication terminate:notification];
+}
+
+- (void)handleLayoutDidChange:(NSNotification *)notification
+{
+    [self reloadLayout];
 }
 
 #pragma mark - Layout Management
+
+- (void)reloadLayout
+{
+    Auto preferences = DTIPreferences.sharedPreferences;
+    [self createWindowsForLayout:preferences.layout];
+}
 
 - (void)createWindowsForLayout:(DTILayout *)layout
 {
@@ -90,9 +112,7 @@
     
     self.timeWindowControllers = controllers;
     
-    // New layout-based approach
-    Auto preferences = DTIPreferences.sharedPreferences;
-    [self createWindowsForLayout:preferences.layout];
+    [self reloadLayout];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
