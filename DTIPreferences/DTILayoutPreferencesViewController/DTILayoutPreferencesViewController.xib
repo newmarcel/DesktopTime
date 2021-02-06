@@ -312,7 +312,7 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="completelyTerminate:" target="-2" id="sDO-5s-G3U"/>
+                        <action selector="completelyTerminate:" target="-1" id="fpd-nf-rIO"/>
                     </connections>
                 </button>
                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="uwD-iS-1Wz">

@@ -42,14 +42,6 @@
     self.availableLayoutElements = DTILayoutElementGetAllElements();
 }
 
-#pragma mark - Actions
-
-- (IBAction)completelyTerminate:(id)sender
-{
-    [DTINotificationCenter.defaultCenter postNotification:DTIAppShouldTerminateNotification];
-    [NSApplication.sharedApplication terminate:sender];
-}
-
 #pragma mark - DTILayoutDelegate
 
 - (void)layoutDidChange:(DTILayout *)layout keyPath:(NSString *)keyPath

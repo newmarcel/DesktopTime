@@ -6,10 +6,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <DesktopTimeKit/DesktopTimeKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DTIPreferencesWindowController : NSWindowController
+
+- (IBAction)completelyTerminate:(id)sender;
+
 @end
 
 NS_ASSUME_NONNULL_END

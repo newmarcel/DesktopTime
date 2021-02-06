@@ -25,4 +25,11 @@
     splitViewController.splitView.autosaveName = @"DTIPreferencesSplit";
 }
 
+- (IBAction)completelyTerminate:(id)sender
+{
+    Auto center = DTINotificationCenter.defaultCenter;
+    [center postNotification:DTIAppShouldTerminateNotification];
+    [NSApplication.sharedApplication terminate:sender];
+}
+
 @end

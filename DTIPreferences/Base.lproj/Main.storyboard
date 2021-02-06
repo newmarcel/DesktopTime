@@ -47,6 +47,9 @@
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
                                         <menuItem title="Completely Quit DesktopTime" keyEquivalent="q" id="ybZ-Ke-uti">
                                             <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="completelyTerminate:" target="Ady-hI-5gd" id="I9a-Ht-voS"/>
+                                            </connections>
                                         </menuItem>
                                         <menuItem title="Quit DesktopTime Preferences" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
