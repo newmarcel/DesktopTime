@@ -105,7 +105,7 @@
         CGRect windowFrame = [self windowFrameForPosition:self.position
                                               screenFrame:(CGRect)screen.frame
                                                windowSize:frame.size];
-        [window setFrame:windowFrame display:YES];
+        [window setFrame:windowFrame display:NO];
     }
 }
 
@@ -116,8 +116,8 @@
     CGFloat width = windowSize.width;
     CGFloat height = windowSize.height;
     CGFloat topY = screenFrame.size.height - height;
-    CGFloat bottomY = 0.0f;
-    CGFloat leftX = 0.0f;
+    CGFloat bottomY = screenFrame.origin.y;
+    CGFloat leftX = screenFrame.origin.x;
     CGFloat midX = roundf((screenFrame.size.width / 2.0f) - (width / 2.0f));
     CGFloat rightX = screenFrame.size.width - width;
     
