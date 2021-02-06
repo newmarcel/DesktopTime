@@ -89,6 +89,14 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
         }
         case DTILayoutDisplayModeOnlySecondaryDisplays:
         {
+            if(screens.count == 1)
+            {
+                // If only one screen is connected, just use this
+                // instead of not displaying anything.
+                [self createWindowsForLayout:layout onScreen:screens.firstObject];
+                break;
+            }
+            
             for(NSScreen *screen in screens)
             {
                 if([screen isEqual:mainScreen]) { continue; }
