@@ -49,6 +49,7 @@
 		DAC70E1225C55175009787A1 /* NSURL+DTIPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC70E0B25C55175009787A1 /* NSURL+DTIPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAC70E1325C55175009787A1 /* DTIPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC70E0C25C55175009787A1 /* DTIPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAC70E1425C55175009787A1 /* DTIPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC70E0D25C55175009787A1 /* DTIPreferences.m */; };
+		DACCAD1125CE95AC00512A4A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DACCAD1025CE95AC00512A4A /* Credits.rtf */; };
 		DAE550CC25CDB6A400297C2A /* DTILayoutElementWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE550CA25CDB6A400297C2A /* DTILayoutElementWindowController.m */; };
 		DAE550CD25CDB6A400297C2A /* DTILayoutElementWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAE550CB25CDB6A400297C2A /* DTILayoutElementWindowController.xib */; };
 		DAE550D325CDB80300297C2A /* DTILayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE550D225CDB80300297C2A /* DTILayoutController.m */; };
@@ -174,6 +175,7 @@
 		DAC70E0B25C55175009787A1 /* NSURL+DTIPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+DTIPreferences.h"; sourceTree = "<group>"; };
 		DAC70E0C25C55175009787A1 /* DTIPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIPreferences.h; sourceTree = "<group>"; };
 		DAC70E0D25C55175009787A1 /* DTIPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTIPreferences.m; sourceTree = "<group>"; };
+		DACCAD1025CE95AC00512A4A /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		DAE550C925CDB6A400297C2A /* DTILayoutElementWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTILayoutElementWindowController.h; sourceTree = "<group>"; };
 		DAE550CA25CDB6A400297C2A /* DTILayoutElementWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTILayoutElementWindowController.m; sourceTree = "<group>"; };
 		DAE550CB25CDB6A400297C2A /* DTILayoutElementWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTILayoutElementWindowController.xib; sourceTree = "<group>"; };
@@ -401,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				DAC70DAF25C49BEA009787A1 /* Assets.xcassets */,
+				DACCAD1025CE95AC00512A4A /* Credits.rtf */,
 				DAC70DB425C49BEA009787A1 /* Info.plist */,
 				DAC70DB525C49BEA009787A1 /* main.m */,
 				DAC70DB725C49BEA009787A1 /* DTIPreferences.entitlements */,
@@ -638,6 +641,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAB3511325C5FB2A000D76B9 /* DTIDateTimePreferencesViewController.xib in Resources */,
+				DACCAD1125CE95AC00512A4A /* Credits.rtf in Resources */,
 				DAB3510E25C5F9ED000D76B9 /* DTIBatteryPreferencesViewController.xib in Resources */,
 				DAC70DB025C49BEA009787A1 /* Assets.xcassets in Resources */,
 				DAC70DB325C49BEA009787A1 /* Main.storyboard in Resources */,
