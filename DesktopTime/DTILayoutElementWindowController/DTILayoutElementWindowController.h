@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) DTILayoutPosition position;
 @property (weak, nonatomic) NSScreen *targetScreen;
 
-+ (nullable  instancetype)windowControllerForElement:(DTILayoutElement)element
-                                          atPosition:(DTILayoutPosition)position;
++ (nullable instancetype)windowControllerForElement:(DTILayoutElement)element
+                                         atPosition:(DTILayoutPosition)position;
 
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;

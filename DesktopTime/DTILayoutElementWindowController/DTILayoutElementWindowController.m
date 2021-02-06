@@ -31,19 +31,9 @@
             // Do not create a window at all
             return nil;
         case DTILayoutElementDateTime:
-        {
-            Auto controller = [[DTIDateTimeLayoutElementWindowController alloc]
-                               initWithElement:element
-                               Position:position];
-            return controller;
-        }
+            // fallthrough
         case DTILayoutElementDate:
-        {
-            Auto controller = [[DTIDateTimeLayoutElementWindowController alloc]
-                               initWithElement:element
-                               Position:position];
-            return controller;
-        }
+            // fallthrough
         case DTILayoutElementTime:
         {
             Auto controller = [[DTIDateTimeLayoutElementWindowController alloc]
@@ -52,10 +42,12 @@
             return controller;
         }
         case DTILayoutElementBatteryLevel:
-            @throw [NSException exceptionWithName:NSInternalInconsistencyException
-                                           reason:@"Battery Level not implemented"
-                                         userInfo:nil];
-            return nil;
+        {
+            Auto controller = [[DTIBatteryLevelLayoutElementWindowController alloc]
+                               initWithElement:element
+                               Position:position];
+            return controller;
+        }
     }
 }
 
@@ -104,14 +96,48 @@
     AutoVar frame = window.frame;
     Auto screen = self.targetScreen ?: window.screen;
     
-#warning TODO: Take position into account
+    // Let Auto Layout size the window
+    [window layoutIfNeeded];
     
     if(screen != nil)
     {
-        frame.origin = screen.frame.origin;
-//        frame.size.width = screen.frame.size.width; // FIXME
-        
-        [window setFrame:frame display:YES];
+        CGRect windowFrame = [self windowFrameForPosition:self.position
+                                              screenFrame:(CGRect)screen.frame
+                                               windowSize:frame.size];
+        [window setFrame:windowFrame display:YES];
+    }
+}
+
+- (CGRect)windowFrameForPosition:(DTILayoutPosition)position screenFrame:(CGRect)screenFrame windowSize:(CGSize)windowSize
+{
+    // Remember: AppKit's coordinate system starts at the bottom left!!!
+    
+    CGFloat width = windowSize.width;
+    CGFloat height = windowSize.height;
+    CGFloat topY = screenFrame.size.height - height;
+    CGFloat bottomY = 0.0f;
+    CGFloat leftX = 0.0f;
+    CGFloat midX = roundf((screenFrame.size.width / 2.0f) - (width / 2.0f));
+    CGFloat rightX = screenFrame.size.width - width;
+    
+    switch(position)
+    {
+        case DTILayoutPositionUndefined:
+            return CGRectZero;
+            
+        case DTILayoutPositionTopLeft:
+            return CGRectMake(leftX, topY, width, height);
+        case DTILayoutPositionTopMiddle:
+            return CGRectMake(midX, topY, width, height);
+        case DTILayoutPositionTopRight:
+            return CGRectMake(rightX, topY, width, height);
+            
+        case DTILayoutPositionBottomLeft:
+            return CGRectMake(leftX, bottomY, width, height);
+        case DTILayoutPositionBottomMiddle:
+            return CGRectMake(midX, bottomY, width, height);
+        case DTILayoutPositionBottomRight:
+            return CGRectMake(rightX, bottomY, width, height);
     }
 }
 
@@ -164,8 +190,9 @@
     [super reloadWindow];
     
     Auto label = self.textLabel;
-    Auto preferences = DTIPreferences.sharedPreferences;
+    label.stringValue = @"99 %";
     
+    Auto preferences = DTIPreferences.sharedPreferences;
     label.font = preferences.batteryLevelFont;
     label.textColor = preferences.batteryLevelTextColor;
     label.layer.shadowColor = preferences.batteryLevelShadowColor.CGColor;

@@ -106,6 +106,8 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     
     Auto addController = ^void(DTILayoutElement element, DTILayoutPosition position) {
         Auto controller = [DTILayoutElementWindowController windowControllerForElement:element atPosition:position];
+        if(controller == nil) { return; }
+        
         controller.targetScreen = screen;
         [self.windowControllers addObject:controller];
         [controller showWindow:self];
@@ -113,6 +115,11 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     };
     
     addController(layout.topLeftElement, DTILayoutPositionTopLeft);
+    addController(layout.topMiddleElement, DTILayoutPositionTopMiddle);
+    addController(layout.topRightElement, DTILayoutPositionTopRight);
+    addController(layout.bottomLeftElement, DTILayoutPositionBottomLeft);
+    addController(layout.bottomMiddleElement, DTILayoutPositionBottomMiddle);
+    addController(layout.bottomRightElement, DTILayoutPositionBottomRight);
 }
 
 #pragma mark - Timer

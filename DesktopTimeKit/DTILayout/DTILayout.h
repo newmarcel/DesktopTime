@@ -17,7 +17,7 @@ typedef NS_ENUM(NSUInteger, DTILayoutDisplayMode)
     DTILayoutDisplayModeOnlySecondaryDisplays,
 };
 
-typedef NS_ENUM(NSUInteger, DTILayoutPosition) {
+typedef NS_CLOSED_ENUM(NSUInteger, DTILayoutPosition) {
     DTILayoutPositionUndefined = 0,
     DTILayoutPositionTopLeft,
     DTILayoutPositionTopMiddle,
