@@ -1051,6 +1051,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "info.marcel-dierkes.DesktopTime.Preferences";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -1072,6 +1073,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "info.marcel-dierkes.DesktopTime.Preferences";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
