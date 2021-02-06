@@ -252,6 +252,35 @@
 			path = DTIAppGroup;
 			sourceTree = "<group>";
 		};
+		DA98EF8325CECB0C008072E7 /* DTILayoutElementWindowController */ = {
+			isa = PBXGroup;
+			children = (
+				DAE550C925CDB6A400297C2A /* DTILayoutElementWindowController.h */,
+				DAE550CA25CDB6A400297C2A /* DTILayoutElementWindowController.m */,
+				DAE550CB25CDB6A400297C2A /* DTILayoutElementWindowController.xib */,
+			);
+			path = DTILayoutElementWindowController;
+			sourceTree = "<group>";
+		};
+		DA98EF8425CECB19008072E7 /* DTITimeWindowController (Legacy) */ = {
+			isa = PBXGroup;
+			children = (
+				DAF8E60B25B4465F00E3FA43 /* DTITimeWindowController.h */,
+				DAF8E60C25B4465F00E3FA43 /* DTITimeWindowController.m */,
+				DAF8E60D25B4465F00E3FA43 /* DTITimeWindowController.xib */,
+			);
+			path = "DTITimeWindowController (Legacy)";
+			sourceTree = "<group>";
+		};
+		DA98EF8B25CECB22008072E7 /* DTILayoutController */ = {
+			isa = PBXGroup;
+			children = (
+				DAE550D125CDB80300297C2A /* DTILayoutController.h */,
+				DAE550D225CDB80300297C2A /* DTILayoutController.m */,
+			);
+			path = DTILayoutController;
+			sourceTree = "<group>";
+		};
 		DAA400EB25C6B25300A45F50 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,14 +318,9 @@
 			children = (
 				DAAD1D0F25B43ECE00F6902D /* DTIAppController.h */,
 				DAAD1D1025B43ECE00F6902D /* DTIAppController.m */,
-				DAF8E60B25B4465F00E3FA43 /* DTITimeWindowController.h */,
-				DAF8E60C25B4465F00E3FA43 /* DTITimeWindowController.m */,
-				DAF8E60D25B4465F00E3FA43 /* DTITimeWindowController.xib */,
-				DAE550D125CDB80300297C2A /* DTILayoutController.h */,
-				DAE550D225CDB80300297C2A /* DTILayoutController.m */,
-				DAE550C925CDB6A400297C2A /* DTILayoutElementWindowController.h */,
-				DAE550CA25CDB6A400297C2A /* DTILayoutElementWindowController.m */,
-				DAE550CB25CDB6A400297C2A /* DTILayoutElementWindowController.xib */,
+				DA98EF8425CECB19008072E7 /* DTITimeWindowController (Legacy) */,
+				DA98EF8B25CECB22008072E7 /* DTILayoutController */,
+				DA98EF8325CECB0C008072E7 /* DTILayoutElementWindowController */,
 				DAF8E5F525B43FFA00E3FA43 /* Other… */,
 			);
 			path = DesktopTime;
