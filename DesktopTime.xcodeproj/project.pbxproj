@@ -593,7 +593,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DTI;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					DAAD1D0B25B43ECE00F6902D = {
 						CreatedOnToolsVersion = 12.3;
