@@ -19,6 +19,7 @@
 @end
 
 @interface DTIBatteryLevelLayoutElementWindowController : DTILayoutElementWindowController
+@property (nonatomic) DTIBatteryStatus *batteryStatus;
 @end
 
 @implementation DTILayoutElementWindowController
@@ -185,12 +186,22 @@
 
 @implementation DTIBatteryLevelLayoutElementWindowController
 
+ - (instancetype)initWithElement:(DTILayoutElement)element Position:(DTILayoutPosition)position
+{
+    self = [super initWithElement:element Position:position];
+    if(self)
+    {
+        self.batteryStatus = [DTIBatteryStatus new];
+    }
+    return self;
+}
+
 - (void)reloadWindow
 {
     [super reloadWindow];
     
     Auto label = self.textLabel;
-    label.stringValue = @"99 %";
+    label.stringValue = self.batteryStatus.localizedCurrentCapacity;
     
     Auto preferences = DTIPreferences.sharedPreferences;
     label.font = preferences.batteryLevelFont;
