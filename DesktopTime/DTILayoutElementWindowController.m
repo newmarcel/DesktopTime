@@ -144,10 +144,33 @@
 {
     [super reloadWindow];
     
-    self.textLabel.objectValue = [NSDate date];
+    Auto label = self.textLabel;
+    label.objectValue = [NSDate date];
+    
+    Auto preferences = DTIPreferences.sharedPreferences;
+    label.font = preferences.dateTimeFont;
+    label.textColor = preferences.dateTimeTextColor;
+    label.layer.shadowColor = preferences.dateTimeShadowColor.CGColor;
+    
+    [self updateWindowPosition];
 }
 
 @end
 
 @implementation DTIBatteryLevelLayoutElementWindowController
+
+- (void)reloadWindow
+{
+    [super reloadWindow];
+    
+    Auto label = self.textLabel;
+    Auto preferences = DTIPreferences.sharedPreferences;
+    
+    label.font = preferences.batteryLevelFont;
+    label.textColor = preferences.batteryLevelTextColor;
+    label.layer.shadowColor = preferences.batteryLevelShadowColor.CGColor;
+    
+    [self updateWindowPosition];
+}
+
 @end

@@ -22,8 +22,12 @@
             <view key="contentView" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="110" height="53"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="900" verticalHuggingPriority="900" translatesAutoresizingMaskIntoConstraints="NO" id="vDS-2a-PRn">
+                    <textField wantsLayer="YES" horizontalHuggingPriority="900" verticalHuggingPriority="900" translatesAutoresizingMaskIntoConstraints="NO" id="vDS-2a-PRn">
                         <rect key="frame" x="14" y="16" width="82" height="21"/>
+                        <shadow key="shadow" blurRadius="1">
+                            <size key="offset" width="0.0" height="1"/>
+                            <color key="color" white="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </shadow>
                         <textFieldCell key="cell" lineBreakMode="clipping" title="Text Label" id="QZd-hi-2aL">
                             <font key="font" textStyle="title2" name=".SFNS-Regular"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>

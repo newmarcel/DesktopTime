@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 FOUNDATION_EXPORT NSString * const DTIFirstLaunchFinishedKey;
 FOUNDATION_EXPORT NSString * const DTILayoutKey;
 FOUNDATION_EXPORT NSString * const DTIDateTimeFontKey;
+FOUNDATION_EXPORT NSString * const DTIDateTimeTextColorKey;
+FOUNDATION_EXPORT NSString * const DTIDateTimeShadowColorKey;
 FOUNDATION_EXPORT NSString * const DTIBatteryLevelFontKey;
 FOUNDATION_EXPORT NSString * const DTIBatteryLevelTextColorKey;
 FOUNDATION_EXPORT NSString * const DTIBatteryLevelShadowColorKey;
@@ -29,7 +31,9 @@ FOUNDATION_EXPORT NSString * const DTIBatteryLevelShadowColorKey;
 
 @property (nonatomic, null_resettable) DTILayout *layout;
 
-@property (nonatomic, nullable) NSFont *dateTimeFont;
+@property (nonatomic, null_resettable) NSFont *dateTimeFont;
+@property (nonatomic, null_resettable) NSColor *dateTimeTextColor;
+@property (nonatomic, null_resettable) NSColor *dateTimeShadowColor;
 
 @property (nonatomic, null_resettable) NSFont *batteryLevelFont;
 @property (nonatomic, null_resettable) NSColor *batteryLevelTextColor;

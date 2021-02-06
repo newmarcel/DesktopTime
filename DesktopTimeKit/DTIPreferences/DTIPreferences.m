@@ -13,7 +13,10 @@
 
 NSString * const DTIFirstLaunchFinishedKey = @"info.marcel-dierkes.DesktopTime.FirstLaunchFinshed";
 NSString * const DTILayoutKey = @"info.marcel-dierkes.DesktopTime.Layout";
-NSString * const DTIDateTimeFontKey = @"info.marcel-dierkes.DesktopTime.DateTimeFont";
+NSString * const DTIDateTimeFontKey = @"info.marcel-dierkes.DesktopTime.DateTime.Font";
+NSString * const DTIDateTimeTextColorKey = @"info.marcel-dierkes.DesktopTime.DateTime.TextColor";
+NSString * const DTIDateTimeShadowColorKey = @"info.marcel-dierkes.DesktopTime.DateTime.ShadowColor";
+
 NSString * const DTIBatteryLevelFontKey = @"info.marcel-dierkes.DesktopTime.BatteryLevel.Font";
 NSString * const DTIBatteryLevelTextColorKey = @"info.marcel-dierkes.DesktopTime.BatteryLevel.TextColor";
 NSString * const DTIBatteryLevelShadowColorKey = @"info.marcel-dierkes.DesktopTime.BatteryLevel.ShadowColor";
@@ -222,11 +225,12 @@ NS_INLINE void DTISetColorForKey(id<DTIDefaultsProvider> defaults, NSColor *_Nul
     [notificationCenter postNotification:DTILayoutDidChangeNotification];
 }
 
-#pragma mark - Date & Time Appearance
+#pragma mark - Date/Time Appearance
 
 - (NSFont *)dateTimeFont
 {
-    return DTIFontForKey(self.defaults, DTIDateTimeFontKey);
+    return DTIFontForKey(self.defaults, DTIDateTimeFontKey)
+        ?: [NSFont systemFontOfSize:16.0f weight:NSFontWeightSemibold];
 }
 
 - (void)setDateTimeFont:(NSFont *)font
@@ -234,12 +238,34 @@ NS_INLINE void DTISetColorForKey(id<DTIDefaultsProvider> defaults, NSColor *_Nul
     DTISetFontForKey(self.defaults, font, DTIDateTimeFontKey);
 }
 
+- (NSColor *)dateTimeTextColor
+{
+    return DTIColorForKey(self.defaults, DTIDateTimeTextColorKey)
+    ?: [NSColor colorWithWhite:0.94 alpha:1.0f];
+}
+
+- (void)setDateTimeTextColor:(NSColor *)textColor
+{
+    DTISetColorForKey(self.defaults, textColor, DTIDateTimeTextColorKey);
+}
+
+- (NSColor *)dateTimeShadowColor
+{
+    return DTIColorForKey(self.defaults, DTIDateTimeShadowColorKey)
+    ?: [NSColor.blackColor colorWithAlphaComponent:0.7f];
+}
+
+- (void)setDateTimeShadowColor:(NSColor *)shadowColor
+{
+    DTISetColorForKey(self.defaults, shadowColor, DTIDateTimeShadowColorKey);
+}
+
 #pragma mark - Battery Level Appearance
 
 - (NSFont *)batteryLevelFont
 {
     return DTIFontForKey(self.defaults, DTIBatteryLevelFontKey)
-        ?: [NSFont systemFontOfSize:16.0f weight:NSFontWeightSemibold];;
+        ?: [NSFont systemFontOfSize:16.0f weight:NSFontWeightSemibold];
 }
 
 - (void)setBatteryLevelFont:(NSFont *)font
