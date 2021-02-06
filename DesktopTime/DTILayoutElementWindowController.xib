@@ -19,12 +19,11 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="480" height="110"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
-            <view key="contentView" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="53"/>
-                <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="110" height="53"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vDS-2a-PRn">
-                        <rect key="frame" x="14" y="16" width="452" height="21"/>
+                    <textField horizontalHuggingPriority="900" verticalHuggingPriority="900" translatesAutoresizingMaskIntoConstraints="NO" id="vDS-2a-PRn">
+                        <rect key="frame" x="14" y="16" width="82" height="21"/>
                         <textFieldCell key="cell" lineBreakMode="clipping" title="Text Label" id="QZd-hi-2aL">
                             <font key="font" textStyle="title2" name=".SFNS-Regular"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>

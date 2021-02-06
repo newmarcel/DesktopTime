@@ -50,6 +50,8 @@
 		DAC70E1325C55175009787A1 /* DTIPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC70E0C25C55175009787A1 /* DTIPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAC70E1425C55175009787A1 /* DTIPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC70E0D25C55175009787A1 /* DTIPreferences.m */; };
 		DACCAD1125CE95AC00512A4A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DACCAD1025CE95AC00512A4A /* Credits.rtf */; };
+		DACCAD4525CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.h in Headers */ = {isa = PBXBuildFile; fileRef = DACCAD4325CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACCAD4625CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCAD4425CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.m */; };
 		DAE550CC25CDB6A400297C2A /* DTILayoutElementWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE550CA25CDB6A400297C2A /* DTILayoutElementWindowController.m */; };
 		DAE550CD25CDB6A400297C2A /* DTILayoutElementWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAE550CB25CDB6A400297C2A /* DTILayoutElementWindowController.xib */; };
 		DAE550D325CDB80300297C2A /* DTILayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE550D225CDB80300297C2A /* DTILayoutController.m */; };
@@ -176,6 +178,8 @@
 		DAC70E0C25C55175009787A1 /* DTIPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIPreferences.h; sourceTree = "<group>"; };
 		DAC70E0D25C55175009787A1 /* DTIPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTIPreferences.m; sourceTree = "<group>"; };
 		DACCAD1025CE95AC00512A4A /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		DACCAD4325CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+DTILayoutElement.h"; sourceTree = "<group>"; };
+		DACCAD4425CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+DTILayoutElement.m"; sourceTree = "<group>"; };
 		DAE550C925CDB6A400297C2A /* DTILayoutElementWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTILayoutElementWindowController.h; sourceTree = "<group>"; };
 		DAE550CA25CDB6A400297C2A /* DTILayoutElementWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTILayoutElementWindowController.m; sourceTree = "<group>"; };
 		DAE550CB25CDB6A400297C2A /* DTILayoutElementWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTILayoutElementWindowController.xib; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 				DA1DE52925CC6B5100EEC86F /* DTILayout.m */,
 				DA1DE53625CC6E6300EEC86F /* DTILayoutElement.h */,
 				DA1DE53725CC6E6300EEC86F /* DTILayoutElement.m */,
+				DACCAD4225CEA9E000512A4A /* Extensions */,
 			);
 			path = DTILayout;
 			sourceTree = "<group>";
@@ -442,6 +447,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		DACCAD4225CEA9E000512A4A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DACCAD4325CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.h */,
+				DACCAD4425CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DAF8E5F525B43FFA00E3FA43 /* Other… */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +486,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACCAD4525CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.h in Headers */,
 				DAC70E1325C55175009787A1 /* DTIPreferences.h in Headers */,
 				DAF8E61F25B451E700E3FA43 /* DTIBatteryStatus.h in Headers */,
 				DAC70DF125C550D0009787A1 /* DTINotificationCenter.h in Headers */,
@@ -675,6 +690,7 @@
 				DAF8E61E25B451E700E3FA43 /* DTIBatteryStatus.m in Sources */,
 				DAC70E1025C55175009787A1 /* NSWorkspace+DTIPreferences.m in Sources */,
 				DA1DE53925CC6E6300EEC86F /* DTILayoutElement.m in Sources */,
+				DACCAD4625CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.m in Sources */,
 				DAC70E1425C55175009787A1 /* DTIPreferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

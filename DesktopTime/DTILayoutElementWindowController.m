@@ -9,18 +9,63 @@
 #import "DTIDefines.h"
 
 @interface DTILayoutElementWindowController () <NSWindowDelegate>
+@property (nonatomic, readwrite) DTILayoutElement element;
 @property (nonatomic, readwrite) DTILayoutPosition position;
 @property (weak, nonatomic, nullable) IBOutlet NSTextField *textLabel;
 @end
 
+@interface DTIDateTimeLayoutElementWindowController : DTILayoutElementWindowController
+@property (nonatomic) NSDateFormatter *dateFormatter;
+@end
+
+@interface DTIBatteryLevelLayoutElementWindowController : DTILayoutElementWindowController
+@end
+
 @implementation DTILayoutElementWindowController
 
-- (instancetype)initWithPosition:(DTILayoutPosition)position
++ (instancetype)windowControllerForElement:(DTILayoutElement)element atPosition:(DTILayoutPosition)position
+{
+    switch(element)
+    {
+        case DTILayoutElementNone:
+            // Do not create a window at all
+            return nil;
+        case DTILayoutElementDateTime:
+        {
+            Auto controller = [[DTIDateTimeLayoutElementWindowController alloc]
+                               initWithElement:element
+                               Position:position];
+            return controller;
+        }
+        case DTILayoutElementDate:
+        {
+            Auto controller = [[DTIDateTimeLayoutElementWindowController alloc]
+                               initWithElement:element
+                               Position:position];
+            return controller;
+        }
+        case DTILayoutElementTime:
+        {
+            Auto controller = [[DTIDateTimeLayoutElementWindowController alloc]
+                               initWithElement:element
+                               Position:position];
+            return controller;
+        }
+        case DTILayoutElementBatteryLevel:
+            @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                           reason:@"Battery Level not implemented"
+                                         userInfo:nil];
+            return nil;
+    }
+}
+
+- (instancetype)initWithElement:(DTILayoutElement)element Position:(DTILayoutPosition)position
 {
     Auto nibName = NSStringFromClass([DTILayoutElementWindowController class]);
     self = [super initWithWindowNibName:nibName];
     if(self)
     {
+        self.element = element;
         self.position = position;
     }
     return self;
@@ -59,6 +104,8 @@
     AutoVar frame = window.frame;
     Auto screen = self.targetScreen ?: window.screen;
     
+#warning TODO: Take position into account
+    
     if(screen != nil)
     {
         frame.origin = screen.frame.origin;
@@ -70,12 +117,36 @@
 
 - (void)reloadWindow
 {
-    
 }
 
 @end
 
 @implementation DTIDateTimeLayoutElementWindowController
+
+ - (instancetype)initWithElement:(DTILayoutElement)element Position:(DTILayoutPosition)position
+{
+    self = [super initWithElement:element Position:position];
+    if(self)
+    {
+        self.dateFormatter = [NSDateFormatter dti_dateFormatterForLayoutElement:element];
+    }
+    return self;
+}
+
+- (void)windowDidLoad
+{
+    [super windowDidLoad];
+    
+    self.textLabel.formatter = self.dateFormatter;
+}
+
+- (void)reloadWindow
+{
+    [super reloadWindow];
+    
+    self.textLabel.objectValue = [NSDate date];
+}
+
 @end
 
 @implementation DTIBatteryLevelLayoutElementWindowController

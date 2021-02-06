@@ -10,31 +10,23 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSUInteger, DTIDateTimeDisplayMode) {
-    DTIDateTimeDisplayModeDateTime = 0,
-    DTIDateTimeDisplayModeDate,
-    DTIDateTimeDisplayModeTime
-};
-
 @interface DTILayoutElementWindowController : NSWindowController
+@property (nonatomic, readonly) DTILayoutElement element;
 @property (nonatomic, readonly) DTILayoutPosition position;
 @property (weak, nonatomic) NSScreen *targetScreen;
+
++ (nullable  instancetype)windowControllerForElement:(DTILayoutElement)element
+                                          atPosition:(DTILayoutPosition)position;
 
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithWindowNibName:(NSNibName)windowNibName NS_UNAVAILABLE;
 
-- (instancetype)initWithPosition:(DTILayoutPosition)position;
+- (instancetype)initWithElement:(DTILayoutElement)element
+                       Position:(DTILayoutPosition)position;
 
-- (void)reloadWindow;
+- (void)reloadWindow NS_REQUIRES_SUPER;
 
-@end
-
-@interface DTIDateTimeLayoutElementWindowController : DTILayoutElementWindowController
-@property (nonatomic) DTIDateTimeDisplayMode displayMode;
-@end
-
-@interface DTIBatteryLevelLayoutElementWindowController : DTILayoutElementWindowController
 @end
 
 NS_ASSUME_NONNULL_END

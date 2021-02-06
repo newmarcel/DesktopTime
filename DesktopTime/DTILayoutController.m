@@ -104,47 +104,15 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     NSParameterAssert(layout);
     NSParameterAssert(screen);
     
-    switch(layout.topLeftElement)
-    {
-        case DTILayoutElementNone:
-            // Do not create a window at all
-            break;
-        case DTILayoutElementDateTime:
-        {
-            Auto controller = [[DTIDateTimeLayoutElementWindowController alloc]
-                               initWithPosition:DTILayoutPositionTopLeft];
-            controller.targetScreen = screen;
-            [self.windowControllers addObject:controller];
-            [controller showWindow:self];
-            break;
-        }
-        case DTILayoutElementDate:
-        {
-            Auto controller = [[DTIDateTimeLayoutElementWindowController alloc]
-                               initWithPosition:DTILayoutPositionTopLeft];
-            controller.displayMode = DTIDateTimeDisplayModeDate;
-            controller.targetScreen = screen;
-            [self.windowControllers addObject:controller];
-            [controller showWindow:self];
-            break;
-        }
-        case DTILayoutElementTime:
-        {
-            Auto controller = [[DTIDateTimeLayoutElementWindowController alloc]
-                               initWithPosition:DTILayoutPositionTopLeft];
-            controller.displayMode = DTIDateTimeDisplayModeTime;
-            controller.targetScreen = screen;
-            [self.windowControllers addObject:controller];
-            [controller showWindow:self];
-            break;
-        }
-        case DTILayoutElementBatteryLevel:
-            @throw [NSException exceptionWithName:NSInternalInconsistencyException
-                                           reason:@"Battery Level not implemented"
-                                         userInfo:nil];
-            break;
-
-    }
+    Auto addController = ^void(DTILayoutElement element, DTILayoutPosition position) {
+        Auto controller = [DTILayoutElementWindowController windowControllerForElement:element atPosition:position];
+        controller.targetScreen = screen;
+        [self.windowControllers addObject:controller];
+        [controller showWindow:self];
+        [controller reloadWindow];
+    };
+    
+    addController(layout.topLeftElement, DTILayoutPositionTopLeft);
 }
 
 #pragma mark - Timer
