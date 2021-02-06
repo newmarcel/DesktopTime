@@ -144,6 +144,19 @@
 
 - (void)reloadWindow
 {
+#warning FIXME: Evil temporary layout glitch fix
+    static int rl = 0;
+    NSLog(@"Reload %@", @(rl));
+    
+    if(rl < 4)
+    {
+        self.textLabel.hidden = YES;
+        rl++;
+    }
+    else
+    {
+        self.textLabel.hidden = NO;
+    }
 }
 
 @end
