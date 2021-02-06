@@ -7,12 +7,10 @@
 
 #import "DTIAppController.h"
 #import "DTIDefines.h"
-#import "DTITimeWindowController.h"
 #import "DTILayoutController.h"
 
 @interface DTIAppController ()
 @property (nonatomic) DTILayoutController *layoutController;
-@property (nonatomic) NSHashTable<DTITimeWindowController *> *timeWindowControllers;
 @end
 
 @implementation DTIAppController
@@ -54,18 +52,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
-//    Auto controllers = [NSHashTable weakObjectsHashTable];
-//
-//    for(NSScreen *screen in NSScreen.screens)
-//    {
-//        Auto controller = [DTITimeWindowController new];
-//        controller.targetScreen = screen;
-//        [controllers addObject:controller];
-//        [controller showWindow:self];
-//    }
-//
-//    self.timeWindowControllers = controllers;
-    
     Auto layoutController = [DTILayoutController new];
     [layoutController reloadLayout];
     self.layoutController = layoutController;
