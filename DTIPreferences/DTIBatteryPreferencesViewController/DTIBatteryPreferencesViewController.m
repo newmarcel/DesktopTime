@@ -43,6 +43,8 @@
 {
     [super viewWillAppear];
     
+    NSColorPanel.sharedColorPanel.showsAlpha = YES;
+    
     Auto fontManager = NSFontManager.sharedFontManager;
     fontManager.target = self;
     
