@@ -11,6 +11,8 @@
 		DA1DE52B25CC6B5100EEC86F /* DTILayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1DE52925CC6B5100EEC86F /* DTILayout.m */; };
 		DA1DE53825CC6E6300EEC86F /* DTILayoutElement.h in Headers */ = {isa = PBXBuildFile; fileRef = DA1DE53625CC6E6300EEC86F /* DTILayoutElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA1DE53925CC6E6300EEC86F /* DTILayoutElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1DE53725CC6E6300EEC86F /* DTILayoutElement.m */; };
+		DA328B0125D05AF40057DD64 /* DTILayoutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA328AFF25D05AF40057DD64 /* DTILayoutWindowController.m */; };
+		DA328B0225D05AF40057DD64 /* DTILayoutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA328B0025D05AF40057DD64 /* DTILayoutWindowController.xib */; };
 		DA826ADF25BDACEE009ED73A /* DTIAppGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */; };
 		DA826AE025BDACEE009ED73A /* DTIAppGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAA400E725C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA400E625C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m */; };
@@ -120,6 +122,9 @@
 		DA1DE52925CC6B5100EEC86F /* DTILayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTILayout.m; sourceTree = "<group>"; };
 		DA1DE53625CC6E6300EEC86F /* DTILayoutElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTILayoutElement.h; sourceTree = "<group>"; };
 		DA1DE53725CC6E6300EEC86F /* DTILayoutElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTILayoutElement.m; sourceTree = "<group>"; };
+		DA328AFE25D05AF40057DD64 /* DTILayoutWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTILayoutWindowController.h; sourceTree = "<group>"; };
+		DA328AFF25D05AF40057DD64 /* DTILayoutWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTILayoutWindowController.m; sourceTree = "<group>"; };
+		DA328B0025D05AF40057DD64 /* DTILayoutWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTILayoutWindowController.xib; sourceTree = "<group>"; };
 		DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTIAppGroup.m; sourceTree = "<group>"; };
 		DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIAppGroup.h; sourceTree = "<group>"; };
 		DAA400E525C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFont+DTILocalizedDisplayName.h"; sourceTree = "<group>"; };
@@ -238,6 +243,16 @@
 			path = DTILayout;
 			sourceTree = "<group>";
 		};
+		DA328B0625D05B060057DD64 /* DTILayoutWindowController */ = {
+			isa = PBXGroup;
+			children = (
+				DA328AFE25D05AF40057DD64 /* DTILayoutWindowController.h */,
+				DA328AFF25D05AF40057DD64 /* DTILayoutWindowController.m */,
+				DA328B0025D05AF40057DD64 /* DTILayoutWindowController.xib */,
+			);
+			path = DTILayoutWindowController;
+			sourceTree = "<group>";
+		};
 		DA826ADC25BDACEE009ED73A /* DTIAppGroup */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +319,7 @@
 				DAAD1D0F25B43ECE00F6902D /* DTIAppController.h */,
 				DAAD1D1025B43ECE00F6902D /* DTIAppController.m */,
 				DA98EF8B25CECB22008072E7 /* DTILayoutController */,
+				DA328B0625D05B060057DD64 /* DTILayoutWindowController */,
 				DA98EF8325CECB0C008072E7 /* DTILayoutElementWindowController */,
 				DAF8E5F525B43FFA00E3FA43 /* Other… */,
 			);
@@ -639,6 +655,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAAD1D1325B43ECF00F6902D /* Assets.xcassets in Resources */,
+				DA328B0225D05AF40057DD64 /* DTILayoutWindowController.xib in Resources */,
 				DAE550CD25CDB6A400297C2A /* DTILayoutElementWindowController.xib in Resources */,
 				DAAD1D1625B43ECF00F6902D /* MainMenu.xib in Resources */,
 			);
@@ -681,6 +698,7 @@
 				DAE550D325CDB80300297C2A /* DTILayoutController.m in Sources */,
 				DAAD1D1925B43ECF00F6902D /* main.m in Sources */,
 				DAE550CC25CDB6A400297C2A /* DTILayoutElementWindowController.m in Sources */,
+				DA328B0125D05AF40057DD64 /* DTILayoutWindowController.m in Sources */,
 				DAAD1D1125B43ECE00F6902D /* DTIAppController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
