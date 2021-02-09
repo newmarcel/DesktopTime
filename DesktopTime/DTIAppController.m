@@ -54,6 +54,7 @@
 {
     Auto layoutController = [DTILayoutController new];
     [layoutController reloadLayout];
+    [layoutController startTimer];
     self.layoutController = layoutController;
 }
 

@@ -13,14 +13,19 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
 @interface DTILayoutWindowController ()
 @property (nonatomic, readwrite, nullable) DTILayout *currentLayout;
 @property (nonatomic) NSTimer *timer;
+
+@property (weak, nonatomic, nullable) IBOutlet NSTextField *topLeftLabel;
+@property (weak, nonatomic, nullable) IBOutlet NSTextField *topMiddleLabel;
+@property (weak, nonatomic, nullable) IBOutlet NSTextField *topRightLabel;
+
+//@property (weak, nonatomic, nullable) IBOutlet NSTextField *centerMiddleLabel;
+
+@property (weak, nonatomic, nullable) IBOutlet NSTextField *bottomLeftLabel;
+@property (weak, nonatomic, nullable) IBOutlet NSTextField *bottomMiddleLabel;
+@property (weak, nonatomic, nullable) IBOutlet NSTextField *bottomRightLabel;
 @end
 
 @implementation DTILayoutWindowController
-
-+ (instancetype)new
-{
-    return [[DTILayoutWindowController alloc] init];
-}
 
 - (instancetype)init
 {
@@ -35,49 +40,46 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-}
-
-- (void)dealloc
-{
-    [self stopTimer];
+    
+    [self reloadLayout];
 }
 
 #pragma mark - Layout Management
+
+- (NSArray<NSTextField *> *)allLabels
+{
+    Auto labels = [NSMutableArray new];
+    Auto addLabel = ^(NSTextField *_Nullable label) {
+        if(label != nil) { [labels addObject:label]; }
+    };
+    
+    addLabel(self.topLeftLabel);
+    addLabel(self.topMiddleLabel);
+    addLabel(self.topRightLabel);
+    addLabel(self.bottomLeftLabel);
+    addLabel(self.bottomMiddleLabel);
+    addLabel(self.bottomRightLabel);
+    
+    return [labels copy];
+}
 
 - (void)reloadLayout
 {
     Auto layout = DTIPreferences.sharedPreferences.layout;
     self.currentLayout = layout;
     
-//    [self clearWindows];
-//    [self createWindowsForLayout:layout];
+    [self clearLabels];
+    
+    // TODO: Wire up labels
 }
 
-#pragma mark - Timer
-
-- (void)startTimer
+- (void)clearLabels
 {
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:DTITimerTickInterval
-                                                  target:self
-                                                selector:@selector(tick:)
-                                                userInfo:nil
-                                                 repeats:YES];
-    // The initial tick
-    [self tick:self.timer];
-}
-
-- (void)stopTimer
-{
-    [self.timer invalidate];
-    self.timer = nil;
-}
-
-- (void)tick:(NSTimer *)timer
-{
-//    for(DTILayoutElementWindowController *windowController in self.windowControllers)
-//    {
-//        [windowController reloadWindow];
-//    }
+    for(NSTextField *label in [self allLabels])
+    {
+        label.stringValue = @"";
+        label.hidden = YES;
+    }
 }
 
 @end

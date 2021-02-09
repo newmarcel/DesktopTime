@@ -7,12 +7,12 @@
 
 #import "DTILayoutController.h"
 #import "DTIDefines.h"
-#import "DTILayoutElementWindowController.h"
+#import "DTILayoutWindowController.h"
 
 static const NSTimeInterval DTITimerTickInterval = 1.0f;
 
-@interface DTILayoutController ()
-@property (nonatomic) NSMutableArray<DTILayoutElementWindowController *> *windowControllers;
+@interface DTILayoutController () <DTILayoutWindowControllerDataSource>
+@property (nonatomic) NSMutableArray<DTILayoutWindowController *> *windowControllers;
 @property (nonatomic, readwrite, nullable) DTILayout *currentLayout;
 @property (nonatomic) NSTimer *timer;
 @end
@@ -24,14 +24,14 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     self = [super init];
     if(self)
     {
-        self.windowControllers = [NSMutableArray<DTILayoutElementWindowController *> new];
+        self.windowControllers = [NSMutableArray<DTILayoutWindowController *> new];
     }
     return self;
 }
 
 - (void)dealloc
 {
-    [self.timer invalidate];
+    [self stopTimer];
     
     for(NSWindowController *windowController in self.windowControllers)
     {
@@ -42,11 +42,6 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
 
 - (void)reloadLayout
 {
-    if(self.timer == nil)
-    {
-        [self startTimer];
-    }
-    
     Auto layout = DTIPreferences.sharedPreferences.layout;
     self.currentLayout = layout;
     
@@ -112,22 +107,13 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     NSParameterAssert(layout);
     NSParameterAssert(screen);
     
-    Auto addController = ^void(DTILayoutElement element, DTILayoutPosition position) {
-        Auto controller = [DTILayoutElementWindowController windowControllerForElement:element atPosition:position];
-        if(controller == nil) { return; }
-        
-        controller.targetScreen = screen;
-        [self.windowControllers addObject:controller];
-        [controller showWindow:self];
-        [controller reloadWindow];
-    };
+    Auto windowController = [DTILayoutWindowController new];
+    windowController.targetScreen = screen;
+    windowController.dataSource = self;
     
-    addController(layout.topLeftElement, DTILayoutPositionTopLeft);
-    addController(layout.topMiddleElement, DTILayoutPositionTopMiddle);
-    addController(layout.topRightElement, DTILayoutPositionTopRight);
-    addController(layout.bottomLeftElement, DTILayoutPositionBottomLeft);
-    addController(layout.bottomMiddleElement, DTILayoutPositionBottomMiddle);
-    addController(layout.bottomRightElement, DTILayoutPositionBottomRight);
+    [self.windowControllers addObject:windowController];
+    [windowController showWindow:self];
+    [windowController reloadLayout];
 }
 
 #pragma mark - Timer
@@ -143,12 +129,20 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     [self tick:self.timer];
 }
 
+- (void)stopTimer
+{
+    [self.timer invalidate];
+    self.timer = nil;
+}
+
 - (void)tick:(NSTimer *)timer
 {
-    for(DTILayoutElementWindowController *windowController in self.windowControllers)
+    for(DTILayoutWindowController *windowController in self.windowControllers)
     {
-        [windowController reloadWindow];
+        [windowController reloadLayout];
     }
 }
+
+#pragma mark - DTILayoutWindowControllerDataSource
 
 @end

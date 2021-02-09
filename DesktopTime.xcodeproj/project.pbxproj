@@ -11,8 +11,10 @@
 		DA1DE52B25CC6B5100EEC86F /* DTILayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1DE52925CC6B5100EEC86F /* DTILayout.m */; };
 		DA1DE53825CC6E6300EEC86F /* DTILayoutElement.h in Headers */ = {isa = PBXBuildFile; fileRef = DA1DE53625CC6E6300EEC86F /* DTILayoutElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA1DE53925CC6E6300EEC86F /* DTILayoutElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1DE53725CC6E6300EEC86F /* DTILayoutElement.m */; };
-		DA328B0125D05AF40057DD64 /* DTILayoutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA328AFF25D05AF40057DD64 /* DTILayoutWindowController.m */; };
-		DA328B0225D05AF40057DD64 /* DTILayoutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA328B0025D05AF40057DD64 /* DTILayoutWindowController.xib */; };
+		DA5007E625D2FEC8000E0585 /* DTILayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5007E425D2FEC8000E0585 /* DTILayoutController.m */; };
+		DA5007F325D30269000E0585 /* DTILayoutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5007EE25D30269000E0585 /* DTILayoutWindowController.m */; };
+		DA5007F425D30269000E0585 /* DTILayoutElementController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5007EF25D30269000E0585 /* DTILayoutElementController.m */; };
+		DA5007F525D30269000E0585 /* DTILayoutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA5007F225D30269000E0585 /* DTILayoutWindowController.xib */; };
 		DA826ADF25BDACEE009ED73A /* DTIAppGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */; };
 		DA826AE025BDACEE009ED73A /* DTIAppGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAA400E725C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA400E625C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m */; };
@@ -54,9 +56,6 @@
 		DACCAD1125CE95AC00512A4A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DACCAD1025CE95AC00512A4A /* Credits.rtf */; };
 		DACCAD4525CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.h in Headers */ = {isa = PBXBuildFile; fileRef = DACCAD4325CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DACCAD4625CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCAD4425CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.m */; };
-		DAE550CC25CDB6A400297C2A /* DTILayoutElementWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE550CA25CDB6A400297C2A /* DTILayoutElementWindowController.m */; };
-		DAE550CD25CDB6A400297C2A /* DTILayoutElementWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAE550CB25CDB6A400297C2A /* DTILayoutElementWindowController.xib */; };
-		DAE550D325CDB80300297C2A /* DTILayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE550D225CDB80300297C2A /* DTILayoutController.m */; };
 		DAF8E61E25B451E700E3FA43 /* DTIBatteryStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF8E61C25B451E700E3FA43 /* DTIBatteryStatus.m */; };
 		DAF8E61F25B451E700E3FA43 /* DTIBatteryStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF8E61D25B451E700E3FA43 /* DTIBatteryStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -122,9 +121,13 @@
 		DA1DE52925CC6B5100EEC86F /* DTILayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTILayout.m; sourceTree = "<group>"; };
 		DA1DE53625CC6E6300EEC86F /* DTILayoutElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTILayoutElement.h; sourceTree = "<group>"; };
 		DA1DE53725CC6E6300EEC86F /* DTILayoutElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTILayoutElement.m; sourceTree = "<group>"; };
-		DA328AFE25D05AF40057DD64 /* DTILayoutWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTILayoutWindowController.h; sourceTree = "<group>"; };
-		DA328AFF25D05AF40057DD64 /* DTILayoutWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTILayoutWindowController.m; sourceTree = "<group>"; };
-		DA328B0025D05AF40057DD64 /* DTILayoutWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTILayoutWindowController.xib; sourceTree = "<group>"; };
+		DA5007E425D2FEC8000E0585 /* DTILayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTILayoutController.m; sourceTree = "<group>"; };
+		DA5007E525D2FEC8000E0585 /* DTILayoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTILayoutController.h; sourceTree = "<group>"; };
+		DA5007EE25D30269000E0585 /* DTILayoutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTILayoutWindowController.m; sourceTree = "<group>"; };
+		DA5007EF25D30269000E0585 /* DTILayoutElementController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTILayoutElementController.m; sourceTree = "<group>"; };
+		DA5007F025D30269000E0585 /* DTILayoutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTILayoutWindowController.h; sourceTree = "<group>"; };
+		DA5007F125D30269000E0585 /* DTILayoutElementController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTILayoutElementController.h; sourceTree = "<group>"; };
+		DA5007F225D30269000E0585 /* DTILayoutWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTILayoutWindowController.xib; sourceTree = "<group>"; };
 		DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTIAppGroup.m; sourceTree = "<group>"; };
 		DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIAppGroup.h; sourceTree = "<group>"; };
 		DAA400E525C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFont+DTILocalizedDisplayName.h"; sourceTree = "<group>"; };
@@ -183,11 +186,6 @@
 		DACCAD1025CE95AC00512A4A /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		DACCAD4325CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+DTILayoutElement.h"; sourceTree = "<group>"; };
 		DACCAD4425CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+DTILayoutElement.m"; sourceTree = "<group>"; };
-		DAE550C925CDB6A400297C2A /* DTILayoutElementWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTILayoutElementWindowController.h; sourceTree = "<group>"; };
-		DAE550CA25CDB6A400297C2A /* DTILayoutElementWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTILayoutElementWindowController.m; sourceTree = "<group>"; };
-		DAE550CB25CDB6A400297C2A /* DTILayoutElementWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTILayoutElementWindowController.xib; sourceTree = "<group>"; };
-		DAE550D125CDB80300297C2A /* DTILayoutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTILayoutController.h; sourceTree = "<group>"; };
-		DAE550D225CDB80300297C2A /* DTILayoutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTILayoutController.m; sourceTree = "<group>"; };
 		DAF8E5F625B4402000E3FA43 /* Configuration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration.xcconfig; sourceTree = SOURCE_ROOT; };
 		DAF8E61825B44AFD00E3FA43 /* DTIDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIDefines.h; sourceTree = "<group>"; };
 		DAF8E61C25B451E700E3FA43 /* DTIBatteryStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTIBatteryStatus.m; sourceTree = "<group>"; };
@@ -243,12 +241,23 @@
 			path = DTILayout;
 			sourceTree = "<group>";
 		};
-		DA328B0625D05B060057DD64 /* DTILayoutWindowController */ = {
+		DA5007E325D2FEC8000E0585 /* DTILayoutController */ = {
 			isa = PBXGroup;
 			children = (
-				DA328AFE25D05AF40057DD64 /* DTILayoutWindowController.h */,
-				DA328AFF25D05AF40057DD64 /* DTILayoutWindowController.m */,
-				DA328B0025D05AF40057DD64 /* DTILayoutWindowController.xib */,
+				DA5007E525D2FEC8000E0585 /* DTILayoutController.h */,
+				DA5007E425D2FEC8000E0585 /* DTILayoutController.m */,
+			);
+			path = DTILayoutController;
+			sourceTree = "<group>";
+		};
+		DA5007ED25D30269000E0585 /* DTILayoutWindowController */ = {
+			isa = PBXGroup;
+			children = (
+				DA5007F025D30269000E0585 /* DTILayoutWindowController.h */,
+				DA5007EE25D30269000E0585 /* DTILayoutWindowController.m */,
+				DA5007F225D30269000E0585 /* DTILayoutWindowController.xib */,
+				DA5007F125D30269000E0585 /* DTILayoutElementController.h */,
+				DA5007EF25D30269000E0585 /* DTILayoutElementController.m */,
 			);
 			path = DTILayoutWindowController;
 			sourceTree = "<group>";
@@ -260,25 +269,6 @@
 				DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */,
 			);
 			path = DTIAppGroup;
-			sourceTree = "<group>";
-		};
-		DA98EF8325CECB0C008072E7 /* DTILayoutElementWindowController */ = {
-			isa = PBXGroup;
-			children = (
-				DAE550C925CDB6A400297C2A /* DTILayoutElementWindowController.h */,
-				DAE550CA25CDB6A400297C2A /* DTILayoutElementWindowController.m */,
-				DAE550CB25CDB6A400297C2A /* DTILayoutElementWindowController.xib */,
-			);
-			path = DTILayoutElementWindowController;
-			sourceTree = "<group>";
-		};
-		DA98EF8B25CECB22008072E7 /* DTILayoutController */ = {
-			isa = PBXGroup;
-			children = (
-				DAE550D125CDB80300297C2A /* DTILayoutController.h */,
-				DAE550D225CDB80300297C2A /* DTILayoutController.m */,
-			);
-			path = DTILayoutController;
 			sourceTree = "<group>";
 		};
 		DAA400EB25C6B25300A45F50 /* Extensions */ = {
@@ -318,9 +308,8 @@
 			children = (
 				DAAD1D0F25B43ECE00F6902D /* DTIAppController.h */,
 				DAAD1D1025B43ECE00F6902D /* DTIAppController.m */,
-				DA98EF8B25CECB22008072E7 /* DTILayoutController */,
-				DA328B0625D05B060057DD64 /* DTILayoutWindowController */,
-				DA98EF8325CECB0C008072E7 /* DTILayoutElementWindowController */,
+				DA5007E325D2FEC8000E0585 /* DTILayoutController */,
+				DA5007ED25D30269000E0585 /* DTILayoutWindowController */,
 				DAF8E5F525B43FFA00E3FA43 /* Other… */,
 			);
 			path = DesktopTime;
@@ -655,8 +644,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAAD1D1325B43ECF00F6902D /* Assets.xcassets in Resources */,
-				DA328B0225D05AF40057DD64 /* DTILayoutWindowController.xib in Resources */,
-				DAE550CD25CDB6A400297C2A /* DTILayoutElementWindowController.xib in Resources */,
+				DA5007F525D30269000E0585 /* DTILayoutWindowController.xib in Resources */,
 				DAAD1D1625B43ECF00F6902D /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,10 +683,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAE550D325CDB80300297C2A /* DTILayoutController.m in Sources */,
+				DA5007E625D2FEC8000E0585 /* DTILayoutController.m in Sources */,
+				DA5007F325D30269000E0585 /* DTILayoutWindowController.m in Sources */,
 				DAAD1D1925B43ECF00F6902D /* main.m in Sources */,
-				DAE550CC25CDB6A400297C2A /* DTILayoutElementWindowController.m in Sources */,
-				DA328B0125D05AF40057DD64 /* DTILayoutWindowController.m in Sources */,
+				DA5007F425D30269000E0585 /* DTILayoutElementController.m in Sources */,
 				DAAD1D1125B43ECE00F6902D /* DTIAppController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
