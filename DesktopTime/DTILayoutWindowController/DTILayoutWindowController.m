@@ -38,26 +38,30 @@
 {
     [super windowDidLoad];
     
+    [self configureWindow];
     [self reloadWindow];
 }
 
-#pragma mark - Layout Management
+#pragma mark - Window Management
 
-- (NSArray<NSTextField *> *)allLabels
+- (void)configureWindow
 {
-    Auto labels = [NSMutableArray new];
-    Auto addLabel = ^(NSTextField *_Nullable label) {
-        if(label != nil) { [labels addObject:label]; }
-    };
+    Auto window = self.window;
+    window.level = CGWindowLevelForKey(kCGDesktopWindowLevel);
+    window.ignoresMouseEvents = YES;
+//#if DEBUG
+//    window.backgroundColor = NSColor.systemBlueColor;
+//#else
+    window.backgroundColor = NSColor.clearColor;
+//#endif
+}
+
+- (void)updateWindowFrame
+{
+    Auto window = self.window;
+    Auto screen = self.targetScreen ?: window.screen;
     
-    addLabel(self.topLeftLabel);
-    addLabel(self.topMiddleLabel);
-    addLabel(self.topRightLabel);
-    addLabel(self.bottomLeftLabel);
-    addLabel(self.bottomMiddleLabel);
-    addLabel(self.bottomRightLabel);
-    
-    return [labels copy];
+    [window setFrame:screen.visibleFrame display:YES];
 }
 
 - (void)reloadWindow
@@ -73,6 +77,7 @@
         {
             label.stringValue = dataSource.stringValue;
             label.hidden = NO;
+            [elementDataSource applyStyleOfLayoutElement:element toLabel:label];
         }
         else
         {
@@ -88,6 +93,8 @@
     configureElement(layout.bottomLeftElement, self.bottomLeftLabel);
     configureElement(layout.bottomMiddleElement, self.bottomMiddleLabel);
     configureElement(layout.bottomRightElement, self.bottomRightLabel);
+    
+    [self updateWindowFrame];
 }
 
 @end

@@ -162,4 +162,26 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     return dataSource;
 }
 
+- (void)applyStyleOfLayoutElement:(DTILayoutElement)element toLabel:(NSTextField *)label
+{
+    Auto preferences = DTIPreferences.sharedPreferences;
+    switch(element)
+    {
+        case DTILayoutElementDateTime:
+        case DTILayoutElementDate:
+        case DTILayoutElementTime:
+            label.font = preferences.dateTimeFont;
+            label.textColor = preferences.dateTimeTextColor;
+            label.layer.shadowColor = preferences.dateTimeShadowColor.CGColor;
+            break;
+        case DTILayoutElementBatteryLevel:
+            label.font = preferences.batteryLevelFont;
+            label.textColor = preferences.batteryLevelTextColor;
+            label.layer.shadowColor = preferences.batteryLevelShadowColor.CGColor;
+            break;
+        default:
+            break;
+    }
+}
+
 @end

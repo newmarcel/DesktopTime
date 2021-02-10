@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol DTILayoutWindowElementDataSource <NSObject>
 - (nullable DTILayoutElementDataSource *)dataSourceForLayoutElement:(DTILayoutElement)element;
+- (void)applyStyleOfLayoutElement:(DTILayoutElement)element toLabel:(NSTextField *)label;
 @end
 
 NS_ASSUME_NONNULL_END
