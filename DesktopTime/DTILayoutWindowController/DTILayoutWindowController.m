@@ -7,8 +7,7 @@
 
 #import "DTILayoutWindowController.h"
 #import "DTIDefines.h"
-
-static const NSTimeInterval DTITimerTickInterval = 1.0f;
+#import "DTILayoutElementDataSource.h"
 
 @interface DTILayoutWindowController ()
 @property (nonatomic) NSTimer *timer;
@@ -31,7 +30,6 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     self = [super initWithWindowNibName:NSStringFromClass([self class])];
     if(self)
     {
-        
     }
     return self;
 }
@@ -66,18 +64,30 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
 {
     Auto layout = self.layout;
     
-    [self clearLabels];
+    Auto elementDataSource = self.elementDataSource;
+    if(elementDataSource == nil) { return; }
     
-    // TODO: Wire up labels
-}
-
-- (void)clearLabels
-{
-    for(NSTextField *label in [self allLabels])
-    {
-        label.stringValue = @"";
-        label.hidden = YES;
-    }
+    Auto configureElement = ^(DTILayoutElement element, NSTextField *label) {
+        Auto dataSource = [elementDataSource dataSourceForLayoutElement:element];
+        if(dataSource != nil)
+        {
+            label.stringValue = dataSource.stringValue;
+            label.hidden = NO;
+        }
+        else
+        {
+            label.stringValue = @"";
+            label.hidden = YES;
+        }
+    };
+    
+    configureElement(layout.topLeftElement, self.topLeftLabel);
+    configureElement(layout.topMiddleElement, self.topMiddleLabel);
+    configureElement(layout.topRightElement, self.topRightLabel);
+    
+    configureElement(layout.bottomLeftElement, self.bottomLeftLabel);
+    configureElement(layout.bottomMiddleElement, self.bottomMiddleLabel);
+    configureElement(layout.bottomRightElement, self.bottomRightLabel);
 }
 
 @end

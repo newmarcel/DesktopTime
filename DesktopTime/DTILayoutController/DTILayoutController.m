@@ -8,13 +8,15 @@
 #import "DTILayoutController.h"
 #import "DTIDefines.h"
 #import "DTILayoutWindowController.h"
+#import "DTILayoutElementDataSource.h"
 
 static const NSTimeInterval DTITimerTickInterval = 1.0f;
 
-@interface DTILayoutController ()
+@interface DTILayoutController () <DTILayoutWindowElementDataSource>
 @property (nonatomic) NSMutableArray<DTILayoutWindowController *> *windowControllers;
 @property (nonatomic, readwrite, nullable) DTILayout *currentLayout;
 @property (nonatomic) NSTimer *timer;
+@property (nonatomic) NSMapTable<NSNumber *, DTILayoutElementDataSource *> *elementDataSources;
 @end
 
 @implementation DTILayoutController
@@ -24,6 +26,7 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     self = [super init];
     if(self)
     {
+        self.elementDataSources = [NSMapTable<NSNumber *, DTILayoutElementDataSource *> new];
         self.windowControllers = [NSMutableArray<DTILayoutWindowController *> new];
     }
     return self;
@@ -110,6 +113,7 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     Auto windowController = [DTILayoutWindowController new];
     windowController.layout = self.currentLayout;
     windowController.targetScreen = screen;
+    windowController.elementDataSource = self;
     
     [self.windowControllers addObject:windowController];
     [windowController showWindow:self];
@@ -141,6 +145,21 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     {
         [windowController reloadWindow];
     }
+}
+
+#pragma mark - DTILayoutWindowElementDataSource
+
+- (DTILayoutElementDataSource *)dataSourceForLayoutElement:(DTILayoutElement)element
+{
+    Auto key = @(element);
+    AutoVar dataSource = [self.elementDataSources objectForKey:key];
+    if(dataSource == nil)
+    {
+        dataSource = [DTILayoutElementDataSource dataSourceForElement:element];
+        if(dataSource == nil) { return nil; }
+        [self.elementDataSources setObject:dataSource forKey:key];
+    }
+    return dataSource;
 }
 
 @end

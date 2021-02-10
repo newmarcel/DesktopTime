@@ -13,7 +13,7 @@
 		DA1DE53925CC6E6300EEC86F /* DTILayoutElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1DE53725CC6E6300EEC86F /* DTILayoutElement.m */; };
 		DA5007E625D2FEC8000E0585 /* DTILayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5007E425D2FEC8000E0585 /* DTILayoutController.m */; };
 		DA5007F325D30269000E0585 /* DTILayoutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5007EE25D30269000E0585 /* DTILayoutWindowController.m */; };
-		DA5007F425D30269000E0585 /* DTILayoutElementController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5007EF25D30269000E0585 /* DTILayoutElementController.m */; };
+		DA5007F425D30269000E0585 /* DTILayoutElementDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5007EF25D30269000E0585 /* DTILayoutElementDataSource.m */; };
 		DA5007F525D30269000E0585 /* DTILayoutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA5007F225D30269000E0585 /* DTILayoutWindowController.xib */; };
 		DA826ADF25BDACEE009ED73A /* DTIAppGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */; };
 		DA826AE025BDACEE009ED73A /* DTIAppGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -124,9 +124,9 @@
 		DA5007E425D2FEC8000E0585 /* DTILayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTILayoutController.m; sourceTree = "<group>"; };
 		DA5007E525D2FEC8000E0585 /* DTILayoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTILayoutController.h; sourceTree = "<group>"; };
 		DA5007EE25D30269000E0585 /* DTILayoutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTILayoutWindowController.m; sourceTree = "<group>"; };
-		DA5007EF25D30269000E0585 /* DTILayoutElementController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTILayoutElementController.m; sourceTree = "<group>"; };
+		DA5007EF25D30269000E0585 /* DTILayoutElementDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTILayoutElementDataSource.m; sourceTree = "<group>"; };
 		DA5007F025D30269000E0585 /* DTILayoutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTILayoutWindowController.h; sourceTree = "<group>"; };
-		DA5007F125D30269000E0585 /* DTILayoutElementController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTILayoutElementController.h; sourceTree = "<group>"; };
+		DA5007F125D30269000E0585 /* DTILayoutElementDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTILayoutElementDataSource.h; sourceTree = "<group>"; };
 		DA5007F225D30269000E0585 /* DTILayoutWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTILayoutWindowController.xib; sourceTree = "<group>"; };
 		DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTIAppGroup.m; sourceTree = "<group>"; };
 		DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIAppGroup.h; sourceTree = "<group>"; };
@@ -256,8 +256,8 @@
 				DA5007F025D30269000E0585 /* DTILayoutWindowController.h */,
 				DA5007EE25D30269000E0585 /* DTILayoutWindowController.m */,
 				DA5007F225D30269000E0585 /* DTILayoutWindowController.xib */,
-				DA5007F125D30269000E0585 /* DTILayoutElementController.h */,
-				DA5007EF25D30269000E0585 /* DTILayoutElementController.m */,
+				DA5007F125D30269000E0585 /* DTILayoutElementDataSource.h */,
+				DA5007EF25D30269000E0585 /* DTILayoutElementDataSource.m */,
 			);
 			path = DTILayoutWindowController;
 			sourceTree = "<group>";
@@ -686,7 +686,7 @@
 				DA5007E625D2FEC8000E0585 /* DTILayoutController.m in Sources */,
 				DA5007F325D30269000E0585 /* DTILayoutWindowController.m in Sources */,
 				DAAD1D1925B43ECF00F6902D /* main.m in Sources */,
-				DA5007F425D30269000E0585 /* DTILayoutElementController.m in Sources */,
+				DA5007F425D30269000E0585 /* DTILayoutElementDataSource.m in Sources */,
 				DAAD1D1125B43ECE00F6902D /* DTIAppController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
