@@ -11,7 +11,7 @@
 
 static const NSTimeInterval DTITimerTickInterval = 1.0f;
 
-@interface DTILayoutController () <DTILayoutWindowControllerDataSource>
+@interface DTILayoutController ()
 @property (nonatomic) NSMutableArray<DTILayoutWindowController *> *windowControllers;
 @property (nonatomic, readwrite, nullable) DTILayout *currentLayout;
 @property (nonatomic) NSTimer *timer;
@@ -108,12 +108,12 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     NSParameterAssert(screen);
     
     Auto windowController = [DTILayoutWindowController new];
+    windowController.layout = self.currentLayout;
     windowController.targetScreen = screen;
-    windowController.dataSource = self;
     
     [self.windowControllers addObject:windowController];
     [windowController showWindow:self];
-    [windowController reloadLayout];
+    [windowController reloadWindow];
 }
 
 #pragma mark - Timer
@@ -139,10 +139,8 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
 {
     for(DTILayoutWindowController *windowController in self.windowControllers)
     {
-        [windowController reloadLayout];
+        [windowController reloadWindow];
     }
 }
-
-#pragma mark - DTILayoutWindowControllerDataSource
 
 @end

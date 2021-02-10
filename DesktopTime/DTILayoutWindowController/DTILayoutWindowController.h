@@ -10,18 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol DTILayoutWindowControllerDataSource;
-
 @interface DTILayoutWindowController : NSWindowController
-@property (weak, nonatomic, nullable) id<DTILayoutWindowControllerDataSource> dataSource;
+@property (nonatomic, nullable) DTILayout *layout;
 @property (weak, nonatomic) NSScreen *targetScreen;
 
-- (void)reloadLayout;
+- (void)reloadWindow;
 
-@end
-
-@protocol DTILayoutWindowControllerDataSource <NSObject>
-//- (DTILayout *)layoutForLayoutWindowController:(DTILayoutWindowController *)controller;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -11,7 +11,6 @@
 static const NSTimeInterval DTITimerTickInterval = 1.0f;
 
 @interface DTILayoutWindowController ()
-@property (nonatomic, readwrite, nullable) DTILayout *currentLayout;
 @property (nonatomic) NSTimer *timer;
 
 @property (weak, nonatomic, nullable) IBOutlet NSTextField *topLeftLabel;
@@ -41,7 +40,7 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
 {
     [super windowDidLoad];
     
-    [self reloadLayout];
+    [self reloadWindow];
 }
 
 #pragma mark - Layout Management
@@ -63,10 +62,9 @@ static const NSTimeInterval DTITimerTickInterval = 1.0f;
     return [labels copy];
 }
 
-- (void)reloadLayout
+- (void)reloadWindow
 {
-    Auto layout = DTIPreferences.sharedPreferences.layout;
-    self.currentLayout = layout;
+    Auto layout = self.layout;
     
     [self clearLabels];
     
