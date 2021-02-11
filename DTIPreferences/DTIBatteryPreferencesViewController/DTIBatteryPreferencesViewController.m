@@ -57,7 +57,10 @@
     [super viewWillDisappear];
     
     Auto fontManager = NSFontManager.sharedFontManager;
-    fontManager.target = nil;
+    if(fontManager.target == self)
+    {
+        fontManager.target = nil;
+    }
 }
 
 #pragma mark - Actions
