@@ -17,6 +17,8 @@
 		DA5007F525D30269000E0585 /* DTILayoutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA5007F225D30269000E0585 /* DTILayoutWindowController.xib */; };
 		DA826ADF25BDACEE009ED73A /* DTIAppGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */; };
 		DA826AE025BDACEE009ED73A /* DTIAppGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA8CABF225D58EA00080DCE8 /* DesktopTimeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; };
+		DA8CABF325D58EA00080DCE8 /* DesktopTimeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAA400E725C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA400E625C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m */; };
 		DAAD1D1125B43ECE00F6902D /* DTIAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAD1D1025B43ECE00F6902D /* DTIAppController.m */; };
 		DAAD1D1325B43ECF00F6902D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAD1D1225B43ECF00F6902D /* Assets.xcassets */; };
@@ -26,7 +28,6 @@
 		DAAD1D3625B43F0400F6902D /* DesktopTimeKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAD1D3525B43F0400F6902D /* DesktopTimeKitTests.m */; };
 		DAAD1D3825B43F0400F6902D /* DesktopTimeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DAAD1D2825B43F0400F6902D /* DesktopTimeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAAD1D3B25B43F0400F6902D /* DesktopTimeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; };
-		DAAD1D3C25B43F0400F6902D /* DesktopTimeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAB3510E25C5F9ED000D76B9 /* DTIBatteryPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB3510D25C5F9ED000D76B9 /* DTIBatteryPreferencesViewController.xib */; };
 		DAB3511325C5FB2A000D76B9 /* DTIDateTimePreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB3511225C5FB2A000D76B9 /* DTIDateTimePreferencesViewController.xib */; };
 		DAB3511825C5FC25000D76B9 /* DTILayoutPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB3511725C5FC25000D76B9 /* DTILayoutPreferencesViewController.xib */; };
@@ -41,7 +42,6 @@
 		DAC70DB025C49BEA009787A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC70DAF25C49BEA009787A1 /* Assets.xcassets */; };
 		DAC70DB325C49BEA009787A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC70DB125C49BEA009787A1 /* Main.storyboard */; };
 		DAC70DB625C49BEA009787A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC70DB525C49BEA009787A1 /* main.m */; };
-		DAC70DC525C49C8D009787A1 /* DesktopTimeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; };
 		DAC70DD125C49D4B009787A1 /* DesktopTime Preferences.app in Embed Preferences */ = {isa = PBXBuildFile; fileRef = DAC70DA725C49BE9009787A1 /* DesktopTime Preferences.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DAC70DE725C49E4D009787A1 /* DTIPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC70DE625C49E4D009787A1 /* DTIPreferencesWindowController.m */; };
 		DAC70DF125C550D0009787A1 /* DTINotificationCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC70DEF25C550D0009787A1 /* DTINotificationCenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -92,13 +92,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		DAAD1D4025B43F0400F6902D /* Embed Frameworks */ = {
+		DA8CABF425D58EA10080DCE8 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DAAD1D3C25B43F0400F6902D /* DesktopTimeKit.framework in Embed Frameworks */,
+				DA8CABF325D58EA00080DCE8 /* DesktopTimeKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,7 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAC70DC525C49C8D009787A1 /* DesktopTimeKit.framework in Frameworks */,
+				DA8CABF225D58EA00080DCE8 /* DesktopTimeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,7 +523,6 @@
 				DAAD1D0825B43ECE00F6902D /* Sources */,
 				DAAD1D0925B43ECE00F6902D /* Frameworks */,
 				DAAD1D0A25B43ECE00F6902D /* Resources */,
-				DAAD1D4025B43F0400F6902D /* Embed Frameworks */,
 				DAC70DD025C49D39009787A1 /* Embed Preferences */,
 			);
 			buildRules = (
@@ -580,6 +579,7 @@
 				DAC70DA325C49BE9009787A1 /* Sources */,
 				DAC70DA425C49BE9009787A1 /* Frameworks */,
 				DAC70DA525C49BE9009787A1 /* Resources */,
+				DA8CABF425D58EA10080DCE8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -908,6 +908,7 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+					"\"@executable_path/DesktopTime Preferences.app/Contents/Frameworks\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "info.marcel-dierkes.DesktopTime";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -929,6 +930,7 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+					"\"@executable_path/DesktopTime Preferences.app/Contents/Frameworks\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "info.marcel-dierkes.DesktopTime";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1027,18 +1029,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DTIPreferences/DTIPreferences.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5KESHV9W85;
-				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = DTIPreferences/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "info.marcel-dierkes.DesktopTime.Preferences";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1049,6 +1052,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DTIPreferences/DTIPreferences.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5KESHV9W85;
@@ -1057,10 +1061,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "info.marcel-dierkes.DesktopTime.Preferences";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
