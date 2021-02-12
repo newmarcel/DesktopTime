@@ -34,11 +34,6 @@
     return DTI_L10N_BATTERY_LEVEL;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-
 - (void)viewWillAppear
 {
     [super viewWillAppear];

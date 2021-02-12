@@ -34,11 +34,6 @@
     return DTI_L10N_DATE_TIME;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-
 - (void)viewWillAppear
 {
     [super viewWillAppear];
