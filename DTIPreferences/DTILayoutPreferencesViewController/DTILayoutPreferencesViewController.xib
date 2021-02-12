@@ -261,7 +261,7 @@
                     <rect key="frame" x="20" y="145" width="501" height="5"/>
                 </box>
                 <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3hw-yA-nmb">
-                    <rect key="frame" x="20" y="79" width="273" height="20"/>
+                    <rect key="frame" x="20" y="79" width="392" height="20"/>
                     <subviews>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h3d-qc-fFQ">
                             <rect key="frame" x="-2" y="3" width="119" height="16"/>
@@ -288,12 +288,22 @@
                                 <binding destination="-2" name="selectedIndex" keyPath="self.layout.displayMode" id="hCs-U8-bvx"/>
                             </connections>
                         </popUpButton>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JUH-xK-NwP">
+                            <rect key="frame" x="279" y="3" width="115" height="16"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="(when connected)" id="gJP-nQ-W5Z">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
                     </subviews>
                     <visibilityPriorities>
                         <integer value="1000"/>
                         <integer value="1000"/>
+                        <integer value="1000"/>
                     </visibilityPriorities>
                     <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
                         <real value="3.4028234663852886e+38"/>
                         <real value="3.4028234663852886e+38"/>
                     </customSpacing>
