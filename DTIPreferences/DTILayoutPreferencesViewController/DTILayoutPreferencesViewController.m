@@ -15,6 +15,7 @@
 @property (nonatomic, readwrite) DTILayout *layout;
 @property (nonatomic, readwrite) NSArray<NSString *> *availableLayoutElements;
 @property (nonatomic) BOOL avoidsDockOverlapping;
+@property (nonatomic) BOOL avoidsMenuBarOverlapping;
 @end
 
 @implementation DTILayoutPreferencesViewController
@@ -43,7 +44,7 @@
     self.availableLayoutElements = DTILayoutElementGetAllElements();
 }
 
-#pragma mark - Avoids Dock Overlapping
+#pragma mark - Avoids Overlapping
 
 - (BOOL)avoidsDockOverlapping
 {
@@ -55,6 +56,18 @@
     [self willChangeValueForKey:@"avoidsDockOverlapping"];
     DTIPreferences.sharedPreferences.avoidsDockOverlapping = avoidsDockOverlapping;
     [self willChangeValueForKey:@"avoidsDockOverlapping"];
+}
+
+- (BOOL)avoidsMenuBarOverlapping
+{
+    return DTIPreferences.sharedPreferences.avoidsMenuBarOverlapping;
+}
+
+- (void)setAvoidsMenuBarOverlapping:(BOOL)avoidsMenuBarOverlapping
+{
+    [self willChangeValueForKey:@"avoidsMenuBarOverlapping"];
+    DTIPreferences.sharedPreferences.avoidsMenuBarOverlapping = avoidsMenuBarOverlapping;
+    [self willChangeValueForKey:@"avoidsMenuBarOverlapping"];
 }
 
 #pragma mark - DTILayoutDelegate

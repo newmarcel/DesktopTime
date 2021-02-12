@@ -13,6 +13,7 @@
 
 NSString * const DTIFirstLaunchFinishedKey = @"info.marcel-dierkes.DesktopTime.FirstLaunchFinshed";
 NSString * const DTIAvoidsDockOverlappingKey = @"info.marcel-dierkes.DesktopTime.AvoidsDockOverlapping";
+NSString * const DTIAvoidsMenuBarOverlappingKey = @"info.marcel-dierkes.DesktopTime.AvoidsMenuBarOverlapping";
 
 NSString * const DTILayoutKey = @"info.marcel-dierkes.DesktopTime.Layout";
 NSString * const DTIDateTimeFontKey = @"info.marcel-dierkes.DesktopTime.DateTime.Font";
@@ -168,7 +169,7 @@ NS_INLINE void DTISetColorForKey(id<DTIDefaultsProvider> defaults, NSColor *_Nul
     }
 }
 
-#pragma mark - Avoids Dock Overlapping
+#pragma mark - Avoids Overlapping
 
 - (BOOL)avoidsDockOverlapping
 {
@@ -178,6 +179,16 @@ NS_INLINE void DTISetColorForKey(id<DTIDefaultsProvider> defaults, NSColor *_Nul
 - (void)setAvoidsDockOverlapping:(BOOL)avoidsDockOverlapping
 {
     [self.defaults setBool:avoidsDockOverlapping forKey:DTIAvoidsDockOverlappingKey];
+}
+
+- (BOOL)avoidsMenuBarOverlapping
+{
+    return [self.defaults boolForKey:DTIAvoidsMenuBarOverlappingKey];
+}
+
+- (void)setAvoidsMenuBarOverlapping:(BOOL)avoidsDockOverlapping
+{
+    [self.defaults setBool:avoidsDockOverlapping forKey:DTIAvoidsMenuBarOverlappingKey];
 }
 
 #pragma mark - Layout

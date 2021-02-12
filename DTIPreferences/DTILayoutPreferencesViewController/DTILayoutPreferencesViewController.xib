@@ -14,10 +14,10 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <view translatesAutoresizingMaskIntoConstraints="NO" id="IxF-cg-guC">
-            <rect key="frame" x="0.0" y="0.0" width="541" height="420"/>
+            <rect key="frame" x="0.0" y="0.0" width="541" height="439"/>
             <subviews>
                 <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fzl-6j-g51" userLabel="Outer Stack View">
-                    <rect key="frame" x="20" y="164" width="501" height="184"/>
+                    <rect key="frame" x="20" y="183" width="501" height="184"/>
                     <subviews>
                         <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="16" horizontalStackHuggingPriority="248.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Up-AT-71i" userLabel="Top Stack View">
                             <rect key="frame" x="0.0" y="164" width="501" height="20"/>
@@ -258,10 +258,10 @@
                     </customSpacing>
                 </stackView>
                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="nup-UD-zzo">
-                    <rect key="frame" x="20" y="145" width="501" height="5"/>
+                    <rect key="frame" x="20" y="164" width="501" height="5"/>
                 </box>
                 <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3hw-yA-nmb">
-                    <rect key="frame" x="20" y="79" width="392" height="20"/>
+                    <rect key="frame" x="20" y="74" width="392" height="20"/>
                     <subviews>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h3d-qc-fFQ">
                             <rect key="frame" x="-2" y="3" width="119" height="16"/>
@@ -309,7 +309,7 @@
                     </customSpacing>
                 </stackView>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="g0Y-qe-2Zd">
-                    <rect key="frame" x="18" y="114" width="192" height="18"/>
+                    <rect key="frame" x="18" y="109" width="192" height="18"/>
                     <buttonCell key="cell" type="check" title="Avoid overlapping the Dock" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="1QY-lF-HOv">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
@@ -329,17 +329,27 @@
                     </connections>
                 </button>
                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="uwD-iS-1Wz">
-                    <rect key="frame" x="20" y="60" width="501" height="5"/>
+                    <rect key="frame" x="20" y="55" width="501" height="5"/>
                 </box>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4gC-6n-GU9">
+                    <rect key="frame" x="18" y="133" width="218" height="18"/>
+                    <buttonCell key="cell" type="check" title="Avoid overlapping the Menu Bar" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="r1f-MM-sjW">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.avoidsMenuBarOverlapping" id="qST-i6-eer"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="uwD-iS-1Wz" firstAttribute="top" secondItem="3hw-yA-nmb" secondAttribute="bottom" constant="16" id="81b-s1-7dt"/>
                 <constraint firstItem="3hw-yA-nmb" firstAttribute="leading" secondItem="p3q-HZ-lZ0" secondAttribute="leading" id="94g-bY-Zwz"/>
                 <constraint firstItem="Fzl-6j-g51" firstAttribute="leading" secondItem="p3q-HZ-lZ0" secondAttribute="leading" id="ESO-6V-6xW"/>
+                <constraint firstItem="p3q-HZ-lZ0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4gC-6n-GU9" secondAttribute="trailing" id="FAm-F9-5fh"/>
                 <constraint firstItem="p3q-HZ-lZ0" firstAttribute="bottom" secondItem="iMw-9h-D8H" secondAttribute="bottom" id="HPH-WD-rOa"/>
                 <constraint firstItem="Fzl-6j-g51" firstAttribute="top" secondItem="p3q-HZ-lZ0" secondAttribute="top" id="Hdh-E0-mh3"/>
                 <constraint firstItem="p3q-HZ-lZ0" firstAttribute="trailing" secondItem="Fzl-6j-g51" secondAttribute="trailing" id="KMe-xR-dPc"/>
-                <constraint firstItem="g0Y-qe-2Zd" firstAttribute="top" secondItem="nup-UD-zzo" secondAttribute="bottom" constant="16" id="NhI-aS-ebU"/>
                 <constraint firstItem="p3q-HZ-lZ0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3hw-yA-nmb" secondAttribute="trailing" id="ODn-uM-dXq"/>
                 <constraint firstItem="p3q-HZ-lZ0" firstAttribute="trailing" secondItem="nup-UD-zzo" secondAttribute="trailing" id="ObP-aa-qxY"/>
                 <constraint firstItem="p3q-HZ-lZ0" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3hw-yA-nmb" secondAttribute="bottom" id="SQ2-Es-TVT"/>
@@ -350,8 +360,11 @@
                 <constraint firstItem="iMw-9h-D8H" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uwD-iS-1Wz" secondAttribute="bottom" constant="16" id="dTP-Zs-gkG"/>
                 <constraint firstItem="nup-UD-zzo" firstAttribute="leading" secondItem="p3q-HZ-lZ0" secondAttribute="leading" id="nBW-ap-QBB"/>
                 <constraint firstItem="p3q-HZ-lZ0" firstAttribute="trailing" secondItem="uwD-iS-1Wz" secondAttribute="trailing" id="olc-dP-Rsb"/>
-                <constraint firstItem="3hw-yA-nmb" firstAttribute="top" secondItem="g0Y-qe-2Zd" secondAttribute="bottom" constant="16" id="rdv-2p-EM3"/>
+                <constraint firstItem="g0Y-qe-2Zd" firstAttribute="top" secondItem="4gC-6n-GU9" secondAttribute="bottom" constant="8" id="pg4-K0-BcQ"/>
+                <constraint firstItem="4gC-6n-GU9" firstAttribute="leading" secondItem="p3q-HZ-lZ0" secondAttribute="leading" id="rVQ-03-mgf"/>
+                <constraint firstItem="4gC-6n-GU9" firstAttribute="top" secondItem="nup-UD-zzo" secondAttribute="bottom" constant="16" id="sJg-RY-YdG"/>
                 <constraint firstItem="p3q-HZ-lZ0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="g0Y-qe-2Zd" secondAttribute="trailing" id="tBl-Bt-6o0"/>
+                <constraint firstItem="3hw-yA-nmb" firstAttribute="top" secondItem="g0Y-qe-2Zd" secondAttribute="bottom" constant="16" id="td5-z2-5kl"/>
                 <constraint firstItem="uwD-iS-1Wz" firstAttribute="leading" secondItem="p3q-HZ-lZ0" secondAttribute="leading" id="uoP-vl-gQ7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="QLK-0i-xzr"/>
