@@ -304,6 +304,9 @@
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.avoidsDockOverlapping" id="1KC-Zm-BAU"/>
+                    </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iMw-9h-D8H">
                     <rect key="frame" x="314" y="13" width="214" height="32"/>

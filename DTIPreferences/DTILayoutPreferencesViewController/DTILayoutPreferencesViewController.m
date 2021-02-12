@@ -14,6 +14,7 @@
 @interface DTILayoutPreferencesViewController () <DTILayoutDelegate>
 @property (nonatomic, readwrite) DTILayout *layout;
 @property (nonatomic, readwrite) NSArray<NSString *> *availableLayoutElements;
+@property (nonatomic) BOOL avoidsDockOverlapping;
 @end
 
 @implementation DTILayoutPreferencesViewController
@@ -33,9 +34,9 @@
     return DTI_L10N_LAYOUT;
 }
 
-- (void)viewDidLoad
+- (void)viewWillAppear
 {
-    [super viewDidLoad];
+    [super viewWillAppear];
     
     self.layout = DTIPreferences.sharedPreferences.layout;
     self.layout.delegate = self;
