@@ -43,6 +43,20 @@
     self.availableLayoutElements = DTILayoutElementGetAllElements();
 }
 
+#pragma mark - Avoids Dock Overlapping
+
+- (BOOL)avoidsDockOverlapping
+{
+    return DTIPreferences.sharedPreferences.avoidsDockOverlapping;
+}
+
+- (void)setAvoidsDockOverlapping:(BOOL)avoidsDockOverlapping
+{
+    [self willChangeValueForKey:@"avoidsDockOverlapping"];
+    DTIPreferences.sharedPreferences.avoidsDockOverlapping = avoidsDockOverlapping;
+    [self willChangeValueForKey:@"avoidsDockOverlapping"];
+}
+
 #pragma mark - DTILayoutDelegate
 
 - (void)layoutDidChange:(DTILayout *)layout keyPath:(NSString *)keyPath

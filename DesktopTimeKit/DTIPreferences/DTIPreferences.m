@@ -12,6 +12,8 @@
 #import "DTINotificationCenter.h"
 
 NSString * const DTIFirstLaunchFinishedKey = @"info.marcel-dierkes.DesktopTime.FirstLaunchFinshed";
+NSString * const DTIAvoidsDockOverlappingKey = @"info.marcel-dierkes.DesktopTime.AvoidsDockOverlapping";
+
 NSString * const DTILayoutKey = @"info.marcel-dierkes.DesktopTime.Layout";
 NSString * const DTIDateTimeFontKey = @"info.marcel-dierkes.DesktopTime.DateTime.Font";
 NSString * const DTIDateTimeTextColorKey = @"info.marcel-dierkes.DesktopTime.DateTime.TextColor";
@@ -164,6 +166,18 @@ NS_INLINE void DTISetColorForKey(id<DTIDefaultsProvider> defaults, NSColor *_Nul
         self.firstLaunchFinished = YES;
         block();
     }
+}
+
+#pragma mark - Avoids Dock Overlapping
+
+- (BOOL)avoidsDockOverlapping
+{
+    return [self.defaults boolForKey:DTIAvoidsDockOverlappingKey];
+}
+
+- (void)setAvoidsDockOverlapping:(BOOL)avoidsDockOverlapping
+{
+    [self.defaults setBool:avoidsDockOverlapping forKey:DTIAvoidsDockOverlappingKey];
 }
 
 #pragma mark - Layout

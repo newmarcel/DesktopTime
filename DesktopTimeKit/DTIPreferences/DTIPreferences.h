@@ -13,6 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 FOUNDATION_EXPORT NSString * const DTIFirstLaunchFinishedKey;
+FOUNDATION_EXPORT NSString * const DTIAvoidsDockOverlappingKey;
 FOUNDATION_EXPORT NSString * const DTILayoutKey;
 FOUNDATION_EXPORT NSString * const DTIDateTimeFontKey;
 FOUNDATION_EXPORT NSString * const DTIDateTimeTextColorKey;
@@ -28,6 +29,7 @@ FOUNDATION_EXPORT NSString * const DTIBatteryLevelShadowColorKey;
 @property (nonatomic, readonly) id<DTIDefaultsProvider> defaults;
 
 @property (nonatomic, getter=isFirstLaunchFinished) BOOL firstLaunchFinished;
+@property (nonatomic) BOOL avoidsDockOverlapping;
 
 @property (nonatomic, null_resettable) DTILayout *layout;
 
