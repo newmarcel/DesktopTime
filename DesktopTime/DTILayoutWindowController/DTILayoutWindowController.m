@@ -54,10 +54,6 @@
 #else
     window.backgroundColor = NSColor.clearColor;
 #endif
-    
-    // Full screen size
-    Auto screen = self.targetScreen ?: window.screen;
-    [window setFrame:screen.frame display:YES];
 }
 
 - (void)updateOffsets
@@ -90,6 +86,8 @@
     
     NSEdgeInsets insets = NSEdgeInsetsMake(top, left, bottom, right);
     window.contentView.additionalSafeAreaInsets = insets;
+    
+    [window setFrame:screen.frame display:NO];
 }
 
 - (void)reloadWindow
