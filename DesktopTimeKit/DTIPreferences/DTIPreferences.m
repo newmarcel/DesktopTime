@@ -160,7 +160,7 @@ NS_INLINE void DTISetColorForKey(id<DTIDefaultsProvider> defaults, NSColor *_Nul
     }
 }
 
-- (void)performBlockOnFirstLaunch:(void(^)(void))block
+- (void)performBlockOnFirstLaunch:(void(NS_NOESCAPE ^)(void))block
 {
     if([self isFirstLaunchFinished] == NO)
     {

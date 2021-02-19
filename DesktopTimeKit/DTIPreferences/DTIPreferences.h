@@ -49,7 +49,7 @@ FOUNDATION_EXPORT NSString * const DTIBatteryLevelShadowColorKey;
 /// Performs the given block only when the app is launched for the first time
 /// and marks the first launch as completed.
 /// @param block A custom block
-- (void)performBlockOnFirstLaunch:(void(^)(void))block;
+- (void)performBlockOnFirstLaunch:(void(NS_NOESCAPE ^)(void))block;
 
 @end
 
