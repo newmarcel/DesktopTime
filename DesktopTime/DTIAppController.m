@@ -56,6 +56,11 @@
     [layoutController reloadLayout];
     [layoutController startTimer];
     self.layoutController = layoutController;
+    
+    [DTIPreferences.sharedPreferences performBlockOnFirstLaunch:^{
+        Auto workspace = NSWorkspace.sharedWorkspace;
+        [workspace dti_openPreferencesWithCompletionHandler:nil];
+    }];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
