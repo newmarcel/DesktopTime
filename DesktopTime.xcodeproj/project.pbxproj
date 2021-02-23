@@ -17,6 +17,10 @@
 		DA5007F525D30269000E0585 /* DTILayoutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA5007F225D30269000E0585 /* DTILayoutWindowController.xib */; };
 		DA826ADF25BDACEE009ED73A /* DTIAppGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */; };
 		DA826AE025BDACEE009ED73A /* DTIAppGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA85B4D425E57D9000731156 /* DTIWorkspaceMetrics.h in Headers */ = {isa = PBXBuildFile; fileRef = DA85B4D225E57D9000731156 /* DTIWorkspaceMetrics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA85B4D525E57D9000731156 /* DTIWorkspaceMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = DA85B4D325E57D9000731156 /* DTIWorkspaceMetrics.m */; };
+		DA85B4E225E57DBB00731156 /* NSScreen+DTIWorkspaceMetrics.h in Headers */ = {isa = PBXBuildFile; fileRef = DA85B4E025E57DBB00731156 /* NSScreen+DTIWorkspaceMetrics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA85B4E325E57DBB00731156 /* NSScreen+DTIWorkspaceMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = DA85B4E125E57DBB00731156 /* NSScreen+DTIWorkspaceMetrics.m */; };
 		DA8CABF225D58EA00080DCE8 /* DesktopTimeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; };
 		DA8CABF325D58EA00080DCE8 /* DesktopTimeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAA400E725C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA400E625C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m */; };
@@ -130,6 +134,10 @@
 		DA5007F225D30269000E0585 /* DTILayoutWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTILayoutWindowController.xib; sourceTree = "<group>"; };
 		DA826ADD25BDACEE009ED73A /* DTIAppGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTIAppGroup.m; sourceTree = "<group>"; };
 		DA826ADE25BDACEE009ED73A /* DTIAppGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIAppGroup.h; sourceTree = "<group>"; };
+		DA85B4D225E57D9000731156 /* DTIWorkspaceMetrics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTIWorkspaceMetrics.h; sourceTree = "<group>"; };
+		DA85B4D325E57D9000731156 /* DTIWorkspaceMetrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTIWorkspaceMetrics.m; sourceTree = "<group>"; };
+		DA85B4E025E57DBB00731156 /* NSScreen+DTIWorkspaceMetrics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSScreen+DTIWorkspaceMetrics.h"; sourceTree = "<group>"; };
+		DA85B4E125E57DBB00731156 /* NSScreen+DTIWorkspaceMetrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSScreen+DTIWorkspaceMetrics.m"; sourceTree = "<group>"; };
 		DAA400E525C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFont+DTILocalizedDisplayName.h"; sourceTree = "<group>"; };
 		DAA400E625C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFont+DTILocalizedDisplayName.m"; sourceTree = "<group>"; };
 		DAAD1D0C25B43ECE00F6902D /* DesktopTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +279,25 @@
 			path = DTIAppGroup;
 			sourceTree = "<group>";
 		};
+		DA85B4D925E57D9500731156 /* DTIWorkspaceMetrics */ = {
+			isa = PBXGroup;
+			children = (
+				DA85B4D225E57D9000731156 /* DTIWorkspaceMetrics.h */,
+				DA85B4D325E57D9000731156 /* DTIWorkspaceMetrics.m */,
+				DA85B4E725E57DBE00731156 /* Extensions */,
+			);
+			path = DTIWorkspaceMetrics;
+			sourceTree = "<group>";
+		};
+		DA85B4E725E57DBE00731156 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA85B4E025E57DBB00731156 /* NSScreen+DTIWorkspaceMetrics.h */,
+				DA85B4E125E57DBB00731156 /* NSScreen+DTIWorkspaceMetrics.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DAA400EB25C6B25300A45F50 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +347,7 @@
 			children = (
 				DAAD1D2825B43F0400F6902D /* DesktopTimeKit.h */,
 				DA1DE53225CC6B6F00EEC86F /* DTILayout */,
+				DA85B4D925E57D9500731156 /* DTIWorkspaceMetrics */,
 				DAF8E61B25B451E700E3FA43 /* DTIBatteryStatus */,
 				DA826ADC25BDACEE009ED73A /* DTIAppGroup */,
 				DAC70E0525C55175009787A1 /* DTIPreferences */,
@@ -499,12 +527,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA85B4E225E57DBB00731156 /* NSScreen+DTIWorkspaceMetrics.h in Headers */,
 				DACCAD4525CEA9F700512A4A /* NSDateFormatter+DTILayoutElement.h in Headers */,
 				DAC70E1325C55175009787A1 /* DTIPreferences.h in Headers */,
 				DAF8E61F25B451E700E3FA43 /* DTIBatteryStatus.h in Headers */,
 				DAC70DF125C550D0009787A1 /* DTINotificationCenter.h in Headers */,
 				DA1DE52A25CC6B5100EEC86F /* DTILayout.h in Headers */,
 				DA826AE025BDACEE009ED73A /* DTIAppGroup.h in Headers */,
+				DA85B4D425E57D9000731156 /* DTIWorkspaceMetrics.h in Headers */,
 				DAC70E1225C55175009787A1 /* NSURL+DTIPreferences.h in Headers */,
 				DAC70E0E25C55175009787A1 /* DTIDefaultsProvider.h in Headers */,
 				DA1DE53825CC6E6300EEC86F /* DTILayoutElement.h in Headers */,
@@ -695,7 +725,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA85B4E325E57DBB00731156 /* NSScreen+DTIWorkspaceMetrics.m in Sources */,
 				DAC70E0F25C55175009787A1 /* NSURL+DTIPreferences.m in Sources */,
+				DA85B4D525E57D9000731156 /* DTIWorkspaceMetrics.m in Sources */,
 				DA826ADF25BDACEE009ED73A /* DTIAppGroup.m in Sources */,
 				DA1DE52B25CC6B5100EEC86F /* DTILayout.m in Sources */,
 				DAC70DF225C550D0009787A1 /* DTINotificationCenter.m in Sources */,

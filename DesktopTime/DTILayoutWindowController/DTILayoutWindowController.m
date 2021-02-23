@@ -49,42 +49,16 @@
     Auto window = self.window;
     window.level = CGWindowLevelForKey(kCGDesktopWindowLevel);
     window.ignoresMouseEvents = YES;
-#if DEBUG
-    window.backgroundColor = [NSColor colorWithRed:0.2f green:0.3f blue:0.3f alpha:0.4f];
-#else
     window.backgroundColor = NSColor.clearColor;
-#endif
 }
 
 - (void)updateOffsets
 {
-    Auto preferences = DTIPreferences.sharedPreferences;
-    BOOL avoidsDockOverlapping = preferences.avoidsDockOverlapping;
-    BOOL avoidsMenuBarOverlapping = preferences.avoidsMenuBarOverlapping;
-    
     Auto window = self.window;
     Auto screen = self.targetScreen ?: window.screen;
     
-    CGRect fullFrame = screen.frame;
-    CGRect visiFrame = screen.visibleFrame;
-    
-    CGFloat menubarHeight = NSStatusBar.systemStatusBar.thickness + 3.0f; // + 3pts on Big Sur
-    if(avoidsMenuBarOverlapping == NO) { menubarHeight = 0.0f; }
-
-    CGFloat hDockWidth = fullFrame.size.width - visiFrame.size.width;
-    CGFloat dockHeight = fullFrame.size.height - visiFrame.size.height;
-    if(avoidsMenuBarOverlapping) { dockHeight -= menubarHeight; }
-    if(dockHeight > 3.0f) { dockHeight -= 3.0f; }
-    
-    CGFloat top = avoidsMenuBarOverlapping ? menubarHeight : 0.0f;
-    CGFloat left = 0.0f;
-    if(hDockWidth > 0.0f && visiFrame.origin.x > fullFrame.origin.x) { left = visiFrame.origin.x; }
-    CGFloat bottom = 0.0f;
-    if(dockHeight > 0.0f && avoidsDockOverlapping == YES) { bottom = dockHeight; }
-    CGFloat right = 0.0f;
-    if(hDockWidth > 0.0f && visiFrame.origin.x == fullFrame.origin.x) { right = hDockWidth; }
-    
-    NSEdgeInsets insets = NSEdgeInsetsMake(top, left, bottom, right);
+    Auto metrics = screen.dti_workspaceMetrics;
+    Auto insets = metrics.usableEdgeInsets;
     window.contentView.additionalSafeAreaInsets = insets;
     
     [window setFrame:screen.frame display:NO];

@@ -9,7 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSUInteger, DTILayoutElement) {
+typedef NS_ENUM(NSUInteger, DTILayoutElement)
+{
     DTILayoutElementNone = 0,
     DTILayoutElementDateTime,
     DTILayoutElementDate,

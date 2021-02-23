@@ -19,6 +19,8 @@ FOUNDATION_EXPORT const unsigned char DesktopTimeKitVersionString[];
 #import <DesktopTimeKit/NSDateFormatter+DTILayoutElement.h>
 #import <DesktopTimeKit/DTIDefaultsProvider.h>
 #import <DesktopTimeKit/DTIPreferences.h>
+#import <DesktopTimeKit/DTIWorkspaceMetrics.h>
+#import <DesktopTimeKit/NSScreen+DTIWorkspaceMetrics.h>
 #import <DesktopTimeKit/DTINotificationCenter.h>
 #import <DesktopTimeKit/DTIAppGroup.h>
 #import <DesktopTimeKit/NSURL+DTIPreferences.h>
