@@ -25,3 +25,4 @@ FOUNDATION_EXPORT const unsigned char DesktopTimeKitVersionString[];
 #import <DesktopTimeKit/DTIAppGroup.h>
 #import <DesktopTimeKit/NSURL+DTIPreferences.h>
 #import <DesktopTimeKit/NSWorkspace+DTIPreferences.h>
+#import <DesktopTimeKit/NSAlert+DTIPreferences.h>

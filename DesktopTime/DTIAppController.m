@@ -59,7 +59,10 @@
     
     [DTIPreferences.sharedPreferences performBlockOnFirstLaunch:^{
         Auto workspace = NSWorkspace.sharedWorkspace;
-        [workspace dti_openPreferencesWithCompletionHandler:nil];
+        Auto alert = NSAlert.dti_welcomeAlert;
+        [alert dti_runWelcomeAlertWithOpenPreferencesHandler:^{
+            [workspace dti_openPreferencesWithCompletionHandler:nil];
+        }];
     }];
 }
 

@@ -23,6 +23,8 @@
 		DA85B4E325E57DBB00731156 /* NSScreen+DTIWorkspaceMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = DA85B4E125E57DBB00731156 /* NSScreen+DTIWorkspaceMetrics.m */; };
 		DA8CABF225D58EA00080DCE8 /* DesktopTimeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; };
 		DA8CABF325D58EA00080DCE8 /* DesktopTimeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD1D2625B43F0400F6902D /* DesktopTimeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA90B26225E8E8EB00089B4C /* NSAlert+DTIPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = DA90B26025E8E8EB00089B4C /* NSAlert+DTIPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA90B26325E8E8EB00089B4C /* NSAlert+DTIPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = DA90B26125E8E8EB00089B4C /* NSAlert+DTIPreferences.m */; };
 		DAA400E725C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA400E625C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m */; };
 		DAAD1D1125B43ECE00F6902D /* DTIAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAD1D1025B43ECE00F6902D /* DTIAppController.m */; };
 		DAAD1D1325B43ECF00F6902D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAD1D1225B43ECF00F6902D /* Assets.xcassets */; };
@@ -138,6 +140,8 @@
 		DA85B4D325E57D9000731156 /* DTIWorkspaceMetrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTIWorkspaceMetrics.m; sourceTree = "<group>"; };
 		DA85B4E025E57DBB00731156 /* NSScreen+DTIWorkspaceMetrics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSScreen+DTIWorkspaceMetrics.h"; sourceTree = "<group>"; };
 		DA85B4E125E57DBB00731156 /* NSScreen+DTIWorkspaceMetrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSScreen+DTIWorkspaceMetrics.m"; sourceTree = "<group>"; };
+		DA90B26025E8E8EB00089B4C /* NSAlert+DTIPreferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAlert+DTIPreferences.h"; sourceTree = "<group>"; };
+		DA90B26125E8E8EB00089B4C /* NSAlert+DTIPreferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+DTIPreferences.m"; sourceTree = "<group>"; };
 		DAA400E525C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFont+DTILocalizedDisplayName.h"; sourceTree = "<group>"; };
 		DAA400E625C6B24E00A45F50 /* NSFont+DTILocalizedDisplayName.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFont+DTILocalizedDisplayName.m"; sourceTree = "<group>"; };
 		DAAD1D0C25B43ECE00F6902D /* DesktopTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -480,6 +484,8 @@
 		DAC70E0725C55175009787A1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DA90B26025E8E8EB00089B4C /* NSAlert+DTIPreferences.h */,
+				DA90B26125E8E8EB00089B4C /* NSAlert+DTIPreferences.m */,
 				DAC70E0B25C55175009787A1 /* NSURL+DTIPreferences.h */,
 				DAC70E0825C55175009787A1 /* NSURL+DTIPreferences.m */,
 				DAC70E0A25C55175009787A1 /* NSWorkspace+DTIPreferences.h */,
@@ -534,6 +540,7 @@
 				DAC70DF125C550D0009787A1 /* DTINotificationCenter.h in Headers */,
 				DA1DE52A25CC6B5100EEC86F /* DTILayout.h in Headers */,
 				DA826AE025BDACEE009ED73A /* DTIAppGroup.h in Headers */,
+				DA90B26225E8E8EB00089B4C /* NSAlert+DTIPreferences.h in Headers */,
 				DA85B4D425E57D9000731156 /* DTIWorkspaceMetrics.h in Headers */,
 				DAC70E1225C55175009787A1 /* NSURL+DTIPreferences.h in Headers */,
 				DAC70E0E25C55175009787A1 /* DTIDefaultsProvider.h in Headers */,
@@ -731,6 +738,7 @@
 				DA826ADF25BDACEE009ED73A /* DTIAppGroup.m in Sources */,
 				DA1DE52B25CC6B5100EEC86F /* DTILayout.m in Sources */,
 				DAC70DF225C550D0009787A1 /* DTINotificationCenter.m in Sources */,
+				DA90B26325E8E8EB00089B4C /* NSAlert+DTIPreferences.m in Sources */,
 				DAF8E61E25B451E700E3FA43 /* DTIBatteryStatus.m in Sources */,
 				DAC70E1025C55175009787A1 /* NSWorkspace+DTIPreferences.m in Sources */,
 				DA1DE53925CC6E6300EEC86F /* DTILayoutElement.m in Sources */,
