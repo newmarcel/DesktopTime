@@ -32,4 +32,12 @@
     [NSApplication.sharedApplication terminate:sender];
 }
 
+- (IBAction)showAboutPanel:(nullable id)sender
+{
+    Auto appName = NSLocalizedString(@"DesktopTime", @"DesktopTime");
+    [NSApplication.sharedApplication orderFrontStandardAboutPanelWithOptions:@{
+        NSAboutPanelOptionApplicationName: appName
+    }];
+}
+
 @end
