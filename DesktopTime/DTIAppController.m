@@ -77,4 +77,9 @@
     return NO;
 }
 
+- (void)applicationDidChangeScreenParameters:(NSNotification *)notification
+{
+    [self.layoutController reloadLayout];
+}
+
 @end
