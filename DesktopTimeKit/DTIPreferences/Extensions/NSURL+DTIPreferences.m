@@ -14,9 +14,8 @@ static NSString * const DTIPreferencesAppBundleName = @"DesktopTime Preferences.
 
 + (NSURL *)dti_preferencesAppURL
 {
-    Auto executableBaseURL = NSBundle.mainBundle.executableURL.URLByDeletingLastPathComponent;
-    return [executableBaseURL URLByAppendingPathComponent:DTIPreferencesAppBundleName
-                                              isDirectory:NO];
+    Auto bundle = NSBundle.mainBundle;
+    return [bundle URLForAuxiliaryExecutable:DTIPreferencesAppBundleName];
 }
 
 @end
