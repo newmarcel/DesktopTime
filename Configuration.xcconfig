@@ -6,10 +6,10 @@
 //  Copyright (c) 2018 Marcel Dierkes. All rights reserved.
 //
 
-MACOSX_DEPLOYMENT_TARGET = 11.0
+MACOSX_DEPLOYMENT_TARGET = 12.0
 PRODUCT_BUNDLE_IDENTIFIER = info.marcel-dierkes.DesktopTime
 
-MARKETING_VERSION = 2.0.4
-CURRENT_PROJECT_VERSION = 2000400
+MARKETING_VERSION = 2.1.0
+CURRENT_PROJECT_VERSION = 2010001
 
 DTI_COPYRIGHT_TEXT = Copyright © 2015 – 2023 Marcel Dierkes. All rights reserved.
